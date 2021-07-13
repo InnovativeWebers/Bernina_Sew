@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA07C05B510C906505885AF7 /* Pods_Bernina_Sew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19F656D6F84E3B74881F654 /* Pods_Bernina_Sew.framework */; };
+		D43C3BF22635C35200E53768 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C3BF12635C35200E53768 /* LoginViewController.swift */; };
+		D43C3BF52635C86B00E53768 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C3BF42635C86B00E53768 /* ShopViewController.swift */; };
+		D43C3BF82635C88500E53768 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C3BF72635C88500E53768 /* ClubViewController.swift */; };
+		D43C3BFB2635C89100E53768 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C3BFA2635C89100E53768 /* BlogViewController.swift */; };
+		D43C3BFE2635C89C00E53768 /* DesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C3BFD2635C89C00E53768 /* DesignViewController.swift */; };
+		D451ECFA264CDA6C00A17A67 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D451ECF9264CDA6C00A17A67 /* ProfileViewController.swift */; };
+		D451ED0F264F8BAD00A17A67 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D451ED0D264F8BAD00A17A67 /* EventTableViewCell.swift */; };
+		D451ED10264F8BAD00A17A67 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D451ED0E264F8BAD00A17A67 /* EventTableViewCell.xib */; };
+		D451ED12264F8C3A00A17A67 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D451ED11264F8C3A00A17A67 /* Event.swift */; };
+		D4684398269D6B0B0026E468 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4684397269D6B0B0026E468 /* GoogleService-Info.plist */; };
+		D47B710A263A752200B0B660 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B7109263A752200B0B660 /* SignUpViewController.swift */; };
+		D49A798B268995BE009F62BD /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A798A268995BE009F62BD /* TabViewController.swift */; };
+		D49A798D268995FF009F62BD /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A798C268995FF009F62BD /* K.swift */; };
+		D49A798F2689AA7C009F62BD /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A798E2689AA7C009F62BD /* ProductListViewController.swift */; };
+		D49A79912689AA96009F62BD /* ProductInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A79902689AA96009F62BD /* ProductInfoViewController.swift */; };
+		D49A79932689AE47009F62BD /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A79922689AE47009F62BD /* EventViewController.swift */; };
+		D49A79952689B024009F62BD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A79942689B024009F62BD /* Product.swift */; };
+		D49A79972689B035009F62BD /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A79962689B035009F62BD /* ProductList.swift */; };
+		D4D13BA9269D3A8B00BA2181 /* InputJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D13BA8269D3A8B00BA2181 /* InputJSON.json */; };
+		D4D13BAB269D5F1300BA2181 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D13BAA269D5F1300BA2181 /* Tools.swift */; };
+		D4E801BF2624876D001C3CB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E801BE2624876D001C3CB0 /* AppDelegate.swift */; };
+		D4E801C12624876D001C3CB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E801C02624876D001C3CB0 /* SceneDelegate.swift */; };
+		D4E801C32624876D001C3CB0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E801C22624876D001C3CB0 /* HomeViewController.swift */; };
+		D4E801C62624876D001C3CB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E801C42624876D001C3CB0 /* Main.storyboard */; };
+		D4E801C82624876E001C3CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E801C72624876E001C3CB0 /* Assets.xcassets */; };
+		D4E801CB2624876E001C3CB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E801C92624876E001C3CB0 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D43C3BF12635C35200E53768 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D43C3BF42635C86B00E53768 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		D43C3BF72635C88500E53768 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
+		D43C3BFA2635C89100E53768 /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
+		D43C3BFD2635C89C00E53768 /* DesignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignViewController.swift; sourceTree = "<group>"; };
+		D451ECF9264CDA6C00A17A67 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D451ED0D264F8BAD00A17A67 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		D451ED0E264F8BAD00A17A67 /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		D451ED11264F8C3A00A17A67 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		D4684397269D6B0B0026E468 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../iOS/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D47B7109263A752200B0B660 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D49A798A268995BE009F62BD /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		D49A798C268995FF009F62BD /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		D49A798E2689AA7C009F62BD /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		D49A79902689AA96009F62BD /* ProductInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoViewController.swift; sourceTree = "<group>"; };
+		D49A79922689AE47009F62BD /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		D49A79942689B024009F62BD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		D49A79962689B035009F62BD /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
+		D4D13BA8269D3A8B00BA2181 /* InputJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = InputJSON.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		D4D13BAA269D5F1300BA2181 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		D4E801BB2624876D001C3CB0 /* Bernina Sew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bernina Sew.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E801BE2624876D001C3CB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4E801C02624876D001C3CB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D4E801C22624876D001C3CB0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D4E801C52624876D001C3CB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4E801C72624876E001C3CB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4E801CA2624876E001C3CB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4E801CC2624876E001C3CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB8CADBF929918C717535F38 /* Pods-Bernina Sew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bernina Sew.debug.xcconfig"; path = "Target Support Files/Pods-Bernina Sew/Pods-Bernina Sew.debug.xcconfig"; sourceTree = "<group>"; };
+		E19F656D6F84E3B74881F654 /* Pods_Bernina_Sew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bernina_Sew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F928AF6F1140259873ED4BC5 /* Pods-Bernina Sew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bernina Sew.release.xcconfig"; path = "Target Support Files/Pods-Bernina Sew/Pods-Bernina Sew.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4E801B82624876D001C3CB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA07C05B510C906505885AF7 /* Pods_Bernina_Sew.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B576EC08C4EB94A2D698163 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E19F656D6F84E3B74881F654 /* Pods_Bernina_Sew.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4C92C552666931F00E3AE2D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D4C92C562666932700E3AE2D /* Model */,
+				D4C92C572666932D00E3AE2D /* View */,
+				D4C92C582666933300E3AE2D /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D4C92C562666932700E3AE2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D451ED11264F8C3A00A17A67 /* Event.swift */,
+				D49A79942689B024009F62BD /* Product.swift */,
+				D49A79962689B035009F62BD /* ProductList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4C92C572666932D00E3AE2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D451ED0D264F8BAD00A17A67 /* EventTableViewCell.swift */,
+				D451ED0E264F8BAD00A17A67 /* EventTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4C92C582666933300E3AE2D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D4E801C22624876D001C3CB0 /* HomeViewController.swift */,
+				D49A798A268995BE009F62BD /* TabViewController.swift */,
+				D49A798E2689AA7C009F62BD /* ProductListViewController.swift */,
+				D49A79902689AA96009F62BD /* ProductInfoViewController.swift */,
+				D49A79922689AE47009F62BD /* EventViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D4C92C592666936600E3AE2D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D4C92C5A2666937900E3AE2D /* Controller */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D4C92C5A2666937900E3AE2D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D451ECF9264CDA6C00A17A67 /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D4C92C5D2666943700E3AE2D /* Member */ = {
+			isa = PBXGroup;
+			children = (
+				D4C92C5E2666944000E3AE2D /* Controller */,
+			);
+			path = Member;
+			sourceTree = "<group>";
+		};
+		D4C92C5E2666944000E3AE2D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D43C3BF72635C88500E53768 /* ClubViewController.swift */,
+				D43C3BFA2635C89100E53768 /* BlogViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D4C92C612666946700E3AE2D /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				D4C92C622666947100E3AE2D /* Controller */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		D4C92C622666947100E3AE2D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D43C3BF42635C86B00E53768 /* ShopViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D4C92C652666948C00E3AE2D /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				D4C92C662666949300E3AE2D /* Controller */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		D4C92C662666949300E3AE2D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D43C3BFD2635C89C00E53768 /* DesignViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D4C92C69266694B800E3AE2D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D4C92C6A266694C700E3AE2D /* Controller */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D4C92C6A266694C700E3AE2D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D43C3BF12635C35200E53768 /* LoginViewController.swift */,
+				D47B7109263A752200B0B660 /* SignUpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D4D13BA7269D376C00BA2181 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D49A798C268995FF009F62BD /* K.swift */,
+				D4D13BAA269D5F1300BA2181 /* Tools.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D4E801B22624876D001C3CB0 = {
+			isa = PBXGroup;
+			children = (
+				D4684397269D6B0B0026E468 /* GoogleService-Info.plist */,
+				D4E801BD2624876D001C3CB0 /* Bernina Sew */,
+				D4E801BC2624876D001C3CB0 /* Products */,
+				E31BF7192AA88CD73F84E4CF /* Pods */,
+				5B576EC08C4EB94A2D698163 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D4E801BC2624876D001C3CB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4E801BB2624876D001C3CB0 /* Bernina Sew.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4E801BD2624876D001C3CB0 /* Bernina Sew */ = {
+			isa = PBXGroup;
+			children = (
+				D4D13BA8269D3A8B00BA2181 /* InputJSON.json */,
+				D4D13BA7269D376C00BA2181 /* Resources */,
+				D4C92C69266694B800E3AE2D /* Login */,
+				D4C92C652666948C00E3AE2D /* Design */,
+				D4C92C612666946700E3AE2D /* Shop */,
+				D4C92C5D2666943700E3AE2D /* Member */,
+				D4C92C552666931F00E3AE2D /* Home */,
+				D4C92C592666936600E3AE2D /* Profile */,
+				D4E801BE2624876D001C3CB0 /* AppDelegate.swift */,
+				D4E801C02624876D001C3CB0 /* SceneDelegate.swift */,
+				D4E801C42624876D001C3CB0 /* Main.storyboard */,
+				D4E801C72624876E001C3CB0 /* Assets.xcassets */,
+				D4E801C92624876E001C3CB0 /* LaunchScreen.storyboard */,
+				D4E801CC2624876E001C3CB0 /* Info.plist */,
+			);
+			path = "Bernina Sew";
+			sourceTree = "<group>";
+		};
+		E31BF7192AA88CD73F84E4CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB8CADBF929918C717535F38 /* Pods-Bernina Sew.debug.xcconfig */,
+				F928AF6F1140259873ED4BC5 /* Pods-Bernina Sew.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4E801BA2624876D001C3CB0 /* Bernina Sew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4E801CF2624876E001C3CB0 /* Build configuration list for PBXNativeTarget "Bernina Sew" */;
+			buildPhases = (
+				13F31B9EA3AEED09B5F4BBFC /* [CP] Check Pods Manifest.lock */,
+				D4E801B72624876D001C3CB0 /* Sources */,
+				D4E801B82624876D001C3CB0 /* Frameworks */,
+				D4E801B92624876D001C3CB0 /* Resources */,
+				76256DD429A989E4EF27EA0E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bernina Sew";
+			productName = "Bernina Sew";
+			productReference = D4E801BB2624876D001C3CB0 /* Bernina Sew.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4E801B32624876D001C3CB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					D4E801BA2624876D001C3CB0 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = D4E801B62624876D001C3CB0 /* Build configuration list for PBXProject "Bernina Sew" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4E801B22624876D001C3CB0;
+			productRefGroup = D4E801BC2624876D001C3CB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4E801BA2624876D001C3CB0 /* Bernina Sew */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4E801B92624876D001C3CB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D451ED10264F8BAD00A17A67 /* EventTableViewCell.xib in Resources */,
+				D4E801CB2624876E001C3CB0 /* LaunchScreen.storyboard in Resources */,
+				D4D13BA9269D3A8B00BA2181 /* InputJSON.json in Resources */,
+				D4E801C82624876E001C3CB0 /* Assets.xcassets in Resources */,
+				D4E801C62624876D001C3CB0 /* Main.storyboard in Resources */,
+				D4684398269D6B0B0026E468 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13F31B9EA3AEED09B5F4BBFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bernina Sew-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76256DD429A989E4EF27EA0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bernina Sew/Pods-Bernina Sew-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bernina Sew/Pods-Bernina Sew-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bernina Sew/Pods-Bernina Sew-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4E801B72624876D001C3CB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4E801C32624876D001C3CB0 /* HomeViewController.swift in Sources */,
+				D49A798D268995FF009F62BD /* K.swift in Sources */,
+				D451ED0F264F8BAD00A17A67 /* EventTableViewCell.swift in Sources */,
+				D4E801BF2624876D001C3CB0 /* AppDelegate.swift in Sources */,
+				D43C3BF82635C88500E53768 /* ClubViewController.swift in Sources */,
+				D49A798B268995BE009F62BD /* TabViewController.swift in Sources */,
+				D49A79912689AA96009F62BD /* ProductInfoViewController.swift in Sources */,
+				D451ED12264F8C3A00A17A67 /* Event.swift in Sources */,
+				D49A798F2689AA7C009F62BD /* ProductListViewController.swift in Sources */,
+				D43C3BF52635C86B00E53768 /* ShopViewController.swift in Sources */,
+				D43C3BF22635C35200E53768 /* LoginViewController.swift in Sources */,
+				D49A79952689B024009F62BD /* Product.swift in Sources */,
+				D4E801C12624876D001C3CB0 /* SceneDelegate.swift in Sources */,
+				D451ECFA264CDA6C00A17A67 /* ProfileViewController.swift in Sources */,
+				D47B710A263A752200B0B660 /* SignUpViewController.swift in Sources */,
+				D43C3BFE2635C89C00E53768 /* DesignViewController.swift in Sources */,
+				D43C3BFB2635C89100E53768 /* BlogViewController.swift in Sources */,
+				D49A79972689B035009F62BD /* ProductList.swift in Sources */,
+				D49A79932689AE47009F62BD /* EventViewController.swift in Sources */,
+				D4D13BAB269D5F1300BA2181 /* Tools.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4E801C42624876D001C3CB0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4E801C52624876D001C3CB0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4E801C92624876E001C3CB0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4E801CA2624876E001C3CB0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4E801CD2624876E001C3CB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4E801CE2624876E001C3CB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4E801D02624876E001C3CB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB8CADBF929918C717535F38 /* Pods-Bernina Sew.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Bernina Sew/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lunarian.Bernina-Sew";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D4E801D12624876E001C3CB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F928AF6F1140259873ED4BC5 /* Pods-Bernina Sew.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Bernina Sew/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lunarian.Bernina-Sew";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4E801B62624876D001C3CB0 /* Build configuration list for PBXProject "Bernina Sew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E801CD2624876E001C3CB0 /* Debug */,
+				D4E801CE2624876E001C3CB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4E801CF2624876E001C3CB0 /* Build configuration list for PBXNativeTarget "Bernina Sew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E801D02624876E001C3CB0 /* Debug */,
+				D4E801D12624876E001C3CB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4E801B32624876D001C3CB0 /* Project object */;
+}

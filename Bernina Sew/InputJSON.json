@@ -1,0 +1,28 @@
+
+
+
+{
+    "FeaturedProducts":[
+        {
+            "ID": 1001,
+            "Name": "Bernina 790 plus",
+            "Image": "https://www.bernina.com/assetgen/2/de/Resources/bernina-products/machines/8-series/880-PLUS/B-880-PLUS-NEU-Bilder/B880Plus-Standard-NewPlus-EN.png"
+        },
+
+        {
+            "ID": 1002,
+            "Name": "Bernina 880 plus",
+            "Image": "https://www.bernina.com/assetgen/2/de/Resources/bernina-products/machines/7-Series/790-PLUS/B-790-PLUS-NEU-Bilder/B790Plus-Standard-NewPlus-EN.jpg"
+        },
+
+        {
+            "ID": 1003,
+            "Name": "Bernina 770 QE",
+            "Image": "https://www.bernina.com/assetgen/2/de/Resources/bernina-products/machines/7-Series/770/B770_Standard.jpg"
+        }
+    ]
+
+}
+
+
+

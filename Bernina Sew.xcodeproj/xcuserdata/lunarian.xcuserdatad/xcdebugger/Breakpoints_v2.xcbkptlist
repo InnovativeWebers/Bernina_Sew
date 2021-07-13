@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "92164B35-9FA2-458F-A310-29F8FE09CCC1"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF29F343-BF34-43A4-A04C-AB09F57F7D69"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bernina Sew/Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "HomeViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "FF29F343-BF34-43A4-A04C-AB09F57F7D69 - b9b8379fd0e99d1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bernina_Sew.ViewController.eventsTableView.getter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "Bernina Sew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lunarian/Desktop/iOS/IFB398_Project/Bernina%20Sew/Bernina%20Sew/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "FF29F343-BF34-43A4-A04C-AB09F57F7D69 - 65b7146a098b4911"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bernina_Sew.ViewController.eventsTableView.setter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "Bernina Sew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lunarian/Desktop/iOS/IFB398_Project/Bernina%20Sew/Bernina%20Sew/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "FF29F343-BF34-43A4-A04C-AB09F57F7D69 - bec48efe20150620"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bernina_Sew.ViewController.eventsTableView.modify : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "Bernina Sew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lunarian/Desktop/iOS/IFB398_Project/Bernina%20Sew/Bernina%20Sew/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "FF29F343-BF34-43A4-A04C-AB09F57F7D69 - 47e121e4f53af72f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bernina_Sew.ViewController.eventsTableView.modify : Swift.Optional&lt;__C.UITableView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Bernina Sew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lunarian/Desktop/iOS/IFB398_Project/Bernina%20Sew/Bernina%20Sew/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "FF29F343-BF34-43A4-A04C-AB09F57F7D69 - 24c446d6ff66a022"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bernina_Sew.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Bernina_Sew.ViewController"
+                  moduleName = "Bernina Sew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lunarian/Desktop/iOS/IFB398_Project/Bernina%20Sew/Bernina%20Sew/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1481">
+               </Location>
+               <Location
+                  uuid = "FF29F343-BF34-43A4-A04C-AB09F57F7D69 - 976a3230ee62a977"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bernina_Sew.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Bernina_Sew.ViewController&gt;"
+                  moduleName = "Bernina Sew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lunarian/Desktop/iOS/IFB398_Project/Bernina%20Sew/Bernina%20Sew/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1422">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C45B5363-CBFE-42C2-928B-29FE512F818C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bernina Sew/Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "HomeViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "C45B5363-CBFE-42C2-928B-29FE512F818C - 24f6bf41fe50db11"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bernina_Sew.ViewController.patternImage2.getter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Bernina Sew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lunarian/Desktop/iOS/IFB398_Project/Bernina%20Sew/Bernina%20Sew/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "C45B5363-CBFE-42C2-928B-29FE512F818C - 3b50b5812fba8f05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bernina_Sew.ViewController.patternImage2.setter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Bernina Sew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lunarian/Desktop/iOS/IFB398_Project/Bernina%20Sew/Bernina%20Sew/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "C45B5363-CBFE-42C2-928B-29FE512F818C - b8a2edfaafaa452c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bernina_Sew.ViewController.patternImage2.modify : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Bernina Sew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lunarian/Desktop/iOS/IFB398_Project/Bernina%20Sew/Bernina%20Sew/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "C45B5363-CBFE-42C2-928B-29FE512F818C - 3b4cc1d5b072e4c5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bernina_Sew.ViewController.patternImage2.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Bernina Sew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lunarian/Desktop/iOS/IFB398_Project/Bernina%20Sew/Bernina%20Sew/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "C45B5363-CBFE-42C2-928B-29FE512F818C - 24c446d6ff66a73a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bernina_Sew.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Bernina_Sew.ViewController"
+                  moduleName = "Bernina Sew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lunarian/Desktop/iOS/IFB398_Project/Bernina%20Sew/Bernina%20Sew/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "997">
+               </Location>
+               <Location
+                  uuid = "C45B5363-CBFE-42C2-928B-29FE512F818C - 976a3230ee62ae6f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bernina_Sew.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Bernina_Sew.ViewController&gt;"
+                  moduleName = "Bernina Sew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lunarian/Desktop/iOS/IFB398_Project/Bernina%20Sew/Bernina%20Sew/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "938">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
