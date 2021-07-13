@@ -20,6 +20,25 @@
             "Name": "Bernina 770 QE",
             "Image": "https://www.bernina.com/assetgen/2/de/Resources/bernina-products/machines/7-Series/770/B770_Standard.jpg"
         }
+    ],
+    
+    "Events": [
+        {
+            "Name": "L1 Workshop"
+            "Level": "Beginner"
+            "Date": "22-07-2021"
+        },
+        {
+            "Name": "L2 Workshop"
+            "Level": "Intermediate"
+            "Date": "29-07-2021"
+        },
+        {
+            "Name": "L1 Workshop"
+            "Level": "Beginner"
+            "Date": "01-08-2021"
+        }
+    
     ]
 
 }

@@ -16,31 +16,23 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var patternsButton: UIButton!
     @IBOutlet weak var eventsButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
-    
-    // normally we load the events from an API, however here we simply created a dummy event array since we weren't given an API
-    let events: [Event] = [
-        Event(eventName: "L1 Workhsop", level: "Beginner", date: "13-June-2021"),
-        Event(eventName: "L2 Workhsop", level: "Intermediate", date: "26-June-2021"),
-        Event(eventName: "L3 Workhsop", level: "Hard", date: "01-July-2021"),
-    ]
     @IBOutlet weak var featuredProduct1: UIImageView!
     @IBOutlet weak var featuredProduct2: UIImageView!
     @IBOutlet weak var featuredProduct3: UIImageView!
-    
     @IBOutlet weak var pattern1: UIImageView!
     @IBOutlet weak var pattern2: UIImageView!
     @IBOutlet weak var pattern3: UIImageView!
-    
     @IBOutlet weak var searchTextField: UITextField!
-    
+
     @IBAction func searchPressed(_ sender: UIButton) {
         sender.showAnimation {
             self.searchTextField.endEditing(true)
         }
-        
     }
-    var selectedRow: Int?
+
+    let events: [Event] = []
     var productList: [Product] = []
+
     
     @objc func dismissKeyboard() {
         searchTextField.endEditing(true)
@@ -84,7 +76,6 @@ class HomeViewController: UIViewController {
     func loadJson(filename fileName: String) -> ProductList? {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
             do {
-                print(url)
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 let jsonData = try decoder.decode(ProductList.self, from: data)
@@ -93,9 +84,7 @@ class HomeViewController: UIViewController {
                 print("error:\(error)")
             }
         }
-        
         return nil
- 
     }
 }
 
@@ -117,9 +106,7 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedRow = indexPath.row
-        self.performSegue(withIdentifier: "HomeToEvent", sender: self)
     }
-
 }
 
 extension HomeViewController: UITextFieldDelegate {
@@ -131,13 +118,5 @@ extension HomeViewController: UITextFieldDelegate {
         searchTextField.endEditing(true)
         return true
     }
-    
-//    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-//        if textField.text != ""{
-//            return true
-//        }else{
-//            textField.placeholder = "Search for products..."
-//            return false
-//        }
-//    }
+
 }

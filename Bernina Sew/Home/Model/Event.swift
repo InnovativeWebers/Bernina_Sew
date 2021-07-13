@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct EventList {
+    var events:[Event]
+}
+
 struct Event{
     var eventName: String
     var level: String
