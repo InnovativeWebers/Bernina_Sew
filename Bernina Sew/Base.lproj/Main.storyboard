@@ -186,7 +186,7 @@
                                 <rect key="frame" x="16" y="290" width="358" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="History">
+                                <state key="normal" title="My Events">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -686,7 +686,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AYu-rX-oyE"/>
+        <segue reference="CZV-Ns-aWE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1_mbcSMZM8mcUPpqfC_K6nnQ" width="85.333335876464844" height="85.333335876464844"/>

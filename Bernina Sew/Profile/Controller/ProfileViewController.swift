@@ -9,11 +9,12 @@ import UIKit
 import Firebase
 
 class ProfileViewController: UIViewController {
-
-
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.title = "Profile"
 
         let imageIcon = UIImage(systemName: "face.smiling.fill", withConfiguration: K.symbolConfig)?.withTintColor(K.brandRed, renderingMode: .alwaysOriginal)
@@ -23,13 +24,12 @@ class ProfileViewController: UIViewController {
 
     @IBAction func logoutPressed(_ sender: UIButton) {
         
-    let firebaseAuth = Auth.auth()
-    do {
-      try firebaseAuth.signOut()
-    } catch let signOutError as NSError {
-      print ("Error signing out: %@", signOutError)
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+          print ("Error signing out: %@", signOutError)
+        }
+        
     }
-      
-    }
-
 }

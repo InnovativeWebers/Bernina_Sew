@@ -7,6 +7,28 @@
 
 import UIKit
 
+
+struct Tools {
+    public static func setUpButton(_ btnTitle: String, _ color: UIColor, _ fontSize: Int) -> UIButton {
+        let btn = UIButton()
+        btn.layer.cornerRadius = 10
+        btn.backgroundColor = color
+        btn.setTitle(btnTitle, for: .normal)
+        btn.titleLabel?.font = .systemFont(ofSize: CGFloat(fontSize), weight: .bold)
+        return btn
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 public extension UIView {
     func showAnimation(_ completionBlock: @escaping () -> Void) {
       isUserInteractionEnabled = false
@@ -34,7 +56,10 @@ public extension UIView {
         self.layer.shadowOpacity = 0.9
         self.layer.shadowRadius = 1.0
     }
+
 }
+
+
 
 extension UITextField {
     func setLeftPaddingPoints(_ amount:CGFloat){

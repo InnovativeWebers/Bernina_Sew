@@ -11,6 +11,8 @@ class BlogViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationController?.navigationBar.isTranslucent = false
         self.title = "Member"
         
         let imageIcon = UIImage(systemName: "person.and.person.fill", withConfiguration: K.symbolConfig)?.withTintColor(K.brandRed, renderingMode: .alwaysOriginal)

@@ -11,6 +11,8 @@ class ShopViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationController?.navigationBar.isTranslucent = false
         self.title = "Shop"
         let imageIcon = UIImage(systemName: "cart.fill", withConfiguration: K.symbolConfig)?.withTintColor(K.brandRed, renderingMode: .alwaysOriginal)
         self.tabBarController?.tabBar.items![3].selectedImage = imageIcon

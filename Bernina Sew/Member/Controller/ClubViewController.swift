@@ -11,6 +11,8 @@ class ClubViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationController?.navigationBar.isTranslucent = false
         self.title = "Club"
 
         // Do any additional setup after loading the view.

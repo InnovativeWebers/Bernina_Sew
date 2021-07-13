@@ -43,6 +43,8 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationController?.navigationBar.isTranslucent = false
         eventsTableView.dataSource = self
         eventsTableView.delegate = self
         searchTextField.delegate = self
@@ -127,6 +129,12 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = EventViewController()
+        vc.eventName = eventList[indexPath.row].Name
+        vc.eventDate = eventList[indexPath.row].Date
+        vc.eventLevel = eventList[indexPath.row].Level
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
