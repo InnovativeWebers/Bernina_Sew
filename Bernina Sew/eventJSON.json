@@ -1,0 +1,28 @@
+{
+    "Events": [
+        {
+            "Name": "L1 Workshop",
+            "Level": "Beginner",
+            "Date": "22-07-2021"
+        },
+        
+        {
+            "Name": "L2 Workshop",
+            "Level": "Intermediate",
+            "Date": "29-07-2021"
+        },
+        
+        {
+            "Name": "L3 Workshop",
+            "Level": "Beginner",
+            "Date": "01-08-2021"
+        },
+        
+        {
+            "Name": "L2 Workshop",
+            "Level": "Intermediate",
+            "Date": "03-08-2021"
+        }
+    
+    ]
+}

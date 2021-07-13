@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct EventList {
-    var events:[Event]
+struct EventList: Decodable {
+    var Events:[Event]
 }
 
-struct Event{
-    var eventName: String
-    var level: String
-    var date: String
+struct Event: Decodable{
+    var Name: String
+    var Level: String
+    var Date: String
 }

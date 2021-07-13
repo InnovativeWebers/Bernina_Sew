@@ -18,6 +18,7 @@
 		D451ED10264F8BAD00A17A67 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D451ED0E264F8BAD00A17A67 /* EventTableViewCell.xib */; };
 		D451ED12264F8C3A00A17A67 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D451ED11264F8C3A00A17A67 /* Event.swift */; };
 		D468439C269D72610026E468 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D468439B269D72610026E468 /* GoogleService-Info.plist */; };
+		D468439E269D757A0026E468 /* eventJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D468439D269D757A0026E468 /* eventJSON.json */; };
 		D47B710A263A752200B0B660 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B7109263A752200B0B660 /* SignUpViewController.swift */; };
 		D49A798B268995BE009F62BD /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A798A268995BE009F62BD /* TabViewController.swift */; };
 		D49A798D268995FF009F62BD /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A798C268995FF009F62BD /* K.swift */; };
@@ -47,6 +48,7 @@
 		D451ED0E264F8BAD00A17A67 /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		D451ED11264F8C3A00A17A67 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D468439B269D72610026E468 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../iOS/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D468439D269D757A0026E468 /* eventJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = eventJSON.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		D47B7109263A752200B0B660 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D49A798A268995BE009F62BD /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		D49A798C268995FF009F62BD /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 		D4E801BD2624876D001C3CB0 /* Bernina Sew */ = {
 			isa = PBXGroup;
 			children = (
+				D468439D269D757A0026E468 /* eventJSON.json */,
 				D4D13BA8269D3A8B00BA2181 /* InputJSON.json */,
 				D4D13BA7269D376C00BA2181 /* Resources */,
 				D4C92C69266694B800E3AE2D /* Login */,
@@ -332,6 +335,7 @@
 			files = (
 				D451ED10264F8BAD00A17A67 /* EventTableViewCell.xib in Resources */,
 				D4E801CB2624876E001C3CB0 /* LaunchScreen.storyboard in Resources */,
+				D468439E269D757A0026E468 /* eventJSON.json in Resources */,
 				D4D13BA9269D3A8B00BA2181 /* InputJSON.json in Resources */,
 				D4E801C82624876E001C3CB0 /* Assets.xcassets in Resources */,
 				D4E801C62624876D001C3CB0 /* Main.storyboard in Resources */,

@@ -14,4 +14,7 @@ struct K {
     static let green = #colorLiteral(red: 0.4, green: 0.8705882353, blue: 0.5764705882, alpha: 1)
     static let orange = #colorLiteral(red: 1, green: 0.7568627451, blue: 0.02745098039, alpha: 1)
     static let pink = #colorLiteral(red: 0.9137254902, green: 0.5215686275, blue: 0.5019607843, alpha: 1)
+    
+    static let screenWidth = UIScreen.main.bounds.width
+    static let screenHeight = UIScreen.main.bounds.height
 }
