@@ -33,8 +33,11 @@ class HomeViewController: UIViewController {
 
     var eventList: [Event] = []
     var productList: [Product] = []
+    var patternsList: [Pattern] = []
 
     let loadingView = NVActivityIndicatorView(frame: CGRect(x: K.screenWidth / 2 - 50, y: K.screenHeight / 4, width: 100, height: 50), type: .lineScale, color: K.brandRed, padding: 1.0)
+    
+    let loadingView2 = NVActivityIndicatorView(frame: CGRect(x: K.screenWidth / 2 - 50, y: K.screenHeight / 3, width: 100, height: 50), type: .lineScale, color: K.brandRed, padding: 1.0)
 
     @objc func dismissKeyboard() {
         searchTextField.endEditing(true)
@@ -50,8 +53,8 @@ class HomeViewController: UIViewController {
         searchTextField.delegate = self
         
         searchTextField.placeholder = "Search for products..."
-        
         searchButton.layer.cornerRadius = 8
+        eventsTableView.rowHeight = 58
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
@@ -60,6 +63,8 @@ class HomeViewController: UIViewController {
         self.title = "Home"
         
         view.addSubview(loadingView)
+        view.addSubview(loadingView2)
+        
         featuredButton.layer.cornerRadius = 10
         patternsButton.layer.cornerRadius = 10
         eventsButton.layer.cornerRadius = 10
@@ -68,47 +73,25 @@ class HomeViewController: UIViewController {
         self.tabBarController?.tabBar.items![0].selectedImage = imageIcon
         eventsTableView.register(UINib(nibName: "EventTableViewCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         
-        productList = loadProductList(filename: "InputJSON")!.FeaturedProducts
+        productList = Tools.loadProductList(filename: "InputJSON")!.FeaturedProducts
         
         loadingView.startAnimating()
         featuredProduct1.sd_setImage(with: URL(string: productList[0].Image), completed: nil)
         featuredProduct2.sd_setImage(with: URL(string: productList[1].Image), completed: nil)
         featuredProduct3.sd_setImage(with: URL(string: productList[2].Image), completed: nil)
+        
         loadingView.stopAnimating()
 
-        eventList = loadEventList(filename: "eventJSON")!.Events
+        eventList = Tools.loadEventList(filename: "eventJSON")!.Events
         
-        
+        patternsList = Tools.loadPatternList(filename: "patternJSON")!.Patterns
+        pattern1.sd_setImage(with: URL(string: patternsList[0].Image), completed: nil)
+        pattern2.sd_setImage(with: URL(string: patternsList[1].Image), completed: nil)
+        pattern3.sd_setImage(with: URL(string: patternsList[2].Image), completed: nil)
         
     }
     
-    func loadProductList(filename fileName: String) -> ProductList? {
-        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let jsonData = try decoder.decode(ProductList.self, from: data)
-                return jsonData
-            } catch {
-                print("error:\(error)")
-            }
-        }
-        return nil
-    }
-    
-    func loadEventList(filename fileName: String) -> EventList? {
-        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let jsonData = try decoder.decode(EventList.self, from: data)
-                return jsonData
-            } catch {
-                print("error:\(error)")
-            }
-        }
-        return nil
-    }
+   
 }
 
 

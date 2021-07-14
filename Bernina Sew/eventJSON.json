@@ -22,6 +22,12 @@
             "Name": "L2 Workshop",
             "Level": "Intermediate",
             "Date": "03-08-2021"
+        },
+        
+        {
+            "Name": "L0 Workshop",
+            "Level": "0 exp",
+            "Date": "10-08-2021"
         }
     
     ]

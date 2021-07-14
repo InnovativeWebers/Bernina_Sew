@@ -1,0 +1,22 @@
+
+
+{
+    "Patterns":[
+        {
+            "ID": 1001,
+            "Name": "Lion",
+            "Image":"https://img.icons8.com/officel/80/000000/lion.png"
+        },
+
+        {
+            "ID": 1002,
+            "Name": "Tree",
+            "Image": "https://img.icons8.com/doodle/96/000000/large-tree.png"
+        },
+        {
+            "ID": 1003,
+            "Name": "Cat",
+            "Image": "https://img.icons8.com/plasticine/100/000000/black-cat.png"
+        }
+    ]
+}

@@ -19,6 +19,8 @@
 		D451ED12264F8C3A00A17A67 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D451ED11264F8C3A00A17A67 /* Event.swift */; };
 		D468439C269D72610026E468 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D468439B269D72610026E468 /* GoogleService-Info.plist */; };
 		D468439E269D757A0026E468 /* eventJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D468439D269D757A0026E468 /* eventJSON.json */; };
+		D46843A0269D90750026E468 /* patternJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D468439F269D90750026E468 /* patternJSON.json */; };
+		D46843A2269D92BB0026E468 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46843A1269D92BB0026E468 /* Pattern.swift */; };
 		D47B710A263A752200B0B660 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B7109263A752200B0B660 /* SignUpViewController.swift */; };
 		D49A798B268995BE009F62BD /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A798A268995BE009F62BD /* TabViewController.swift */; };
 		D49A798D268995FF009F62BD /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A798C268995FF009F62BD /* K.swift */; };
@@ -49,6 +51,8 @@
 		D451ED11264F8C3A00A17A67 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D468439B269D72610026E468 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../iOS/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D468439D269D757A0026E468 /* eventJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = eventJSON.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		D468439F269D90750026E468 /* patternJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = patternJSON.json; sourceTree = "<group>"; };
+		D46843A1269D92BB0026E468 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
 		D47B7109263A752200B0B660 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D49A798A268995BE009F62BD /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		D49A798C268995FF009F62BD /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				D451ED11264F8C3A00A17A67 /* Event.swift */,
 				D49A79942689B024009F62BD /* Product.swift */,
 				D49A79962689B035009F62BD /* ProductList.swift */,
+				D46843A1269D92BB0026E468 /* Pattern.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 			children = (
 				D468439D269D757A0026E468 /* eventJSON.json */,
 				D4D13BA8269D3A8B00BA2181 /* InputJSON.json */,
+				D468439F269D90750026E468 /* patternJSON.json */,
 				D4D13BA7269D376C00BA2181 /* Resources */,
 				D4C92C69266694B800E3AE2D /* Login */,
 				D4C92C652666948C00E3AE2D /* Design */,
@@ -333,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46843A0269D90750026E468 /* patternJSON.json in Resources */,
 				D451ED10264F8BAD00A17A67 /* EventTableViewCell.xib in Resources */,
 				D4E801CB2624876E001C3CB0 /* LaunchScreen.storyboard in Resources */,
 				D468439E269D757A0026E468 /* eventJSON.json in Resources */,
@@ -404,6 +411,7 @@
 				D43C3BF52635C86B00E53768 /* ShopViewController.swift in Sources */,
 				D43C3BF22635C35200E53768 /* LoginViewController.swift in Sources */,
 				D49A79952689B024009F62BD /* Product.swift in Sources */,
+				D46843A2269D92BB0026E468 /* Pattern.swift in Sources */,
 				D4E801C12624876D001C3CB0 /* SceneDelegate.swift in Sources */,
 				D451ECFA264CDA6C00A17A67 /* ProfileViewController.swift in Sources */,
 				D47B710A263A752200B0B660 /* SignUpViewController.swift in Sources */,

@@ -17,6 +17,48 @@ struct Tools {
         btn.titleLabel?.font = .systemFont(ofSize: CGFloat(fontSize), weight: .bold)
         return btn
     }
+    
+    public static func loadProductList(filename fileName: String) -> ProductList? {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(ProductList.self, from: data)
+                return jsonData
+            } catch {
+                print("error:\(error)")
+            }
+        }
+        return nil
+    }
+    
+    public static func loadEventList(filename fileName: String) -> EventList? {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(EventList.self, from: data)
+                return jsonData
+            } catch {
+                print("error:\(error)")
+            }
+        }
+        return nil
+    }
+    
+    public static func loadPatternList(filename fileName: String) -> PatternList? {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(PatternList.self, from: data)
+                return jsonData
+            } catch {
+                print("error:\(error)")
+            }
+        }
+        return nil
+    }
 }
 
 
