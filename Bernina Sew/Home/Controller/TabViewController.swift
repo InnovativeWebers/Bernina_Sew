@@ -19,26 +19,12 @@ class TabViewController: UITabBarController {
         tab.items![3].image = UIImage(systemName: "cart", withConfiguration: K.symbolConfig)? .withTintColor(.black, renderingMode: .alwaysOriginal)
         tab.items![4].image = UIImage(systemName: "face.smiling", withConfiguration: K.symbolConfig)? .withTintColor(.black, renderingMode: .alwaysOriginal)
         
-        
-        
         let unselectedColor = UIColor.black
         let selectedColor = K.brandRed
         
-        
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: unselectedColor], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: selectedColor], for: .selected)
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

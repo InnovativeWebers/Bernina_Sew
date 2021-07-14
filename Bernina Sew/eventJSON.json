@@ -2,13 +2,13 @@
     "Events": [
         {
             "Name": "L1 Workshop",
-            "Level": "Beginner",
+            "Level": "Easy",
             "Date": "22-07-2021"
         },
         
         {
             "Name": "L2 Workshop",
-            "Level": "Intermediate",
+            "Level": "Medium",
             "Date": "29-07-2021"
         },
         
@@ -20,13 +20,13 @@
         
         {
             "Name": "L2 Workshop",
-            "Level": "Intermediate",
+            "Level": "Medium",
             "Date": "03-08-2021"
         },
         
         {
-            "Name": "L0 Workshop",
-            "Level": "0 exp",
+            "Name": "L1 Workshop",
+            "Level": "Easy",
             "Date": "10-08-2021"
         }
     

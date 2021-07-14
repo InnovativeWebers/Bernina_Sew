@@ -26,6 +26,8 @@
 		D46843AC269EAA880026E468 /* ChangePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46843AB269EAA880026E468 /* ChangePhotoViewController.swift */; };
 		D46843AE269EADB60026E468 /* ChangeUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46843AD269EADB60026E468 /* ChangeUsernameViewController.swift */; };
 		D46843B0269EC5800026E468 /* CBToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46843AF269EC5800026E468 /* CBToast.swift */; };
+		D46843B3269ED3670026E468 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46843B2269ED3670026E468 /* EventListViewController.swift */; };
+		D46843B6269EEB8B0026E468 /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46843B5269EEB8B0026E468 /* EventListCell.swift */; };
 		D47B710A263A752200B0B660 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B7109263A752200B0B660 /* SignUpViewController.swift */; };
 		D49A798B268995BE009F62BD /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A798A268995BE009F62BD /* TabViewController.swift */; };
 		D49A798D268995FF009F62BD /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A798C268995FF009F62BD /* K.swift */; };
@@ -63,6 +65,9 @@
 		D46843AB269EAA880026E468 /* ChangePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePhotoViewController.swift; sourceTree = "<group>"; };
 		D46843AD269EADB60026E468 /* ChangeUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameViewController.swift; sourceTree = "<group>"; };
 		D46843AF269EC5800026E468 /* CBToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBToast.swift; sourceTree = "<group>"; };
+		D46843B1269ED1410026E468 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../iOS/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D46843B2269ED3670026E468 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		D46843B5269EEB8B0026E468 /* EventListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
 		D47B7109263A752200B0B660 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D49A798A268995BE009F62BD /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		D49A798C268995FF009F62BD /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
@@ -104,6 +109,14 @@
 				E19F656D6F84E3B74881F654 /* Pods_Bernina_Sew.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D46843B4269EE9DC0026E468 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D46843B5269EEB8B0026E468 /* EventListCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D4C92C552666931F00E3AE2D /* Home */ = {
@@ -151,6 +164,7 @@
 		D4C92C592666936600E3AE2D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				D46843B4269EE9DC0026E468 /* View */,
 				D4C92C5A2666937900E3AE2D /* Controller */,
 			);
 			path = Profile;
@@ -163,6 +177,7 @@
 				D46843A9269E8D210026E468 /* AccountViewController.swift */,
 				D46843AD269EADB60026E468 /* ChangeUsernameViewController.swift */,
 				D46843AB269EAA880026E468 /* ChangePhotoViewController.swift */,
+				D46843B2269ED3670026E468 /* EventListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -266,6 +281,7 @@
 		D4E801BD2624876D001C3CB0 /* Bernina Sew */ = {
 			isa = PBXGroup;
 			children = (
+				D46843B1269ED1410026E468 /* GoogleService-Info.plist */,
 				D468439D269D757A0026E468 /* eventJSON.json */,
 				D4D13BA8269D3A8B00BA2181 /* InputJSON.json */,
 				D468439F269D90750026E468 /* patternJSON.json */,
@@ -414,10 +430,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46843B6269EEB8B0026E468 /* EventListCell.swift in Sources */,
 				D4E801C32624876D001C3CB0 /* HomeViewController.swift in Sources */,
 				D49A798D268995FF009F62BD /* K.swift in Sources */,
 				D451ED0F264F8BAD00A17A67 /* EventTableViewCell.swift in Sources */,
 				D4E801BF2624876D001C3CB0 /* AppDelegate.swift in Sources */,
+				D46843B3269ED3670026E468 /* EventListViewController.swift in Sources */,
 				D43C3BF82635C88500E53768 /* ClubViewController.swift in Sources */,
 				D49A798B268995BE009F62BD /* TabViewController.swift in Sources */,
 				D46843B0269EC5800026E468 /* CBToast.swift in Sources */,

@@ -64,17 +64,16 @@ struct Tools {
     public static func setHeight( _ sender: UIView, _ height: Int){
         sender.heightAnchor.constraint(equalToConstant: CGFloat(height)).isActive = true
     }
+    
+    public static func setUpTableView() -> UITableView {
+        let tv = UITableView()
+        tv.translatesAutoresizingMaskIntoConstraints = false
+        tv.separatorStyle = .none
+        
+        return tv
+    }
    
 }
-
-
-
-
-
-
-
-
-
 
 
 public extension UIView {
@@ -106,8 +105,6 @@ public extension UIView {
     }
 
 }
-
-
 
 extension UITextField {
     func setLeftPaddingPoints(_ amount:CGFloat){
