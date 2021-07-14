@@ -220,13 +220,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Wick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1U-hS-AX8">
-                                <rect key="frame" x="113" y="116" width="127.33333333333331" height="22"/>
+                                <rect key="frame" x="116" y="116" width="127.33333333333331" height="22"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="johnwick@bernina.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5e-cp-JgT">
-                                <rect key="frame" x="113" y="157" width="226" height="37"/>
+                                <rect key="frame" x="116" y="157" width="223" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="6vd-oA-Ktl"/>
                                 </constraints>
@@ -242,7 +242,7 @@
                             <constraint firstItem="m1U-hS-AX8" firstAttribute="top" secondItem="E8b-mV-GUI" secondAttribute="top" constant="28" id="9wW-Dc-95y"/>
                             <constraint firstItem="E8b-mV-GUI" firstAttribute="trailing" secondItem="rTQ-D7-AJ1" secondAttribute="trailing" constant="20" id="CWi-dF-64T"/>
                             <constraint firstItem="rTQ-D7-AJ1" firstAttribute="top" secondItem="VLq-99-h3h" secondAttribute="bottom" constant="40" id="EQj-zC-dLF"/>
-                            <constraint firstItem="m1U-hS-AX8" firstAttribute="leading" secondItem="VLq-99-h3h" secondAttribute="trailing" constant="7" id="FlD-Tg-icI"/>
+                            <constraint firstItem="m1U-hS-AX8" firstAttribute="leading" secondItem="VLq-99-h3h" secondAttribute="trailing" constant="10" id="FlD-Tg-icI"/>
                             <constraint firstItem="rTQ-D7-AJ1" firstAttribute="leading" secondItem="E8b-mV-GUI" secondAttribute="leading" constant="20" id="GCG-0L-2m5"/>
                             <constraint firstItem="w5e-cp-JgT" firstAttribute="leading" secondItem="m1U-hS-AX8" secondAttribute="leading" id="GDF-Di-svs"/>
                             <constraint firstItem="VLq-99-h3h" firstAttribute="leading" secondItem="E8b-mV-GUI" secondAttribute="leading" constant="16" id="JPo-3R-ajp"/>

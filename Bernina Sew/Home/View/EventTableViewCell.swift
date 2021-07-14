@@ -16,6 +16,7 @@ class EventTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         dateView.layer.cornerRadius = 10
+        dateView.backgroundColor = K.green
 
  
         // Initialization code

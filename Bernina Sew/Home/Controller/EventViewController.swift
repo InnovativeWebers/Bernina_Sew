@@ -97,7 +97,7 @@ class EventViewController: UIViewController {
         bookingButton.snp.makeConstraints {(make) -> Void in
             make.left.equalTo(view).offset(10)
             make.right.equalTo(view).offset(-10)
-            make.bottom.equalTo(view).offset(-16)
+            make.bottom.equalTo(view).offset(-40)
         }
         
         bookingButton.addTarget(self, action: #selector(bookingAction(sender:)), for: .touchUpInside)

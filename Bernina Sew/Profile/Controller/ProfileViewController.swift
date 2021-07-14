@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController {
     
     @IBAction func acountButtonPressed(_ sender: UIButton) {
         let vc = AccountViewController()
+        vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -48,6 +49,8 @@ class ProfileViewController: UIViewController {
         super.viewWillAppear(true)
         
         profileImage.contentMode = .scaleAspectFill
+        
+        profileImage.layer.cornerRadius = 12
         
         if user?.photoURL == nil {
             profileImage.sd_setImage(with: URL(string: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9j2d6fOEChhiGl2e67ck-R5X5jlAEfTkjHQ&usqp=CAU"), completed: nil)

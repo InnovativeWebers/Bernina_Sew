@@ -116,6 +116,7 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate{
         vc.eventName = eventList[indexPath.row].Name
         vc.eventDate = eventList[indexPath.row].Date
         vc.eventLevel = eventList[indexPath.row].Level
+        vc.hidesBottomBarWhenPushed = true
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
