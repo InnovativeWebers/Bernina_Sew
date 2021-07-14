@@ -184,7 +184,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="logoutPressed:" destination="IBx-df-4oQ" eventType="touchUpInside" id="wow-Fw-i1F"/>
+                                            <action selector="acountButtonPressed:" destination="IBx-df-4oQ" eventType="touchUpInside" id="Ug6-gF-oJG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4c9-Od-m3w">
@@ -194,7 +194,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="logoutPressed:" destination="IBx-df-4oQ" eventType="touchUpInside" id="yAS-Yb-ces"/>
+                                            <action selector="bookingsButtonPressed:" destination="IBx-df-4oQ" eventType="touchUpInside" id="qab-ow-eCg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhX-ut-8r9">
@@ -204,7 +204,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="logoutPressed:" destination="IBx-df-4oQ" eventType="touchUpInside" id="acv-3j-cQR"/>
+                                            <action selector="settingsButtonPressed:" destination="IBx-df-4oQ" eventType="touchUpInside" id="6EO-8H-lOM"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAy-Ax-QnI">
@@ -253,6 +253,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="4Qs-EH-ess"/>
                     <connections>
+                        <outlet property="AccountButton" destination="Dca-Ue-eR9" id="a4S-i1-Djb"/>
+                        <outlet property="bookingsButton" destination="4c9-Od-m3w" id="7oS-Jh-qzc"/>
+                        <outlet property="emailLabel" destination="w5e-cp-JgT" id="WoM-ER-6Tv"/>
+                        <outlet property="logoutButton" destination="fAy-Ax-QnI" id="Iar-IN-zmR"/>
+                        <outlet property="nameLabel" destination="m1U-hS-AX8" id="HDR-3t-QGh"/>
+                        <outlet property="profileImage" destination="VLq-99-h3h" id="vRU-Ai-cOx"/>
+                        <outlet property="settingsButton" destination="nhX-ut-8r9" id="hci-sE-NbZ"/>
                         <segue destination="FBm-Lj-Dsz" kind="presentation" identifier="profileToLogin" modalPresentationStyle="fullScreen" id="mzX-vF-xmp"/>
                     </connections>
                 </viewController>

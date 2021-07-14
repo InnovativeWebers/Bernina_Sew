@@ -21,6 +21,7 @@
 		D468439E269D757A0026E468 /* eventJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D468439D269D757A0026E468 /* eventJSON.json */; };
 		D46843A0269D90750026E468 /* patternJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D468439F269D90750026E468 /* patternJSON.json */; };
 		D46843A2269D92BB0026E468 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46843A1269D92BB0026E468 /* Pattern.swift */; };
+		D46843A8269E83CE0026E468 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46843A7269E83CE0026E468 /* ImagePicker.swift */; };
 		D47B710A263A752200B0B660 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B7109263A752200B0B660 /* SignUpViewController.swift */; };
 		D49A798B268995BE009F62BD /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A798A268995BE009F62BD /* TabViewController.swift */; };
 		D49A798D268995FF009F62BD /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A798C268995FF009F62BD /* K.swift */; };
@@ -53,6 +54,7 @@
 		D468439D269D757A0026E468 /* eventJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = eventJSON.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		D468439F269D90750026E468 /* patternJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = patternJSON.json; sourceTree = "<group>"; };
 		D46843A1269D92BB0026E468 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
+		D46843A7269E83CE0026E468 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		D47B7109263A752200B0B660 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D49A798A268995BE009F62BD /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		D49A798C268995FF009F62BD /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			children = (
 				D49A798C268995FF009F62BD /* K.swift */,
 				D4D13BAA269D5F1300BA2181 /* Tools.swift */,
+				D46843A7269E83CE0026E468 /* ImagePicker.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				D43C3BF82635C88500E53768 /* ClubViewController.swift in Sources */,
 				D49A798B268995BE009F62BD /* TabViewController.swift in Sources */,
 				D49A79912689AA96009F62BD /* ProductInfoViewController.swift in Sources */,
+				D46843A8269E83CE0026E468 /* ImagePicker.swift in Sources */,
 				D451ED12264F8C3A00A17A67 /* Event.swift in Sources */,
 				D49A798F2689AA7C009F62BD /* ProductListViewController.swift in Sources */,
 				D43C3BF52635C86B00E53768 /* ShopViewController.swift in Sources */,
