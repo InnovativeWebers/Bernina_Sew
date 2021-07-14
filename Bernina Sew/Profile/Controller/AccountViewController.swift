@@ -14,6 +14,8 @@ class AccountViewController: UIViewController {
     
     @objc func changeUserNameAction(sender: UIButton){
         sender.showAnimation {
+            let vc = ChangeUserNameViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
             
         }
     }

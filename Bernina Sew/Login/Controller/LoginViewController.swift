@@ -70,7 +70,6 @@ class LoginViewController: UIViewController {
                 // handle user inputs when there is an error
                 if error != nil{
                     if let errCode = AuthErrorCode(rawValue: error!._code){
-                        print(errCode.rawValue)
                         switch errCode.rawValue{
                         case 17008:
                             self.showAlert(UIButton.self, "Invalid email format")

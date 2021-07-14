@@ -9,6 +9,7 @@ target 'Bernina Sew' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
   pod 'SnapKit', '~> 4.0'
   pod 'SCLAlertView'
   pod 'NVActivityIndicatorView'

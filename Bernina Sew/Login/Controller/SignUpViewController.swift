@@ -101,13 +101,9 @@ class SignUpViewController: UIViewController {
                     }else{
                         
                         self.performSegue(withIdentifier: "SignupToLogin", sender: self)
-                    }
-                
-                        
+                    }    
                 }
             }
+        }
     }
-    
-
-}
 }

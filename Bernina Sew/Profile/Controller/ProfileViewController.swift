@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 
 class ProfileViewController: UIViewController {
     
@@ -41,13 +42,28 @@ class ProfileViewController: UIViewController {
     }
     
     let user = Auth.auth().currentUser
+    let storage = Storage.storage()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        profileImage.contentMode = .scaleAspectFill
         
         if user?.photoURL == nil {
             profileImage.sd_setImage(with: URL(string: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9j2d6fOEChhiGl2e67ck-R5X5jlAEfTkjHQ&usqp=CAU"), completed: nil)
+
+        }else{
+            let storageRef = storage.reference()
+            let islandRef = storageRef.child("profileImages/profile.jpg")
+            // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+            islandRef.getData(maxSize: 1 * 1024 * 1024) { [self] data, error in
+              if let error = error {
+                // Uh-oh, an error occurred!
+              } else {
+                // Data for "images/island.jpg" is returned
+                profileImage.image = UIImage(data: data!)
+              }
+            }
         }
   
         self.navigationController?.navigationBar.isTranslucent = false
@@ -57,7 +73,12 @@ class ProfileViewController: UIViewController {
         let imageIcon = UIImage(systemName: "face.smiling.fill", withConfiguration: K.symbolConfig)?.withTintColor(K.brandRed, renderingMode: .alwaysOriginal)
         self.tabBarController?.tabBar.items![4].selectedImage = imageIcon
         
-        nameLabel.text = "Bernina-User-\(user?.uid.prefix(5) ?? "0001")"
+        if user?.displayName == nil {
+            nameLabel.text = "Bernina-User-\(user?.uid.prefix(5) ?? "0001")"
+        }else{
+            nameLabel.text = user?.displayName
+        }
+
         emailLabel.text = user?.email
     }
     

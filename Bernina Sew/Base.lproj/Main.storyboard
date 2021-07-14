@@ -167,7 +167,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle-cropped" translatesAutoresizingMaskIntoConstraints="NO" id="VLq-99-h3h">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1_mbcSMZM8mcUPpqfC_K6nnQ" translatesAutoresizingMaskIntoConstraints="NO" id="VLq-99-h3h">
                                 <rect key="frame" x="16" y="104" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="J2e-iR-eJ8"/>
@@ -719,7 +719,6 @@
         <image name="1_mbcSMZM8mcUPpqfC_K6nnQ" width="85.333335876464844" height="85.333335876464844"/>
         <image name="BerninaLogo-small" width="341.33334350585938" height="170.66667175292969"/>
         <image name="cart" catalog="system" width="128" height="102"/>
-        <image name="circle-cropped" width="219" height="219"/>
         <image name="face.smiling" catalog="system" width="128" height="121"/>
         <image name="giraffe" width="512" height="512"/>
         <image name="house" catalog="system" width="128" height="106"/>
