@@ -59,6 +59,11 @@ struct Tools {
         }
         return nil
     }
+    
+    
+    public static func setHeight( _ sender: UIView, _ height: Int){
+        sender.heightAnchor.constraint(equalToConstant: CGFloat(height)).isActive = true
+    }
 }
 
 

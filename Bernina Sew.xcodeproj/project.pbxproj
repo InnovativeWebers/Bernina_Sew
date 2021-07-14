@@ -22,6 +22,8 @@
 		D46843A0269D90750026E468 /* patternJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D468439F269D90750026E468 /* patternJSON.json */; };
 		D46843A2269D92BB0026E468 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46843A1269D92BB0026E468 /* Pattern.swift */; };
 		D46843A8269E83CE0026E468 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46843A7269E83CE0026E468 /* ImagePicker.swift */; };
+		D46843AA269E8D210026E468 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46843A9269E8D210026E468 /* AccountViewController.swift */; };
+		D46843AC269EAA880026E468 /* ChangePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46843AB269EAA880026E468 /* ChangePhotoViewController.swift */; };
 		D47B710A263A752200B0B660 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B7109263A752200B0B660 /* SignUpViewController.swift */; };
 		D49A798B268995BE009F62BD /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A798A268995BE009F62BD /* TabViewController.swift */; };
 		D49A798D268995FF009F62BD /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A798C268995FF009F62BD /* K.swift */; };
@@ -55,6 +57,8 @@
 		D468439F269D90750026E468 /* patternJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = patternJSON.json; sourceTree = "<group>"; };
 		D46843A1269D92BB0026E468 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
 		D46843A7269E83CE0026E468 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		D46843A9269E8D210026E468 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		D46843AB269EAA880026E468 /* ChangePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePhotoViewController.swift; sourceTree = "<group>"; };
 		D47B7109263A752200B0B660 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D49A798A268995BE009F62BD /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		D49A798C268995FF009F62BD /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				D451ECF9264CDA6C00A17A67 /* ProfileViewController.swift */,
+				D46843A9269E8D210026E468 /* AccountViewController.swift */,
+				D46843AB269EAA880026E468 /* ChangePhotoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				D49A79912689AA96009F62BD /* ProductInfoViewController.swift in Sources */,
 				D46843A8269E83CE0026E468 /* ImagePicker.swift in Sources */,
 				D451ED12264F8C3A00A17A67 /* Event.swift in Sources */,
+				D46843AC269EAA880026E468 /* ChangePhotoViewController.swift in Sources */,
 				D49A798F2689AA7C009F62BD /* ProductListViewController.swift in Sources */,
 				D43C3BF52635C86B00E53768 /* ShopViewController.swift in Sources */,
 				D43C3BF22635C35200E53768 /* LoginViewController.swift in Sources */,
@@ -418,6 +425,7 @@
 				D46843A2269D92BB0026E468 /* Pattern.swift in Sources */,
 				D4E801C12624876D001C3CB0 /* SceneDelegate.swift in Sources */,
 				D451ECFA264CDA6C00A17A67 /* ProfileViewController.swift in Sources */,
+				D46843AA269E8D210026E468 /* AccountViewController.swift in Sources */,
 				D47B710A263A752200B0B660 /* SignUpViewController.swift in Sources */,
 				D43C3BFE2635C89C00E53768 /* DesignViewController.swift in Sources */,
 				D43C3BFB2635C89100E53768 /* BlogViewController.swift in Sources */,

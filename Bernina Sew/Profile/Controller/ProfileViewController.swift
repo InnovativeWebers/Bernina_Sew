@@ -19,6 +19,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var logoutButton: UIButton!
     
     @IBAction func acountButtonPressed(_ sender: UIButton) {
+        let vc = AccountViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func bookingsButtonPressed(_ sender: Any) {
@@ -42,6 +44,12 @@ class ProfileViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        
+        if user?.photoURL == nil {
+            profileImage.sd_setImage(with: URL(string: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9j2d6fOEChhiGl2e67ck-R5X5jlAEfTkjHQ&usqp=CAU"), completed: nil)
+        }
+  
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.title = "Profile"
@@ -50,10 +58,7 @@ class ProfileViewController: UIViewController {
         self.tabBarController?.tabBar.items![4].selectedImage = imageIcon
         
         nameLabel.text = "Bernina-User-\(user?.uid.prefix(5) ?? "0001")"
-        
         emailLabel.text = user?.email
-        
-        
     }
     
 
