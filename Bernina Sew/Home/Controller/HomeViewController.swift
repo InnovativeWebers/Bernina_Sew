@@ -38,6 +38,19 @@ class HomeViewController: UIViewController {
     let loadingView = NVActivityIndicatorView(frame: CGRect(x: K.screenWidth / 2 - 50, y: K.screenHeight / 4, width: 100, height: 50), type: .lineScale, color: K.brandRed, padding: 1.0)
     
     let loadingView2 = NVActivityIndicatorView(frame: CGRect(x: K.screenWidth / 2 - 50, y: K.screenHeight / 3, width: 100, height: 50), type: .lineScale, color: K.brandRed, padding: 1.0)
+    
+    @IBAction func featuredButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func patternsButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func eventsButtonPressed(_ sender: UIButton) {
+        let vc = EventListViewController()
+        vc.eventList = eventList
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
     @objc func dismissKeyboard() {
         searchTextField.endEditing(true)
@@ -61,6 +74,10 @@ class HomeViewController: UIViewController {
         view.addGestureRecognizer(tap)
 
         self.title = "Home"
+        
+        if let index = self.eventsTableView.indexPathForSelectedRow{
+            self.eventsTableView.deselectRow(at: index, animated: true)
+        }
         
         view.addSubview(loadingView)
         view.addSubview(loadingView2)
@@ -107,7 +124,8 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate{
         cell.eventsLabel.text = eventList[indexPath.row].Name
         cell.levelLabel.text = eventList[indexPath.row].Level
         cell.dateLabel.text = eventList[indexPath.row].Date
-        
+
+
         return cell
     }
     

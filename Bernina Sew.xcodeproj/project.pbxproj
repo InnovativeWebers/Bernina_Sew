@@ -114,7 +114,6 @@
 		D46843B4269EE9DC0026E468 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D46843B5269EEB8B0026E468 /* EventListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,6 +142,7 @@
 		D4C92C572666932D00E3AE2D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D46843B5269EEB8B0026E468 /* EventListCell.swift */,
 				D451ED0D264F8BAD00A17A67 /* EventTableViewCell.swift */,
 				D451ED0E264F8BAD00A17A67 /* EventTableViewCell.xib */,
 			);
@@ -157,6 +157,7 @@
 				D49A798E2689AA7C009F62BD /* ProductListViewController.swift */,
 				D49A79902689AA96009F62BD /* ProductInfoViewController.swift */,
 				D49A79922689AE47009F62BD /* EventViewController.swift */,
+				D46843B2269ED3670026E468 /* EventListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,7 +178,6 @@
 				D46843A9269E8D210026E468 /* AccountViewController.swift */,
 				D46843AD269EADB60026E468 /* ChangeUsernameViewController.swift */,
 				D46843AB269EAA880026E468 /* ChangePhotoViewController.swift */,
-				D46843B2269ED3670026E468 /* EventListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

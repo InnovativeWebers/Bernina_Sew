@@ -19,9 +19,16 @@ class EventListCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
          super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        Tools.setHeight(levelLabel, 60)
+
         
         contentView.addSubview(levelLabel)
+        
+        levelLabel.snp.makeConstraints {(make) -> Void in
+            make.top.equalTo(contentView).offset(10)
+            make.bottom.equalTo(contentView).offset(-10)
+            make.left.equalTo(contentView).offset(10)
+            make.right.equalTo(contentView).offset(-100)
+        }
         
         
     }
