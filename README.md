@@ -1,6 +1,4 @@
-# Bernina_Sew
-
-# IFB398_Project
+# Bernina Sew
 
 ## Client 
 - Tracy Price
