@@ -10,7 +10,7 @@
 - Yana Li - Designer
 
 ## App Name
-Sew Sista
+Bernina Sew
 
 ## App Functions
 - Shopping cart
