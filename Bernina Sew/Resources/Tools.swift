@@ -72,6 +72,27 @@ struct Tools {
         
         return tv
     }
+    
+    public static func setUpHeadingLabel(_ text: String) -> UILabel {
+        let lbl = UILabel()
+        lbl.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+        lbl.text = text
+        return lbl
+    }
+    
+    public static func setUpCollectionView(_ lineSpacing: Int, _ interItemSpacing: Int) -> UICollectionView {
+
+        let layout = UICollectionViewFlowLayout()
+           layout.scrollDirection = .horizontal
+           layout.minimumLineSpacing = CGFloat(lineSpacing)
+           layout.minimumInteritemSpacing = CGFloat(interItemSpacing)
+           let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+           cv.translatesAutoresizingMaskIntoConstraints = false
+           cv.widthAnchor.constraint(equalToConstant: K.screenWidth - 32).isActive = true
+           cv.backgroundColor = .white
+           cv.showsHorizontalScrollIndicator = false
+           return cv
+    }
    
 }
 
@@ -136,3 +157,4 @@ extension UIImage {
         return jpegData(compressionQuality: jpegQuality.rawValue)
     }
 }
+

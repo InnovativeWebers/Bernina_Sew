@@ -21,13 +21,15 @@ class EventListViewController: UIViewController {
         eventTableView.dataSource = self
         view.backgroundColor = .white
         
+        eventTableView.rowHeight = 70
+        
         eventTableView.register(EventListCell.self, forCellReuseIdentifier: "EventListCell")
 
         view.addSubview(eventTableView)
         eventTableView.snp.makeConstraints {(make) -> Void in
             make.top.equalTo(view).offset(10)
-            make.left.equalTo(view).offset(0)
-            make.right.equalTo(view).offset(0)
+            make.left.equalTo(view).offset(10)
+            make.right.equalTo(view).offset(-10)
             make.bottom.equalTo(view).offset(0)
         }
     }
@@ -41,6 +43,9 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventListCell", for: indexPath) as! EventListCell
         cell.levelLabel.text = eventList![indexPath.row].Level
+        cell.dateLabel.text = eventList![indexPath.row].Date
+        cell.eventLabel.text = eventList![indexPath.row].Name
+        cell.selectionStyle = .none
         return cell
     }
     

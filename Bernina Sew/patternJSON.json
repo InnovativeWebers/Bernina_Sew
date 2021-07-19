@@ -17,6 +17,18 @@
             "ID": 1003,
             "Name": "Cat",
             "Image": "https://img.icons8.com/plasticine/100/000000/black-cat.png"
+        },
+        
+        {
+            "ID": 1004,
+            "Name": "Monkey",
+            "Image": "https://image.flaticon.com/icons/png/128/616/616592.png"
+        },
+        
+        {
+            "ID": 1005,
+            "Name": "Kangaroo",
+            "Image": "https://image.flaticon.com/icons/png/128/3809/3809440.png"
         }
     ]
 }

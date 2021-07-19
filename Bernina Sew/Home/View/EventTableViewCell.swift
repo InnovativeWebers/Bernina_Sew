@@ -17,9 +17,21 @@ class EventTableViewCell: UITableViewCell {
         super.awakeFromNib()
         dateView.layer.cornerRadius = 10
         dateView.backgroundColor = K.green
+        
+        contentView.layer.cornerRadius = 10
+        contentView.layer.borderWidth = 2.0
+        contentView.layer.borderColor = K.brandGrey.cgColor
+        
 
  
         // Initialization code
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        //set the values for top,left,bottom,right margins
+        let margins = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+        contentView.frame = contentView.frame.inset(by: margins)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
