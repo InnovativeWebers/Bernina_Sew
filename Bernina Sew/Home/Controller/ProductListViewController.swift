@@ -9,9 +9,16 @@ import UIKit
 
 class ProductListViewController: UIViewController {
     
+    let productTableView = Tools.setUpTableView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isTranslucent = false
+        self.title = "Products"
+        
+        
         
     }
+    
+    
 }

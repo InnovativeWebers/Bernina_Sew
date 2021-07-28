@@ -310,7 +310,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         }else{
             return patternsList.count
         }
-
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
