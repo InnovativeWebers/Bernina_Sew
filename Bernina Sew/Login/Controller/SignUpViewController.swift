@@ -25,10 +25,16 @@ class SignUpViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        reEnterPasswordTextField.delegate = self
         
         emailTextField.layer.borderWidth = 1.0
         emailTextField.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -57,7 +63,11 @@ class SignUpViewController: UIViewController {
         
         
         registerButton.layer.cornerRadius = 10
-        registerButton.backgroundColor = #colorLiteral(red: 0.9137254902, green: 0.2705882353, blue: 0.3764705882, alpha: 1)
+        registerButton.backgroundColor = K.brandRed
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+                tap.cancelsTouchesInView = false
+                view.addGestureRecognizer(tap)
         
  
     }
@@ -99,11 +109,41 @@ class SignUpViewController: UIViewController {
                             }
 
                     }else{
-                        
                         self.performSegue(withIdentifier: "SignupToLogin", sender: self)
                     }    
                 }
             }
         }
     }
+}
+
+
+extension SignUpViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == emailTextField {
+            emailTextField.layer.borderColor = K.brandRed.cgColor
+            emailTextField.layer.borderWidth = 2.5
+        }else if textField == passwordTextField{
+            passwordTextField.layer.borderColor = K.brandRed.cgColor
+            passwordTextField.layer.borderWidth = 2.5
+        }else{
+            reEnterPasswordTextField.layer.borderColor = K.brandRed.cgColor
+            reEnterPasswordTextField.layer.borderWidth = 2.5
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == emailTextField {
+            emailTextField.layer.borderColor = UIColor.black.cgColor
+            emailTextField.layer.borderWidth = 1.0
+        }else if textField == passwordTextField{
+            passwordTextField.layer.borderColor = UIColor.black.cgColor
+            passwordTextField.layer.borderWidth = 1.0
+        }else{
+            reEnterPasswordTextField.layer.borderColor = UIColor.black.cgColor
+            reEnterPasswordTextField.layer.borderWidth = 1.0
+        }
+    }
+    
+    
 }

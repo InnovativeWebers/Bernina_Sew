@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.borderStyle = .none
-        tf.layer.borderWidth = 2.0
+        tf.layer.borderWidth = 1.0
         tf.layer.cornerRadius = 10
         
         return tf
@@ -87,8 +87,11 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Home"
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.default
+        self.navigationController?.navigationBar.tintColor = K.brandRed
         eventsTableView.dataSource = self
         eventsTableView.delegate = self
         searchTextField.delegate = self
@@ -101,30 +104,31 @@ class HomeViewController: UIViewController {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
 
-        self.title = "Home"
+        
         
         if let index = self.eventsTableView.indexPathForSelectedRow{
             self.eventsTableView.deselectRow(at: index, animated: true)
         }
 
-        
-
+    
         
         let imageIcon = UIImage(systemName: "house.fill", withConfiguration: K.symbolConfig)?.withTintColor(K.brandRed, renderingMode: .alwaysOriginal)
         self.tabBarController?.tabBar.items![0].selectedImage = imageIcon
         eventsTableView.register(UINib(nibName: "EventTableViewCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         
+        
+        
+        // load json files here, I've created these files manually and stored them locally,
+        // normally these data should be fetched from an API
         productList = Tools.loadProductList(filename: "InputJSON")!.FeaturedProducts
         
         eventList = Tools.loadEventList(filename: "eventJSON")!.Events
         
         patternsList = Tools.loadPatternList(filename: "patternJSON")!.Patterns
         
+        
         let tableViewHeight = eventList.count * Int(eventsTableView.rowHeight)
-        
         Tools.setHeight(eventsTableView, tableViewHeight)
-        
-        
         
         searchButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
         featureButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
@@ -151,6 +155,8 @@ class HomeViewController: UIViewController {
         featuredCollectionView.register(CollectionCell.self, forCellWithReuseIdentifier: "CollectionCell")
         patternsCollectionView.register(CollectionCell.self, forCellWithReuseIdentifier: "CollectionCell")
         
+        
+        scrollView.showsVerticalScrollIndicator = false
         
         view.addSubview(scrollView)
         view.addSubview(searchTextField)
@@ -256,6 +262,8 @@ class HomeViewController: UIViewController {
 }
 
 
+
+
 extension HomeViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -287,8 +295,14 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate{
 }
 
 extension HomeViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        searchTextField.layer.borderWidth = 2.5
+        searchTextField.layer.borderColor = K.brandRed.cgColor
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
+        searchTextField.layer.borderColor = UIColor.black.cgColor
+        searchTextField.layer.borderWidth = 1.0
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

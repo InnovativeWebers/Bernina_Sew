@@ -10,14 +10,9 @@ import Firebase
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var avatarImage: UIImageView!
-
     @IBOutlet weak var emailTextField: UITextField!
-    
-
     @IBOutlet weak var passwordTextField: UITextField!
-
     @IBOutlet weak var loginButton: UIButton!
-    
     @IBAction func showAlert(_ sender: Any, _ title: String) {
         let alertController = UIAlertController(title: title, message:
             "Please try again!", preferredStyle: .alert)
@@ -26,17 +21,21 @@ class LoginViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+        
 
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         
         emailTextField.borderStyle = .none
         passwordTextField.borderStyle = .none
         loginButton.layer.cornerRadius = 10
-        loginButton.backgroundColor = #colorLiteral(red: 0, green: 0.7176470588, blue: 0.7607843137, alpha: 1)
+        loginButton.backgroundColor = K.brandRed
         
         emailTextField.layer.borderWidth = 1.0
         emailTextField.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -53,7 +52,9 @@ class LoginViewController: UIViewController {
         emailTextField.setLeftPaddingPoints(10)
         passwordTextField.setLeftPaddingPoints(10)
         
-
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+                tap.cancelsTouchesInView = false
+                view.addGestureRecognizer(tap)
         
     }
 
@@ -83,7 +84,7 @@ class LoginViewController: UIViewController {
                         }
                     }
                 }else{
-                    
+ 
                     // transit to home screen when there is no error
                     performSegue(withIdentifier: "LoginToHome", sender: self)
                     (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate )?.changeRootViewController( homeTabBarController)
@@ -93,16 +94,28 @@ class LoginViewController: UIViewController {
     }
 
 
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == emailTextField {
+            emailTextField.layer.borderColor = K.brandRed.cgColor
+            emailTextField.layer.borderWidth = 2.5
+        }else{
+            passwordTextField.layer.borderColor = K.brandRed.cgColor
+            passwordTextField.layer.borderWidth = 2.5
+        }
     }
-    */
-
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == emailTextField {
+            emailTextField.layer.borderColor = UIColor.black.cgColor
+            emailTextField.layer.borderWidth = 1.0
+        }else {
+            passwordTextField.layer.borderColor = UIColor.black.cgColor
+            passwordTextField.layer.borderWidth = 1.0
+        }
+    }
+    
+    
 }
