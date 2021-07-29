@@ -64,6 +64,10 @@ class HomeViewController: UIViewController {
     
     @objc func featuredPressed(sender: UIButton) {
         sender.showAnimation {
+            let vc = ProductListViewController()
+            vc.productList = self.productList
+            self.navigationController?.pushViewController(vc, animated: true)
+            
         }
     }
     
@@ -327,8 +331,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionCell
         
         if collectionView == featuredCollectionView {
@@ -336,8 +338,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         }else {
             cell.collectionImage.sd_setImage(with: URL(string: patternsList[indexPath.row].Image), completed: nil)
         }
-        
-
         return cell
     }
     
