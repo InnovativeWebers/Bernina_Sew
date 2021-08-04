@@ -105,7 +105,6 @@ class SignUpViewController: UIViewController {
                                 default:
                                     break
                                 }
-                                    
                             }
 
                     }else{
@@ -120,30 +119,12 @@ class SignUpViewController: UIViewController {
 
 extension SignUpViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == emailTextField {
-            emailTextField.layer.borderColor = K.brandRed.cgColor
-            emailTextField.layer.borderWidth = 2.5
-        }else if textField == passwordTextField{
-            passwordTextField.layer.borderColor = K.brandRed.cgColor
-            passwordTextField.layer.borderWidth = 2.5
-        }else{
-            reEnterPasswordTextField.layer.borderColor = K.brandRed.cgColor
-            reEnterPasswordTextField.layer.borderWidth = 2.5
-        }
+        textField.layer.borderColor = K.brandRed.cgColor
+        textField.layer.borderWidth = 2.5
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == emailTextField {
-            emailTextField.layer.borderColor = UIColor.black.cgColor
-            emailTextField.layer.borderWidth = 1.0
-        }else if textField == passwordTextField{
-            passwordTextField.layer.borderColor = UIColor.black.cgColor
-            passwordTextField.layer.borderWidth = 1.0
-        }else{
-            reEnterPasswordTextField.layer.borderColor = UIColor.black.cgColor
-            reEnterPasswordTextField.layer.borderWidth = 1.0
-        }
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.borderWidth = 1.0
     }
-    
-    
 }

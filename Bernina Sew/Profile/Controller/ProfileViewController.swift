@@ -52,19 +52,16 @@ class ProfileViewController: UIViewController {
         
         profileImage.layer.cornerRadius = 12
         
-        if user?.photoURL == nil {
-            profileImage.sd_setImage(with: URL(string: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9j2d6fOEChhiGl2e67ck-R5X5jlAEfTkjHQ&usqp=CAU"), completed: nil)
-
-        }else{
+        if user?.photoURL != nil {
             let storageRef = storage.reference()
-            let islandRef = storageRef.child("profileImages/profile.jpg")
+            let imageRef = storageRef.child("profileImages/profile.jpg")
             // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-            islandRef.getData(maxSize: 1 * 1024 * 1024) { [self] data, error in
-              if let error = error {
-                // Uh-oh, an error occurred!
+            imageRef.getData(maxSize: 1 * 1024 * 1024) { [self] data, error in
+                if error != nil {
+                    print(error!.localizedDescription)
               } else {
                 // Data for "images/island.jpg" is returned
-                profileImage.image = UIImage(data: data!)
+                    profileImage.image = UIImage(data: data!)
               }
             }
         }

@@ -18,6 +18,16 @@ class ProductListViewController: UIViewController {
         self.title = "Products"
         productTableView.delegate = self
         productTableView.register(ProductTableViewCell.self, forCellReuseIdentifier: "ProductCell")
+        
+        
+        view.addSubview(productTableView)
+        productTableView.snp.makeConstraints { make  in
+            make.top.equalTo(view)
+            make.left.equalTo(view)
+            make.right.equalTo(view)
+            make.bottom.equalTo(view)
+        }
+        
     }
 }
 

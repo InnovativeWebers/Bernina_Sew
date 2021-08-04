@@ -92,30 +92,16 @@ class LoginViewController: UIViewController {
             }
         }
     }
-
-
 }
 
 extension LoginViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == emailTextField {
-            emailTextField.layer.borderColor = K.brandRed.cgColor
-            emailTextField.layer.borderWidth = 2.5
-        }else{
-            passwordTextField.layer.borderColor = K.brandRed.cgColor
-            passwordTextField.layer.borderWidth = 2.5
-        }
+        textField.layer.borderColor = K.brandRed.cgColor
+        textField.layer.borderWidth = 2.5
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == emailTextField {
-            emailTextField.layer.borderColor = UIColor.black.cgColor
-            emailTextField.layer.borderWidth = 1.0
-        }else {
-            passwordTextField.layer.borderColor = UIColor.black.cgColor
-            passwordTextField.layer.borderWidth = 1.0
-        }
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.borderWidth = 1.0
     }
-    
-    
 }

@@ -42,11 +42,10 @@ class ChangePhotoViewController: UIViewController, ImagePickerDelegate {
         
         if user?.photoURL != nil {
             let storageRef = storage.reference()
-            let islandRef = storageRef.child("profileImages/profile.jpg")
+            let imageRef = storageRef.child("profileImages/profile.jpg")
             // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-            islandRef.getData(maxSize: 1 * 1024 * 1024) { [self] data, error in
+            imageRef.getData(maxSize: 1 * 1024 * 1024) { [self] data, error in
               if let error = error {
-                // Uh-oh, an error occurred!
                     print(error)
               } else {
                 // Data for "images/island.jpg" is returned

@@ -19,7 +19,7 @@ class ChangeUserNameViewController: UIViewController {
         return tf
     }()
     
-    let confirmButton = Tools.setUpButton("Confirm", K.green, 15)
+    let confirmButton = Tools.setUpButton("Confirm", K.brandRed, 15)
     
     @objc func confirmAction(sender: UIButton){
         sender.showAnimation {
@@ -28,7 +28,11 @@ class ChangeUserNameViewController: UIViewController {
     }
     
     let user = Auth.auth().currentUser
-
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -36,7 +40,7 @@ class ChangeUserNameViewController: UIViewController {
         
         usernameTextField.delegate = self
         
-        confirmButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        confirmButton.widthAnchor.constraint(equalToConstant: 80).isActive = true
         confirmButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
         
         confirmButton.addTarget(self, action: #selector(confirmAction(sender:)), for: .touchUpInside)
@@ -54,6 +58,11 @@ class ChangeUserNameViewController: UIViewController {
             make.top.equalTo(usernameTextField.snp_bottomMargin).offset(16)
             make.right.equalTo(view).offset(-16)
         }
+        
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+                tap.cancelsTouchesInView = false
+                view.addGestureRecognizer(tap)
         
     }
     
