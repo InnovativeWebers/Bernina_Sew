@@ -66,6 +66,7 @@ class HomeViewController: UIViewController {
         sender.showAnimation {
             let vc = ProductListViewController()
             vc.productList = self.productList
+            vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
             
         }
@@ -80,6 +81,7 @@ class HomeViewController: UIViewController {
         sender.showAnimation {
             let vc = EventListViewController()
             vc.eventList = self.eventList
+            vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
