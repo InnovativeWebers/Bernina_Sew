@@ -99,6 +99,30 @@ struct Tools {
         return view
     }
     
+    public static func setUpLoginAlert(_ vc: UIViewController) -> UIAlertController {
+        let alertController = UIAlertController(title: "You're not logged in!", message: "Please log in first!", preferredStyle: .alert)
+
+        // Create the actions
+        let okAction = UIAlertAction(title: "Login", style: UIAlertAction.Style.default) {
+            UIAlertAction in
+            vc.performSegue(withIdentifier: "profileToLogin", sender: vc)
+            
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) {
+                UIAlertAction in
+            print("Canelled")
+        }
+        
+
+        // Add the actions
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+
+            
+        return alertController
+
+    }
+    
     
     public static func setUpCollectionView(_ lineSpacing: Int, _ interItemSpacing: Int) -> UICollectionView {
 
@@ -114,10 +138,7 @@ struct Tools {
            return cv
     }
    
-    public static func presentLoginScreen(vc: UIViewController){
-        let vc = LoginViewController()
-        vc.present(vc, animated: true, completion: nil)
-    }
+
     
 }
 

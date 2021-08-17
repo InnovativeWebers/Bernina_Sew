@@ -72,7 +72,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="wMM-6D-S21" kind="presentation" modalPresentationStyle="fullScreen" id="MCP-aY-iPh"/>
+                                    <segue destination="wMM-6D-S21" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="MCP-aY-iPh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -561,7 +561,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="MCP-aY-iPh"/>
-        <segue reference="mzX-vF-xmp"/>
+        <segue reference="AYu-rX-oyE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BerninaLogo-small" width="341.33334350585938" height="170.66667175292969"/>

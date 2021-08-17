@@ -20,10 +20,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var logoutButton: UIButton!
     
     @IBAction func acountButtonPressed(_ sender: UIButton) {
-   
+        let alert = Tools.setUpLoginAlert(self)
         if Auth.auth().currentUser == nil {
-            CBToast.showToastAction(message: "Please log in first!")
-            performSegue(withIdentifier: "profileToLogin", sender: self)
+            self.present(alert, animated: true, completion: nil)
             
         }else {
             let vc = AccountViewController()
@@ -35,7 +34,6 @@ class ProfileViewController: UIViewController {
     
     @IBAction func bookingsButtonPressed(_ sender: Any) {
     }
-    
     @IBAction func settingsButtonPressed(_ sender: UIButton) {
     }
     
