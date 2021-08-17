@@ -11,16 +11,20 @@ import SDWebImage
 class ProductTableViewCell: UITableViewCell {
 
     let productImageView = Tools.setUpImageView()
-    
     let container = Tools.setUpContainerView()
-    
+    let productName = UILabel()
+    var productPrice = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
          super.init(style: style, reuseIdentifier: reuseIdentifier)
-
+        productName.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        productPrice.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        productPrice.textColor = K.brandRed
         
         contentView.addSubview(container)
         container.addSubview(productImageView)
+        container.addSubview(productName)
+        container.addSubview(productPrice)
         
         container.snp.makeConstraints { make  in
             make.top.equalTo(contentView).offset(8)
@@ -32,6 +36,16 @@ class ProductTableViewCell: UITableViewCell {
         productImageView.snp.makeConstraints { make  in
             make.top.equalTo(container).offset(15)
             make.left.equalTo(container).offset(15)
+        }
+        
+        productName.snp.makeConstraints { make  in
+            make.top.equalTo(container).offset(20)
+            make.left.equalTo(productImageView.snp_rightMargin).offset(20)
+        }
+        
+        productPrice.snp.makeConstraints { make  in
+            make.top.equalTo(productName.snp_bottomMargin).offset(20)
+            make.left.equalTo(productImageView.snp_rightMargin).offset(20)
         }
         
         
