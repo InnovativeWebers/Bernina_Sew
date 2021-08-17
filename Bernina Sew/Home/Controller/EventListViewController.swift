@@ -14,11 +14,11 @@ class EventListViewController: UIViewController {
     let eventTableView = Tools.setUpTableView()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         eventTableView.delegate = self
         eventTableView.dataSource = self
+        self.title = "Events"
         view.backgroundColor = .white
         
         eventTableView.rowHeight = 70

@@ -80,6 +80,26 @@ struct Tools {
         return lbl
     }
     
+    public static func setUpImageView() -> UIImageView {
+        let iv = UIImageView()
+        iv.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        iv.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        iv.layer.cornerRadius = 10
+        iv.clipsToBounds = true
+        iv.layer.borderWidth = 1.5
+        iv.layer.borderColor = UIColor.black.cgColor
+        return iv
+    }
+    
+    public static func setUpContainerView() -> UIView {
+        let view = UIView()
+        view.layer.cornerRadius = 10
+        view.addShadow()
+        view.backgroundColor = K.lightGray
+        return view
+    }
+    
+    
     public static func setUpCollectionView(_ lineSpacing: Int, _ interItemSpacing: Int) -> UICollectionView {
 
         let layout = UICollectionViewFlowLayout()
@@ -94,6 +114,11 @@ struct Tools {
            return cv
     }
    
+    public static func presentLoginScreen(vc: UIViewController){
+        let vc = LoginViewController()
+        vc.present(vc, animated: true, completion: nil)
+    }
+    
 }
 
 

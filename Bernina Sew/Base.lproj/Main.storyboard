@@ -67,6 +67,14 @@
                                     <constraint firstAttribute="height" constant="100" id="oXQ-f6-GdW"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bH-Ug-Grz">
+                                <rect key="frame" x="172" y="780" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="wMM-6D-S21" kind="presentation" modalPresentationStyle="fullScreen" id="MCP-aY-iPh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wEl-cA-JVl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -94,6 +102,7 @@
                     <connections>
                         <outlet property="avatarImage" destination="dq4-DS-mdu" id="q0J-3i-aKm"/>
                         <outlet property="emailTextField" destination="u15-PU-y4W" id="XUk-vt-5Br"/>
+                        <outlet property="guestLoginButton" destination="7bH-Ug-Grz" id="TAm-0p-oHq"/>
                         <outlet property="loginButton" destination="nB0-qh-h9C" id="QNN-eT-eyH"/>
                         <outlet property="passwordTextField" destination="IVH-i3-SIi" id="Jl4-1E-C8X"/>
                         <segue destination="wMM-6D-S21" kind="presentation" identifier="LoginToHome" modalPresentationStyle="fullScreen" id="2DP-Xm-OKF"/>
@@ -101,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVD-Aw-GcP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3745" y="-434"/>
+            <point key="canvasLocation" x="-3746.1538461538462" y="-434.36018957345971"/>
         </scene>
         <!--Club View Controller-->
         <scene sceneID="7rH-5T-5qZ">
@@ -170,7 +179,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BerninaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="VLq-99-h3h">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bernina-red" translatesAutoresizingMaskIntoConstraints="NO" id="VLq-99-h3h">
                                 <rect key="frame" x="16" y="104" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="J2e-iR-eJ8"/>
@@ -551,11 +560,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="MCP-aY-iPh"/>
         <segue reference="mzX-vF-xmp"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="BerninaLogo" width="341.33334350585938" height="341.33334350585938"/>
         <image name="BerninaLogo-small" width="341.33334350585938" height="170.66667175292969"/>
+        <image name="bernina-red" width="200" height="200"/>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="face.smiling" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>

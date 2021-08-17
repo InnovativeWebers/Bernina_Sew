@@ -75,6 +75,7 @@ extension ChangeUserNameViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if usernameTextField.text != "" {
+            
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
             changeRequest?.displayName = usernameTextField.text
             changeRequest?.commitChanges { error in

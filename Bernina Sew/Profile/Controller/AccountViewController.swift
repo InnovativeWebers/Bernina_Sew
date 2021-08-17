@@ -16,7 +16,6 @@ class AccountViewController: UIViewController {
         sender.showAnimation {
             let vc = ChangeUserNameViewController()
             self.navigationController?.pushViewController(vc, animated: true)
-            
         }
     }
     
@@ -26,7 +25,6 @@ class AccountViewController: UIViewController {
         sender.showAnimation {
             let vc = ChangePhotoViewController()
             self.navigationController?.pushViewController(vc, animated: true)
-            
         }
     }
     

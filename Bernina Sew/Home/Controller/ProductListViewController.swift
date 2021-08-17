@@ -17,8 +17,9 @@ class ProductListViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = false
         self.title = "Products"
         productTableView.delegate = self
+        productTableView.dataSource = self
         productTableView.register(ProductTableViewCell.self, forCellReuseIdentifier: "ProductCell")
-        
+        productTableView.rowHeight = 116
         
         view.addSubview(productTableView)
         productTableView.snp.makeConstraints { make  in
@@ -38,6 +39,8 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableViewCell
+        cell.productImageView.sd_setImage(with: URL(string: productList![indexPath.row].Image), placeholderImage: UIImage(named: "placeHolder"), options: .highPriority, completed: nil)
+        cell.selectionStyle = .none
         return cell
     }
     

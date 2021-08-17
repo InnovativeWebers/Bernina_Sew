@@ -91,7 +91,6 @@ class ChangePhotoViewController: UIViewController, ImagePickerDelegate {
         
         let profileRef = imagesRef.child("profile.jpg")
         let data = image?.jpeg(.lowest)
-
         // Upload the file to the path "images/rivers.jpg"
         let uploadTask = profileRef.putData(data!, metadata: nil) { (metadata, error) in
           guard let metadata = metadata else {
