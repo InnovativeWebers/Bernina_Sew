@@ -54,6 +54,7 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
         vc.eventName = eventList![indexPath.row].Name
         vc.eventDate = eventList![indexPath.row].Date
         vc.eventLevel = eventList![indexPath.row].Level
+        vc.eventDescripton = eventList![indexPath.row].Description
         vc.hidesBottomBarWhenPushed = true
         tableView.deselectRow(at: indexPath, animated: true)
         self.navigationController?.pushViewController(vc, animated: true)

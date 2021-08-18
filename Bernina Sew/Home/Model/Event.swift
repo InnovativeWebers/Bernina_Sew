@@ -15,4 +15,5 @@ struct Event: Decodable{
     var Name: String
     var Level: String
     var Date: String
+    var Description: String
 }

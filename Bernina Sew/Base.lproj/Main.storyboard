@@ -105,7 +105,7 @@
                         <outlet property="guestLoginButton" destination="7bH-Ug-Grz" id="TAm-0p-oHq"/>
                         <outlet property="loginButton" destination="nB0-qh-h9C" id="QNN-eT-eyH"/>
                         <outlet property="passwordTextField" destination="IVH-i3-SIi" id="Jl4-1E-C8X"/>
-                        <segue destination="wMM-6D-S21" kind="presentation" identifier="LoginToHome" modalPresentationStyle="fullScreen" id="2DP-Xm-OKF"/>
+                        <segue destination="wMM-6D-S21" kind="presentation" identifier="LoginToHome" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="2DP-Xm-OKF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVD-Aw-GcP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -560,7 +560,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MCP-aY-iPh"/>
+        <segue reference="2DP-Xm-OKF"/>
         <segue reference="AYu-rX-oyE"/>
     </inferredMetricsTieBreakers>
     <resources>

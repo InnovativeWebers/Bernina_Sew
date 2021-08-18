@@ -3,50 +3,58 @@
         {
             "Name": "L1 Workshop",
             "Level": "Easy",
-            "Date": "22-07-2021"
+            "Date": "22-07-2021",
+            "Description": "This work shop is targeted at people who are new to sewing."
         },
         
         {
             "Name": "L2 Workshop",
             "Level": "Medium",
-            "Date": "29-07-2021"
+            "Date": "29-07-2021",
+            "Description": "This work shop is targeted at people who are new to sewing."
         },
         
         {
             "Name": "L3 Workshop",
             "Level": "Hard",
-            "Date": "01-08-2021"
+            "Date": "01-08-2021",
+            "Description": "This work shop is targeted at people who are new to sewing."
         },
         
         {
             "Name": "L2 Workshop",
             "Level": "Medium",
-            "Date": "03-08-2021"
+            "Date": "03-08-2021",
+            "Description": "This work shop is targeted at people who are new to sewing."
         },
         
         {
             "Name": "L1 Workshop",
             "Level": "Easy",
-            "Date": "10-08-2021"
+            "Date": "10-08-2021",
+            "Description": "This work shop is targeted at people who are new to sewing."
         },
         
         {
             "Name": "L1 Workshop",
             "Level": "Easy",
-            "Date": "13-08-2021"
+            "Date": "13-08-2021",
+            "Description": "This work shop is targeted at people who are new to sewing."
         },
         
         {
             "Name": "L3 Workshop",
             "Level": "Hard",
-            "Date": "20-08-2021"
+            "Date": "20-08-2021",
+            "Description": "This work shop is targeted at people who are new to sewing."
         },
         
         
         {
             "Name": "L1 Workshop",
             "Level": "Easy",
-            "Date": "28-08-2021"
+            "Date": "28-08-2021",
+            "Description": "This work shop is targeted at people who are new to sewing."
         }
     
     ]

@@ -14,6 +14,10 @@ class EventViewController: UIViewController {
     var eventName: String?
     var eventDate: String?
     var eventLevel: String?
+    var eventDescripton: String?
+    
+    var offset = 20
+    
     
     let eventLabel: UILabel = {
         let lbl = UILabel()
@@ -22,7 +26,9 @@ class EventViewController: UIViewController {
         lbl.textColor = .white
         lbl.textAlignment = .center
         lbl.numberOfLines = 2
-        lbl.heightAnchor.constraint(equalToConstant: K.screenHeight / 3).isActive = true
+        lbl.layer.cornerRadius = 10
+        lbl.clipsToBounds = true
+
         return lbl
     }()
     
@@ -34,7 +40,7 @@ class EventViewController: UIViewController {
         lbl.textAlignment = .center
         lbl.numberOfLines = 2
         lbl.heightAnchor.constraint(equalToConstant: K.screenHeight / 12).isActive = true
-        lbl.widthAnchor.constraint(equalToConstant: (K.screenWidth - 30) / 2 ).isActive = true
+
         lbl.layer.cornerRadius = 13
         lbl.clipsToBounds = true
         return lbl
@@ -48,10 +54,22 @@ class EventViewController: UIViewController {
         lbl.textAlignment = .center
         lbl.numberOfLines = 2
         lbl.heightAnchor.constraint(equalToConstant: K.screenHeight / 12).isActive = true
-        lbl.widthAnchor.constraint(equalToConstant: (K.screenWidth - 30) / 2 ).isActive = true
+
         lbl.layer.cornerRadius = 13
         lbl.clipsToBounds = true
         return lbl
+    }()
+    
+    let descriptionTextView: UITextView = {
+        let tf = UITextView()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.isEditable = false
+        tf.isSelectable = false
+        tf.isScrollEnabled = false
+        tf.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
+        
+        
+        return tf
     }()
     
     let bookingButton = Tools.setUpButton("Book", K.brandRed, 25)
@@ -70,33 +88,48 @@ class EventViewController: UIViewController {
         eventLabel.text = eventName
         dateLabel.text = eventDate
         levelLabel.text = eventLevel
+        descriptionTextView.text = eventDescripton
+        
+        dateLabel.widthAnchor.constraint(equalToConstant: (K.screenWidth - CGFloat(offset * 2) - 10) / 2 ).isActive = true
+        levelLabel.widthAnchor.constraint(equalToConstant: (K.screenWidth - CGFloat(offset * 2) - 10) / 2 ).isActive = true
+        eventLabel.heightAnchor.constraint(equalToConstant: K.screenHeight / 3).isActive = true
         
         view.addSubview(eventLabel)
         view.addSubview(dateLabel)
         view.addSubview(levelLabel)
+        view.addSubview(descriptionTextView)
         view.addSubview(bookingButton)
+        
         bookingButton.heightAnchor.constraint(equalToConstant: K.screenHeight / 12).isActive = true
         bookingButton.setTitleColor(.white, for: .normal)
         
         eventLabel.snp.makeConstraints {(make) -> Void in
-            make.left.equalTo(view).offset(10)
-            make.right.equalTo(view).offset(-10)
-            make.top.equalTo(view).offset(10)
+            make.left.equalTo(view).offset(offset)
+            make.right.equalTo(view).offset(-offset)
+            make.top.equalTo(view).offset(offset)
         }
         
         dateLabel.snp.makeConstraints {(make) -> Void in
-            make.left.equalTo(view).offset(10)
+            make.left.equalTo(view).offset(offset)
             make.top.equalTo(eventLabel.snp_bottomMargin).offset(16)
         }
         
         levelLabel.snp.makeConstraints {(make) -> Void in
-            make.right.equalTo(view).offset(-10)
+            make.right.equalTo(view).offset(-offset)
             make.top.equalTo(eventLabel.snp_bottomMargin).offset(16)
         }
         
+        descriptionTextView.snp.makeConstraints { make  in
+            make.top.equalTo(levelLabel.snp_bottomMargin).offset(30)
+            make.left.equalTo(view).offset(offset)
+            make.right.equalTo(view).offset(-offset)
+            make.bottom.equalTo(bookingButton.snp_topMargin).offset(-30)
+        }
+        
+        
         bookingButton.snp.makeConstraints {(make) -> Void in
-            make.left.equalTo(view).offset(10)
-            make.right.equalTo(view).offset(-10)
+            make.left.equalTo(view).offset(offset)
+            make.right.equalTo(view).offset(-offset)
             make.bottom.equalTo(view).offset(-40)
         }
         

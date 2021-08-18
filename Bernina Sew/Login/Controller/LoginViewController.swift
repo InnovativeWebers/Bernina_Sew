@@ -104,7 +104,6 @@ class LoginViewController: UIViewController {
                         }
                     }
                 }else{
-                    print("Logged in!")
                     // transit to home screen when there is no error
                     performSegue(withIdentifier: "LoginToHome", sender: self)
                     (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate )?.changeRootViewController( homeTabBarController)

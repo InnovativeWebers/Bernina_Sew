@@ -12,7 +12,7 @@ class EventListCell: UITableViewCell {
     let levelLabel: UILabel = {
         let lbl = UILabel()
         lbl.font = .systemFont(ofSize: 13, weight: .bold)
-        lbl.backgroundColor = K.orange
+        lbl.backgroundColor = K.brandRed
         lbl.layer.cornerRadius = 10
         lbl.textAlignment = .center
         lbl.widthAnchor.constraint(equalToConstant: K.screenWidth / 3 - 10 - 10 - 32).isActive = true
@@ -23,11 +23,11 @@ class EventListCell: UITableViewCell {
     
     let dateLabel: UILabel = {
         let lbl = UILabel()
-        lbl.font = .systemFont(ofSize: 13, weight: .bold)
-        lbl.backgroundColor = K.green
+        lbl.font = .systemFont(ofSize: 15, weight: .bold)
+        lbl.backgroundColor = K.darkGreen
         lbl.layer.cornerRadius = 10
         lbl.textAlignment = .center
-        lbl.widthAnchor.constraint(equalToConstant: K.screenWidth / 3 - 10 - 10 - 32).isActive = true
+//        lbl.widthAnchor.constraint(equalToConstant: K.screenWidth / 3 - 10 - 10 - 32).isActive = true
         
         return lbl
     }()
@@ -39,14 +39,19 @@ class EventListCell: UITableViewCell {
         lbl.widthAnchor.constraint(equalToConstant: K.screenWidth / 3 - 10 - 10 - 32).isActive = true
         return lbl
     }()
+    
+
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
          super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        dateLabel.widthAnchor.constraint(equalToConstant: 130).isActive = true
+        dateLabel.textColor = .white
 
         contentView.addSubview(levelLabel)
         contentView.addSubview(dateLabel)
         contentView.addSubview(eventLabel)
+
         
         contentView.layer.borderColor = K.brandGrey.cgColor
         contentView.layer.borderWidth = 2.0
@@ -73,6 +78,7 @@ class EventListCell: UITableViewCell {
 
         }
         
+
     }
     
     override func layoutSubviews() {
