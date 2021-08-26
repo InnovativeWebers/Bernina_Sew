@@ -39,13 +39,12 @@
 		D49A79952689B024009F62BD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A79942689B024009F62BD /* Product.swift */; };
 		D49A79972689B035009F62BD /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A79962689B035009F62BD /* ProductList.swift */; };
 		D4A3FAEA26B2AF0500DC11C4 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3FAE926B2AF0500DC11C4 /* ProductTableViewCell.swift */; };
-		D4D13BA9269D3A8B00BA2181 /* InputJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D13BA8269D3A8B00BA2181 /* InputJSON.json */; };
+		D4D13BA9269D3A8B00BA2181 /* featuredProductJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D13BA8269D3A8B00BA2181 /* featuredProductJSON.json */; };
 		D4D13BAB269D5F1300BA2181 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D13BAA269D5F1300BA2181 /* Tools.swift */; };
 		D4E801BF2624876D001C3CB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E801BE2624876D001C3CB0 /* AppDelegate.swift */; };
 		D4E801C12624876D001C3CB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E801C02624876D001C3CB0 /* SceneDelegate.swift */; };
 		D4E801C32624876D001C3CB0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E801C22624876D001C3CB0 /* HomeViewController.swift */; };
 		D4E801C62624876D001C3CB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E801C42624876D001C3CB0 /* Main.storyboard */; };
-		D4E801C82624876E001C3CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E801C72624876E001C3CB0 /* Assets.xcassets */; };
 		D4E801CB2624876E001C3CB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E801C92624876E001C3CB0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -82,14 +81,13 @@
 		D49A79942689B024009F62BD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		D49A79962689B035009F62BD /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		D4A3FAE926B2AF0500DC11C4 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
-		D4D13BA8269D3A8B00BA2181 /* InputJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = InputJSON.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		D4D13BA8269D3A8B00BA2181 /* featuredProductJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = featuredProductJSON.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		D4D13BAA269D5F1300BA2181 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		D4E801BB2624876D001C3CB0 /* Bernina Sew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bernina Sew.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E801BE2624876D001C3CB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4E801C02624876D001C3CB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D4E801C22624876D001C3CB0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D4E801C52624876D001C3CB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D4E801C72624876E001C3CB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4E801CA2624876E001C3CB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4E801CC2624876E001C3CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB8CADBF929918C717535F38 /* Pods-Bernina Sew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bernina Sew.debug.xcconfig"; path = "Target Support Files/Pods-Bernina Sew/Pods-Bernina Sew.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,10 +135,9 @@
 		D4C92C562666932700E3AE2D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D451ED11264F8C3A00A17A67 /* Event.swift */,
-				D49A79942689B024009F62BD /* Product.swift */,
-				D49A79962689B035009F62BD /* ProductList.swift */,
-				D46843A1269D92BB0026E468 /* Pattern.swift */,
+				D4E071BA26CCBA740078C7BF /* Pattern */,
+				D4E071B926CCBA650078C7BF /* Product */,
+				D4E071B826CCBA4E0078C7BF /* Event */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,11 +145,9 @@
 		D4C92C572666932D00E3AE2D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D46843B5269EEB8B0026E468 /* EventListCell.swift */,
-				D451ED0D264F8BAD00A17A67 /* EventTableViewCell.swift */,
-				D451ED0E264F8BAD00A17A67 /* EventTableViewCell.xib */,
+				D4E071BC26CCBAA90078C7BF /* Product */,
+				D4E071BB26CCBA7F0078C7BF /* Event */,
 				D46843B726A0162D0026E468 /* CollectionCell.swift */,
-				D4A3FAE926B2AF0500DC11C4 /* ProductTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,12 +155,10 @@
 		D4C92C582666933300E3AE2D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D4E071BE26CCBAC40078C7BF /* Product */,
+				D4E071BD26CCBAB40078C7BF /* Event */,
 				D4E801C22624876D001C3CB0 /* HomeViewController.swift */,
 				D49A798A268995BE009F62BD /* TabViewController.swift */,
-				D49A798E2689AA7C009F62BD /* ProductListViewController.swift */,
-				D49A79902689AA96009F62BD /* ProductInfoViewController.swift */,
-				D49A79922689AE47009F62BD /* EventViewController.swift */,
-				D46843B2269ED3670026E468 /* EventListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +260,83 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D4E071B826CCBA4E0078C7BF /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				D451ED11264F8C3A00A17A67 /* Event.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		D4E071B926CCBA650078C7BF /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				D49A79962689B035009F62BD /* ProductList.swift */,
+				D49A79942689B024009F62BD /* Product.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		D4E071BA26CCBA740078C7BF /* Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				D46843A1269D92BB0026E468 /* Pattern.swift */,
+			);
+			path = Pattern;
+			sourceTree = "<group>";
+		};
+		D4E071BB26CCBA7F0078C7BF /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				D46843B5269EEB8B0026E468 /* EventListCell.swift */,
+				D451ED0D264F8BAD00A17A67 /* EventTableViewCell.swift */,
+				D451ED0E264F8BAD00A17A67 /* EventTableViewCell.xib */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		D4E071BC26CCBAA90078C7BF /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				D4A3FAE926B2AF0500DC11C4 /* ProductTableViewCell.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		D4E071BD26CCBAB40078C7BF /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				D46843B2269ED3670026E468 /* EventListViewController.swift */,
+				D49A79922689AE47009F62BD /* EventViewController.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		D4E071BE26CCBAC40078C7BF /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				D49A79902689AA96009F62BD /* ProductInfoViewController.swift */,
+				D49A798E2689AA7C009F62BD /* ProductListViewController.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		D4E071BF26CCBAF80078C7BF /* InputFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InputFiles;
+			sourceTree = "<group>";
+		};
+		D4E071C026CCBB840078C7BF /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D4E801C42624876D001C3CB0 /* Main.storyboard */,
+				D4E801C92624876E001C3CB0 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		D4E801B22624876D001C3CB0 = {
 			isa = PBXGroup;
 			children = (
@@ -289,12 +359,14 @@
 		D4E801BD2624876D001C3CB0 /* Bernina Sew */ = {
 			isa = PBXGroup;
 			children = (
+				D468439F269D90750026E468 /* patternJSON.json */,
+				D4D13BA8269D3A8B00BA2181 /* featuredProductJSON.json */,
+				D468439D269D757A0026E468 /* eventJSON.json */,
 				D46843B926A02F270026E468 /* Assets.xcassets */,
 				D46843B1269ED1410026E468 /* GoogleService-Info.plist */,
-				D468439D269D757A0026E468 /* eventJSON.json */,
-				D4D13BA8269D3A8B00BA2181 /* InputJSON.json */,
-				D468439F269D90750026E468 /* patternJSON.json */,
+				D4E071BF26CCBAF80078C7BF /* InputFiles */,
 				D4D13BA7269D376C00BA2181 /* Resources */,
+				D4E071C026CCBB840078C7BF /* Storyboard */,
 				D4C92C69266694B800E3AE2D /* Login */,
 				D4C92C652666948C00E3AE2D /* Design */,
 				D4C92C612666946700E3AE2D /* Shop */,
@@ -303,9 +375,6 @@
 				D4C92C592666936600E3AE2D /* Profile */,
 				D4E801BE2624876D001C3CB0 /* AppDelegate.swift */,
 				D4E801C02624876D001C3CB0 /* SceneDelegate.swift */,
-				D4E801C42624876D001C3CB0 /* Main.storyboard */,
-				D4E801C72624876E001C3CB0 /* Assets.xcassets */,
-				D4E801C92624876E001C3CB0 /* LaunchScreen.storyboard */,
 				D4E801CC2624876E001C3CB0 /* Info.plist */,
 			);
 			path = "Bernina Sew";
@@ -383,8 +452,7 @@
 				D451ED10264F8BAD00A17A67 /* EventTableViewCell.xib in Resources */,
 				D4E801CB2624876E001C3CB0 /* LaunchScreen.storyboard in Resources */,
 				D468439E269D757A0026E468 /* eventJSON.json in Resources */,
-				D4D13BA9269D3A8B00BA2181 /* InputJSON.json in Resources */,
-				D4E801C82624876E001C3CB0 /* Assets.xcassets in Resources */,
+				D4D13BA9269D3A8B00BA2181 /* featuredProductJSON.json in Resources */,
 				D4E801C62624876D001C3CB0 /* Main.storyboard in Resources */,
 				D46843BA26A02F270026E468 /* Assets.xcassets in Resources */,
 				D468439C269D72610026E468 /* GoogleService-Info.plist in Resources */,

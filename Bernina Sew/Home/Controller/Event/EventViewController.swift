@@ -111,12 +111,12 @@ class EventViewController: UIViewController {
         
         dateLabel.snp.makeConstraints {(make) -> Void in
             make.left.equalTo(view).offset(offset)
-            make.top.equalTo(eventLabel.snp_bottomMargin).offset(16)
+            make.top.equalTo(eventLabel.snp_bottomMargin).offset(offset)
         }
         
         levelLabel.snp.makeConstraints {(make) -> Void in
             make.right.equalTo(view).offset(-offset)
-            make.top.equalTo(eventLabel.snp_bottomMargin).offset(16)
+            make.top.equalTo(eventLabel.snp_bottomMargin).offset(offset)
         }
         
         descriptionTextView.snp.makeConstraints { make  in

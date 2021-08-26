@@ -126,7 +126,7 @@ class HomeViewController: UIViewController {
         
         // load json files here, I've created these files manually and stored them locally,
         // normally these data should be fetched from an API
-        productList = Tools.loadProductList(filename: "InputJSON")!.FeaturedProducts
+        productList = Tools.loadProductList(filename: "featuredProductJSON")!.FeaturedProducts
         
         eventList = Tools.loadEventList(filename: "eventJSON")!.Events
         

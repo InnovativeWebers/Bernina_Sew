@@ -7,7 +7,8 @@
             "ID": 1001,
             "Name": "Bernina 790 plus",
             "Image": "https://www.bernina.com/assetgen/2/de/Resources/bernina-products/machines/8-series/880-PLUS/B-880-PLUS-NEU-Bilder/B880Plus-Standard-NewPlus-EN.png",
-            "Price": 1000
+            "Price": 1000,
+            "Description": "This is a Bernina 790 plus sewing machine"
             
         },
 
@@ -15,27 +16,31 @@
             "ID": 1002,
             "Name": "Bernina 880 plus",
             "Image": "https://www.bernina.com/assetgen/2/de/Resources/bernina-products/machines/7-Series/790-PLUS/B-790-PLUS-NEU-Bilder/B790Plus-Standard-NewPlus-EN.jpg",
-            "Price": 1000
+            "Price": 1000,
+            "Description": "This is a Bernina 880 plus sewing machine"
         },
 
         {
             "ID": 1003,
             "Name": "Bernina 770 QE",
             "Image": "https://www.bernina.com/assetgen/2/de/Resources/bernina-products/machines/7-Series/770/B770_Standard.jpg",
-            "Price": 1000
+            "Price": 1000,
+            "Description": "This is a Bernina 770 QE sewing machine"
         },
         
         {
             "ID": 1004,
             "Name": "Slide-on Table",
             "Image":"https://www.bernina.com/de/Resources/bernina-products/zubehoer/naehen/anwendungsbilder/products_sonderzubehoer_anwendung_freiarmanschiebe.jpg",
-            "Price": 1000
+            "Price": 100,
+            "Description": "This is a slide-on table"
         },
         {
             "ID": 1005,
             "Name": "Bernina L 860",
             "Image": "https://www.bernina.com/BERNINA/media/products/Overlocker/L%20860/Image%20Gallery/03-1_gallery_L860.jpg",
-            "Price": 1000
+            "Price": 1000,
+            "Description": "This is a Bernina L860 sewing machine"
         }
     ]
 }
