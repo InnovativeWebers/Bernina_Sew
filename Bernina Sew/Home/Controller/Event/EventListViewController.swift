@@ -59,6 +59,4 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 }

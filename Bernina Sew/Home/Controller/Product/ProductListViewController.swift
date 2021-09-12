@@ -49,6 +49,11 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ProductInfoViewController()
+        vc.productImageUrl = productList![indexPath.row].Image
+        vc.productPrice = "$ \(productList![indexPath.row].Price)"
+        vc.productID = productList![indexPath.row].ID
+        vc.productName = productList![indexPath.row].Name
+        vc.productDescription = productList![indexPath.row].Description
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }

@@ -74,6 +74,10 @@ class HomeViewController: UIViewController {
     
     @objc func patternsPressed(sender: UIButton) {
         sender.showAnimation {
+            let vc = PatternsListViewController()
+            vc.patternList = self.patternsList
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -345,6 +349,24 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == featuredCollectionView {
+            let vc = ProductInfoViewController()
+            vc.productImageUrl = productList[indexPath.row].Image
+            vc.productPrice = "$ \(productList[indexPath.row].Price)"
+            vc.productID = productList[indexPath.row].ID
+            vc.productName = productList[indexPath.row].Name
+            vc.productDescription = productList[indexPath.row].Description
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else {
+            let vc = PatternsViewController()
+            vc.patternName = patternsList[indexPath.row].Name
+            vc.patternID = patternsList[indexPath.row].ID
+            vc.patternImgUrl = patternsList[indexPath.row].Image
+            vc.patterDescription = patternsList[indexPath.row].Description
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
 
     }
 

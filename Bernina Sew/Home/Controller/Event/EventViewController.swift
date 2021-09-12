@@ -100,7 +100,7 @@ class EventViewController: UIViewController {
         view.addSubview(descriptionTextView)
         view.addSubview(bookingButton)
         
-        bookingButton.heightAnchor.constraint(equalToConstant: K.screenHeight / 12).isActive = true
+        bookingButton.heightAnchor.constraint(equalToConstant: 55).isActive = true
         bookingButton.setTitleColor(.white, for: .normal)
         
         eventLabel.snp.makeConstraints {(make) -> Void in
