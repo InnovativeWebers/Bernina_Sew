@@ -74,6 +74,7 @@ class ProfileViewController: UIViewController {
                   } else {
                     // Data for "images/island.jpg" is returned
                         profileImage.image = UIImage(data: data!)
+
                   }
             }
 

@@ -13,6 +13,7 @@ class TabViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         tab.items![0].image = UIImage(systemName: "house", withConfiguration: K.symbolConfig)? .withTintColor(.black, renderingMode: .alwaysOriginal)
         tab.items![1].image = UIImage(systemName: "person.and.person", withConfiguration: K.symbolConfig)? .withTintColor(.black, renderingMode: .alwaysOriginal)
         tab.items![2].image = UIImage(systemName: "paintpalette", withConfiguration:K.symbolConfig)? .withTintColor(.black, renderingMode: .alwaysOriginal)

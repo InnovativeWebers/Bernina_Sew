@@ -11,6 +11,9 @@
 		D432E72D26EE05EA00B9A82B /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E72C26EE05EA00B9A82B /* PatternsViewController.swift */; };
 		D432E72F26EE060900B9A82B /* PatternsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E72E26EE060900B9A82B /* PatternsListViewController.swift */; };
 		D432E73226EE064100B9A82B /* PatternTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E73126EE064100B9A82B /* PatternTableViewCell.swift */; };
+		D432E73926EE2B3200B9A82B /* BlogModel.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E73826EE2B3200B9A82B /* BlogModel.swift.swift */; };
+		D432E73B26EE5BB900B9A82B /* BlogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E73A26EE5BB900B9A82B /* BlogCell.swift */; };
+		D432E73E26EEF0F900B9A82B /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E73D26EEF0F900B9A82B /* AddPostViewController.swift */; };
 		D43C3BF22635C35200E53768 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C3BF12635C35200E53768 /* LoginViewController.swift */; };
 		D43C3BF52635C86B00E53768 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C3BF42635C86B00E53768 /* ShopViewController.swift */; };
 		D43C3BF82635C88500E53768 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C3BF72635C88500E53768 /* ClubViewController.swift */; };
@@ -55,6 +58,9 @@
 		D432E72C26EE05EA00B9A82B /* PatternsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsViewController.swift; sourceTree = "<group>"; };
 		D432E72E26EE060900B9A82B /* PatternsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsListViewController.swift; sourceTree = "<group>"; };
 		D432E73126EE064100B9A82B /* PatternTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternTableViewCell.swift; sourceTree = "<group>"; };
+		D432E73826EE2B3200B9A82B /* BlogModel.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogModel.swift.swift; sourceTree = "<group>"; };
+		D432E73A26EE5BB900B9A82B /* BlogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCell.swift; sourceTree = "<group>"; };
+		D432E73D26EEF0F900B9A82B /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		D43C3BF12635C35200E53768 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D43C3BF42635C86B00E53768 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		D43C3BF72635C88500E53768 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +144,22 @@
 			path = Patterns;
 			sourceTree = "<group>";
 		};
+		D432E73726EE2B1F00B9A82B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D432E73826EE2B3200B9A82B /* BlogModel.swift.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D432E73C26EE5BC000B9A82B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D432E73A26EE5BB900B9A82B /* BlogCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D46843B4269EE9DC0026E468 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +233,8 @@
 		D4C92C5D2666943700E3AE2D /* Member */ = {
 			isa = PBXGroup;
 			children = (
+				D432E73C26EE5BC000B9A82B /* View */,
+				D432E73726EE2B1F00B9A82B /* Model */,
 				D4C92C5E2666944000E3AE2D /* Controller */,
 			);
 			path = Member;
@@ -221,6 +245,7 @@
 			children = (
 				D43C3BF72635C88500E53768 /* ClubViewController.swift */,
 				D43C3BFA2635C89100E53768 /* BlogViewController.swift */,
+				D432E73D26EEF0F900B9A82B /* AddPostViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -349,6 +374,9 @@
 		D4E071BF26CCBAF80078C7BF /* InputFiles */ = {
 			isa = PBXGroup;
 			children = (
+				D468439F269D90750026E468 /* patternJSON.json */,
+				D4D13BA8269D3A8B00BA2181 /* featuredProductJSON.json */,
+				D468439D269D757A0026E468 /* eventJSON.json */,
 			);
 			path = InputFiles;
 			sourceTree = "<group>";
@@ -384,9 +412,6 @@
 		D4E801BD2624876D001C3CB0 /* Bernina Sew */ = {
 			isa = PBXGroup;
 			children = (
-				D468439F269D90750026E468 /* patternJSON.json */,
-				D4D13BA8269D3A8B00BA2181 /* featuredProductJSON.json */,
-				D468439D269D757A0026E468 /* eventJSON.json */,
 				D46843B926A02F270026E468 /* Assets.xcassets */,
 				D46843B1269ED1410026E468 /* GoogleService-Info.plist */,
 				D4E071BF26CCBAF80078C7BF /* InputFiles */,
@@ -538,6 +563,7 @@
 				D49A798D268995FF009F62BD /* K.swift in Sources */,
 				D451ED0F264F8BAD00A17A67 /* EventTableViewCell.swift in Sources */,
 				D4E801BF2624876D001C3CB0 /* AppDelegate.swift in Sources */,
+				D432E73B26EE5BB900B9A82B /* BlogCell.swift in Sources */,
 				D46843B3269ED3670026E468 /* EventListViewController.swift in Sources */,
 				D43C3BF82635C88500E53768 /* ClubViewController.swift in Sources */,
 				D49A798B268995BE009F62BD /* TabViewController.swift in Sources */,
@@ -550,6 +576,7 @@
 				D432E72F26EE060900B9A82B /* PatternsListViewController.swift in Sources */,
 				D49A798F2689AA7C009F62BD /* ProductListViewController.swift in Sources */,
 				D43C3BF52635C86B00E53768 /* ShopViewController.swift in Sources */,
+				D432E73926EE2B3200B9A82B /* BlogModel.swift.swift in Sources */,
 				D46843AE269EADB60026E468 /* ChangeUsernameViewController.swift in Sources */,
 				D4A3FAEA26B2AF0500DC11C4 /* ProductTableViewCell.swift in Sources */,
 				D43C3BF22635C35200E53768 /* LoginViewController.swift in Sources */,
@@ -559,6 +586,7 @@
 				D432E73226EE064100B9A82B /* PatternTableViewCell.swift in Sources */,
 				D451ECFA264CDA6C00A17A67 /* ProfileViewController.swift in Sources */,
 				D46843AA269E8D210026E468 /* AccountViewController.swift in Sources */,
+				D432E73E26EEF0F900B9A82B /* AddPostViewController.swift in Sources */,
 				D47B710A263A752200B0B660 /* SignUpViewController.swift in Sources */,
 				D43C3BFE2635C89C00E53768 /* DesignViewController.swift in Sources */,
 				D432E72D26EE05EA00B9A82B /* PatternsViewController.swift in Sources */,

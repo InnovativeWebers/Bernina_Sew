@@ -9,6 +9,7 @@ import UIKit
 import SDWebImage
 import NVActivityIndicatorView
 
+
 class HomeViewController: UIViewController {
    
     
@@ -267,6 +268,10 @@ class HomeViewController: UIViewController {
             make.top.equalTo(eventsLabel.snp_bottomMargin).offset(16)
         }
         
+
+        
+        
+        
     
     }
 }
@@ -300,9 +305,7 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate{
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
 
-    
 }
 
 extension HomeViewController: UITextFieldDelegate {

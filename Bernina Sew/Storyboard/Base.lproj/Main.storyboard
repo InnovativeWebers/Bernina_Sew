@@ -119,20 +119,6 @@
                     <view key="view" contentMode="scaleToFill" id="2XT-Q6-Tap">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cf7-Np-Gus">
-                                <rect key="frame" x="16" y="144" width="358" height="374"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not implemented" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p53-tx-ZJI">
-                                <rect key="frame" x="129" y="544" width="132" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hae-RN-a66"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -149,19 +135,6 @@
                     <view key="view" contentMode="scaleToFill" id="H5H-4h-AKA">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not implemented" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAb-rM-9sV">
-                                <rect key="frame" x="135" y="316" width="132" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BerninaLogo-small" translatesAutoresizingMaskIntoConstraints="NO" id="VsZ-if-kje">
-                                <rect key="frame" x="72" y="149" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qua-CV-hHT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -187,7 +160,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="rTQ-D7-AJ1">
-                                <rect key="frame" x="20" y="234" width="350" height="165"/>
+                                <rect key="frame" x="20" y="234" width="350" height="122"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dca-Ue-eR9">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="36"/>
@@ -217,16 +190,6 @@
                                         </state>
                                         <connections>
                                             <action selector="settingsButtonPressed:" destination="IBx-df-4oQ" eventType="touchUpInside" id="6EO-8H-lOM"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAy-Ax-QnI">
-                                        <rect key="frame" x="0.0" y="129" width="350" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Logout">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="logoutPressed:" destination="IBx-df-4oQ" eventType="touchUpInside" id="bIa-Wx-Gg1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -268,7 +231,6 @@
                         <outlet property="AccountButton" destination="Dca-Ue-eR9" id="a4S-i1-Djb"/>
                         <outlet property="bookingsButton" destination="4c9-Od-m3w" id="7oS-Jh-qzc"/>
                         <outlet property="emailLabel" destination="w5e-cp-JgT" id="WoM-ER-6Tv"/>
-                        <outlet property="logoutButton" destination="fAy-Ax-QnI" id="Iar-IN-zmR"/>
                         <outlet property="nameLabel" destination="m1U-hS-AX8" id="HDR-3t-QGh"/>
                         <outlet property="profileImage" destination="VLq-99-h3h" id="vRU-Ai-cOx"/>
                         <outlet property="settingsButton" destination="nhX-ut-8r9" id="hci-sE-NbZ"/>
@@ -286,15 +248,6 @@
                     <view key="view" contentMode="scaleToFill" id="9hf-KQ-7C9">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not implemented" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcc-ej-s7x">
-                                <rect key="frame" x="128" y="301" width="132" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="52C-Hm-Vvk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -561,7 +514,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2DP-Xm-OKF"/>
-        <segue reference="AYu-rX-oyE"/>
+        <segue reference="mzX-vF-xmp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BerninaLogo-small" width="341.33334350585938" height="170.66667175292969"/>
