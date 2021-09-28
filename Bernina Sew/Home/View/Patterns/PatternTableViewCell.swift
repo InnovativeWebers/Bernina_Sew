@@ -1,6 +1,7 @@
 
 import UIKit
 import SDWebImage
+import SCLAlertView
 
 class PatternTableViewCell: UITableViewCell {
 
@@ -8,17 +9,26 @@ class PatternTableViewCell: UITableViewCell {
     let container = Tools.setUpContainerView()
     let patternName = UILabel()
     let patternDescription = UILabel()
+    let addButton = Tools.setUpButton("Add to fav", K.brandRed, 16)
+    
+    @objc func addPressed(sender: UIButton){
+        sender.showAnimation {
+            SCLAlertView().showTitle("Added", subTitle: "Check your favorites", style: .success, colorStyle: 0x29BB89)
+        }
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
          super.init(style: style, reuseIdentifier: reuseIdentifier)
         patternName.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         patternDescription.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         patternDescription.numberOfLines = 2
+        addButton.addTarget(self, action: #selector(addPressed(sender:)), for: .touchUpInside)
         
         contentView.addSubview(container)
         container.addSubview(patternName)
         container.addSubview(patternDescription)
         container.addSubview(patternImageView)
+        container.addSubview(addButton)
         
         container.snp.makeConstraints { make  in
             make.top.equalTo(contentView).offset(8)
@@ -42,7 +52,12 @@ class PatternTableViewCell: UITableViewCell {
             make.left.equalTo(patternImageView.snp_rightMargin).offset(20)
         }
         
-        
+        Tools.setHeight(addButton, 45)
+        Tools.setWidth(addButton, 100)
+        addButton.snp.makeConstraints { make  in
+            make.centerY.equalTo(container)
+            make.right.equalTo(container).offset(-20)
+        }
         
     }
     

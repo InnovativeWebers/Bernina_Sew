@@ -7,13 +7,21 @@
 
 import UIKit
 import SDWebImage
+import SCLAlertView
 
 class ProductTableViewCell: UITableViewCell {
 
     let productImageView = Tools.setUpImageView()
     let container = Tools.setUpContainerView()
+    let addButton = Tools.setUpButton("Add to cart", K.brandRed, 16)
     let productName = UILabel()
     var productPrice = UILabel()
+    
+    @objc func addPressed(sender: UIButton){
+        sender.showAnimation {
+            SCLAlertView().showTitle("Added", subTitle: "Check your cart", style: .success, colorStyle: 0x29BB89)
+        }
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
          super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -21,10 +29,13 @@ class ProductTableViewCell: UITableViewCell {
         productPrice.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         productPrice.textColor = K.brandRed
         
+        addButton.addTarget(self, action: #selector(addPressed(sender:)), for: .touchUpInside)
+        
         contentView.addSubview(container)
         container.addSubview(productImageView)
         container.addSubview(productName)
         container.addSubview(productPrice)
+        container.addSubview(addButton)
         
         container.snp.makeConstraints { make  in
             make.top.equalTo(contentView).offset(8)
@@ -46,6 +57,13 @@ class ProductTableViewCell: UITableViewCell {
         productPrice.snp.makeConstraints { make  in
             make.top.equalTo(productName.snp_bottomMargin).offset(20)
             make.left.equalTo(productImageView.snp_rightMargin).offset(20)
+        }
+        
+        Tools.setHeight(addButton, 45)
+        Tools.setWidth(addButton, 100)
+        addButton.snp.makeConstraints { make  in
+            make.centerY.equalTo(container)
+            make.right.equalTo(container).offset(-20)
         }
         
         

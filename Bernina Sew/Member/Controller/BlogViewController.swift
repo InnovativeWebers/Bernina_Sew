@@ -114,6 +114,7 @@ extension BlogViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BlogCell", for: indexPath) as! BlogCell
         cell.dateLabel.text = blogs[indexPath.row].Time
         cell.titleLabel.text = blogs[indexPath.row].BlogTitle
+        cell.selectionStyle = .none
         return cell
     }
 }

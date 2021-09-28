@@ -35,8 +35,8 @@ class HomeViewController: UIViewController {
     let eventsButton = Tools.setUpButton("More", K.brandRed, 12)
     let eventsTableView = Tools.setUpTableView()
     
-    let featuredCollectionView = Tools.setUpCollectionView(10, 10)
-    let patternsCollectionView = Tools.setUpCollectionView(10, 10)
+    let featuredCollectionView = Tools.setUpCollectionView(10, 10, 60, 60)
+    let patternsCollectionView = Tools.setUpCollectionView(10, 10, 60, 60)
     
     
     
@@ -267,10 +267,6 @@ class HomeViewController: UIViewController {
             make.right.equalTo(view).offset(-16)
             make.top.equalTo(eventsLabel.snp_bottomMargin).offset(16)
         }
-        
-
-        
-        
         
     
     }

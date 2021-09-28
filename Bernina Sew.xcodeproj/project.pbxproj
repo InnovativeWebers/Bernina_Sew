@@ -45,6 +45,7 @@
 		D49A79952689B024009F62BD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A79942689B024009F62BD /* Product.swift */; };
 		D49A79972689B035009F62BD /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A79962689B035009F62BD /* ProductList.swift */; };
 		D4A3FAEA26B2AF0500DC11C4 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3FAE926B2AF0500DC11C4 /* ProductTableViewCell.swift */; };
+		D4C110B327036852009C5D68 /* SelectProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110B227036852009C5D68 /* SelectProductViewController.swift */; };
 		D4D13BA9269D3A8B00BA2181 /* featuredProductJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D13BA8269D3A8B00BA2181 /* featuredProductJSON.json */; };
 		D4D13BAB269D5F1300BA2181 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D13BAA269D5F1300BA2181 /* Tools.swift */; };
 		D4E801BF2624876D001C3CB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E801BE2624876D001C3CB0 /* AppDelegate.swift */; };
@@ -93,6 +94,7 @@
 		D49A79942689B024009F62BD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		D49A79962689B035009F62BD /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		D4A3FAE926B2AF0500DC11C4 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		D4C110B227036852009C5D68 /* SelectProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProductViewController.swift; sourceTree = "<group>"; };
 		D4D13BA8269D3A8B00BA2181 /* featuredProductJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = featuredProductJSON.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		D4D13BAA269D5F1300BA2181 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		D4E801BB2624876D001C3CB0 /* Bernina Sew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bernina Sew.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				D43C3BFD2635C89C00E53768 /* DesignViewController.swift */,
+				D4C110B227036852009C5D68 /* SelectProductViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				D46843A2269D92BB0026E468 /* Pattern.swift in Sources */,
 				D4E801C12624876D001C3CB0 /* SceneDelegate.swift in Sources */,
 				D432E73226EE064100B9A82B /* PatternTableViewCell.swift in Sources */,
+				D4C110B327036852009C5D68 /* SelectProductViewController.swift in Sources */,
 				D451ECFA264CDA6C00A17A67 /* ProfileViewController.swift in Sources */,
 				D46843AA269E8D210026E468 /* AccountViewController.swift in Sources */,
 				D432E73E26EEF0F900B9A82B /* AddPostViewController.swift in Sources */,

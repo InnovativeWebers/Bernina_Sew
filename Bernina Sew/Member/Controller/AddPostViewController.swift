@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import SCLAlertView
 
 class AddPostViewController: UIViewController{
     
@@ -64,7 +65,7 @@ class AddPostViewController: UIViewController{
                 blogs = NSKeyedUnarchiver.unarchiveObject(with: blogArray as Data) as! [BlogModel]
             }
 
-            if titleTextfield.text != nil && contentTextView.text != "Enter details here..." {
+            if titleTextfield.text != nil && titleTextfield.text != "" && contentTextView.text != "" && contentTextView.text != "Enter details here..." {
                 let date = Date()
                 
                 let calendar = Calendar.current
@@ -84,6 +85,10 @@ class AddPostViewController: UIViewController{
                 let dataToStore = NSKeyedArchiver.archivedData(withRootObject: blogs)
                 UserDefaults.standard.setValue(dataToStore, forKey: "Blogs")
                 print("saved")
+                print(titleTextfield.text)
+                print(contentTextView.text)
+            }else{
+                SCLAlertView().showTitle("Missing fields", subTitle: "Please enter title and description", style: .warning, colorStyle: 0xC10000)
             }
             
         }
@@ -136,7 +141,7 @@ class AddPostViewController: UIViewController{
         postButton.snp.makeConstraints { make  in
             make.left.equalTo(view).offset(offset)
             make.right.equalTo(view).offset(-offset)
-            make.bottom.equalTo(view).offset(-offset)
+            make.bottom.equalTo(view).offset(-offset * 2)
         }
         
     }

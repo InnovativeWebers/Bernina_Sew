@@ -129,10 +129,12 @@ struct Tools {
     }
     
     
-    public static func setUpCollectionView(_ lineSpacing: Int, _ interItemSpacing: Int) -> UICollectionView {
+    public static func setUpCollectionView(_ lineSpacing: Int, _ interItemSpacing: Int, _ cellWidth: Int, _ cellHeight: Int) -> UICollectionView {
+        let cellSize = CGSize(width: cellWidth, height: cellHeight)
 
         let layout = UICollectionViewFlowLayout()
            layout.scrollDirection = .horizontal
+        layout.itemSize = cellSize
            layout.minimumLineSpacing = CGFloat(lineSpacing)
            layout.minimumInteritemSpacing = CGFloat(interItemSpacing)
            let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
