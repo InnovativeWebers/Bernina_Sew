@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import SCLAlertView
 
 class SelectProductViewController: UIViewController {
 
@@ -24,7 +25,7 @@ class SelectProductViewController: UIViewController {
     
     @objc func nextPressed(sender: UIButton){
         sender.showAnimation {
-            
+            SCLAlertView().showTitle("Design created", subTitle: "Design has been added", style: .success, colorStyle: 0x29BB89)
         }
     }
     
