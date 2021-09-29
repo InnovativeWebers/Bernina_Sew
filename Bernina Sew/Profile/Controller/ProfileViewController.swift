@@ -33,26 +33,31 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func bookingsButtonPressed(_ sender: Any) {
+        let vc = MyBookingsViewController()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
+    
     @IBAction func settingsButtonPressed(_ sender: UIButton) {
+        let vc = SettingsViewController()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
-    func logout(alert: UIAlertAction!){
-        let firebaseAuth = Auth.auth()
-        do {
-          try firebaseAuth.signOut()
-            performSegue(withIdentifier: "profileToLogin", sender: self)
-        } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
-        }
+    @IBAction func designsButtonPressed(_ sender: Any) {
+        let vc = DesignsViewController()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+
     
     let user = Auth.auth().currentUser
     let storage = Storage.storage()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.navigationController?.navigationBar.tintColor = K.brandRed
         let handle = Auth.auth().addStateDidChangeListener { [self] auth, user in
             if Auth.auth().currentUser != nil {
               // User is signed in.
@@ -116,6 +121,16 @@ class ProfileViewController: UIViewController {
     }
     
 
+    
+    func logout(alert: UIAlertAction!){
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+            performSegue(withIdentifier: "profileToLogin", sender: self)
+        } catch let signOutError as NSError {
+          print ("Error signing out: %@", signOutError)
+        }
+    }
     @IBAction func logoutPressed(_ sender: UIButton) {
         
         sender.showAnimation {

@@ -36,6 +36,7 @@ class DesignViewController: UIViewController {
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationController?.navigationBar.isTranslucent = false
         self.title = "Design"
+        self.navigationController?.navigationBar.tintColor = K.brandRed
         
         let imageIcon = UIImage(systemName: "paintpalette.fill", withConfiguration: K.symbolConfig)?.withTintColor(K.brandRed, renderingMode: .alwaysOriginal)
         self.tabBarController?.tabBar.items![2].selectedImage = imageIcon
@@ -63,6 +64,7 @@ class DesignViewController: UIViewController {
         }
         
         view.addSubview(nextButton)
+        Tools.setHeight(nextButton, 55)
         nextButton.snp.makeConstraints {(make) -> Void in
             make.left.equalTo(view).offset(20)
             make.right.equalTo(view).offset(-20)

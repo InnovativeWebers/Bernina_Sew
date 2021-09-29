@@ -46,6 +46,11 @@
 		D49A79972689B035009F62BD /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A79962689B035009F62BD /* ProductList.swift */; };
 		D4A3FAEA26B2AF0500DC11C4 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3FAE926B2AF0500DC11C4 /* ProductTableViewCell.swift */; };
 		D4C110B327036852009C5D68 /* SelectProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110B227036852009C5D68 /* SelectProductViewController.swift */; };
+		D4C110B527040EC7009C5D68 /* DesignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110B427040EC7009C5D68 /* DesignsViewController.swift */; };
+		D4C110B727040EDD009C5D68 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110B627040EDD009C5D68 /* SettingsViewController.swift */; };
+		D4C110B927040EF5009C5D68 /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110B827040EF5009C5D68 /* MyBookingsViewController.swift */; };
+		D4C110BB270410A2009C5D68 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110BA270410A2009C5D68 /* AddressViewController.swift */; };
+		D4C110BD27041C43009C5D68 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110BC27041C43009C5D68 /* AboutViewController.swift */; };
 		D4D13BA9269D3A8B00BA2181 /* featuredProductJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D13BA8269D3A8B00BA2181 /* featuredProductJSON.json */; };
 		D4D13BAB269D5F1300BA2181 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D13BAA269D5F1300BA2181 /* Tools.swift */; };
 		D4E801BF2624876D001C3CB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E801BE2624876D001C3CB0 /* AppDelegate.swift */; };
@@ -95,6 +100,11 @@
 		D49A79962689B035009F62BD /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		D4A3FAE926B2AF0500DC11C4 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		D4C110B227036852009C5D68 /* SelectProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProductViewController.swift; sourceTree = "<group>"; };
+		D4C110B427040EC7009C5D68 /* DesignsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignsViewController.swift; sourceTree = "<group>"; };
+		D4C110B627040EDD009C5D68 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D4C110B827040EF5009C5D68 /* MyBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
+		D4C110BA270410A2009C5D68 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		D4C110BC27041C43009C5D68 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D4D13BA8269D3A8B00BA2181 /* featuredProductJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = featuredProductJSON.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		D4D13BAA269D5F1300BA2181 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		D4E801BB2624876D001C3CB0 /* Bernina Sew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bernina Sew.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +238,11 @@
 				D46843A9269E8D210026E468 /* AccountViewController.swift */,
 				D46843AD269EADB60026E468 /* ChangeUsernameViewController.swift */,
 				D46843AB269EAA880026E468 /* ChangePhotoViewController.swift */,
+				D4C110B427040EC7009C5D68 /* DesignsViewController.swift */,
+				D4C110B627040EDD009C5D68 /* SettingsViewController.swift */,
+				D4C110B827040EF5009C5D68 /* MyBookingsViewController.swift */,
+				D4C110BA270410A2009C5D68 /* AddressViewController.swift */,
+				D4C110BC27041C43009C5D68 /* AboutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -567,6 +582,7 @@
 				D451ED0F264F8BAD00A17A67 /* EventTableViewCell.swift in Sources */,
 				D4E801BF2624876D001C3CB0 /* AppDelegate.swift in Sources */,
 				D432E73B26EE5BB900B9A82B /* BlogCell.swift in Sources */,
+				D4C110B527040EC7009C5D68 /* DesignsViewController.swift in Sources */,
 				D46843B3269ED3670026E468 /* EventListViewController.swift in Sources */,
 				D43C3BF82635C88500E53768 /* ClubViewController.swift in Sources */,
 				D49A798B268995BE009F62BD /* TabViewController.swift in Sources */,
@@ -579,10 +595,13 @@
 				D432E72F26EE060900B9A82B /* PatternsListViewController.swift in Sources */,
 				D49A798F2689AA7C009F62BD /* ProductListViewController.swift in Sources */,
 				D43C3BF52635C86B00E53768 /* ShopViewController.swift in Sources */,
+				D4C110BB270410A2009C5D68 /* AddressViewController.swift in Sources */,
 				D432E73926EE2B3200B9A82B /* BlogModel.swift.swift in Sources */,
 				D46843AE269EADB60026E468 /* ChangeUsernameViewController.swift in Sources */,
 				D4A3FAEA26B2AF0500DC11C4 /* ProductTableViewCell.swift in Sources */,
 				D43C3BF22635C35200E53768 /* LoginViewController.swift in Sources */,
+				D4C110BD27041C43009C5D68 /* AboutViewController.swift in Sources */,
+				D4C110B727040EDD009C5D68 /* SettingsViewController.swift in Sources */,
 				D49A79952689B024009F62BD /* Product.swift in Sources */,
 				D46843A2269D92BB0026E468 /* Pattern.swift in Sources */,
 				D4E801C12624876D001C3CB0 /* SceneDelegate.swift in Sources */,
@@ -593,6 +612,7 @@
 				D432E73E26EEF0F900B9A82B /* AddPostViewController.swift in Sources */,
 				D47B710A263A752200B0B660 /* SignUpViewController.swift in Sources */,
 				D43C3BFE2635C89C00E53768 /* DesignViewController.swift in Sources */,
+				D4C110B927040EF5009C5D68 /* MyBookingsViewController.swift in Sources */,
 				D432E72D26EE05EA00B9A82B /* PatternsViewController.swift in Sources */,
 				D43C3BFB2635C89100E53768 /* BlogViewController.swift in Sources */,
 				D49A79972689B035009F62BD /* ProductList.swift in Sources */,

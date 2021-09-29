@@ -21,7 +21,6 @@ struct Tools {
     public static func loadProductList(filename fileName: String) -> ProductList? {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
             do {
-                print(url.absoluteString)
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 let jsonData = try decoder.decode(ProductList.self, from: data)

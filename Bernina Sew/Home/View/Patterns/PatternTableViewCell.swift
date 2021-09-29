@@ -9,7 +9,7 @@ class PatternTableViewCell: UITableViewCell {
     let container = Tools.setUpContainerView()
     let patternName = UILabel()
     let patternDescription = UILabel()
-    let addButton = Tools.setUpButton("Add to fav", K.brandRed, 16)
+    let addButton = Tools.setUpButton("Add", K.brandRed, 16)
     
     @objc func addPressed(sender: UIButton){
         sender.showAnimation {
@@ -52,8 +52,7 @@ class PatternTableViewCell: UITableViewCell {
             make.left.equalTo(patternImageView.snp_rightMargin).offset(20)
         }
         
-        Tools.setHeight(addButton, 45)
-        Tools.setWidth(addButton, 100)
+        Tools.setWidth(addButton, 60)
         addButton.snp.makeConstraints { make  in
             make.centerY.equalTo(container)
             make.right.equalTo(container).offset(-20)

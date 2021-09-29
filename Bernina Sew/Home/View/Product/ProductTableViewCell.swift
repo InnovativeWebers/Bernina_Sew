@@ -13,7 +13,7 @@ class ProductTableViewCell: UITableViewCell {
 
     let productImageView = Tools.setUpImageView()
     let container = Tools.setUpContainerView()
-    let addButton = Tools.setUpButton("Add to cart", K.brandRed, 16)
+    let addButton = Tools.setUpButton("Add", K.brandRed, 16)
     let productName = UILabel()
     var productPrice = UILabel()
     
@@ -58,9 +58,7 @@ class ProductTableViewCell: UITableViewCell {
             make.top.equalTo(productName.snp_bottomMargin).offset(20)
             make.left.equalTo(productImageView.snp_rightMargin).offset(20)
         }
-        
-        Tools.setHeight(addButton, 45)
-        Tools.setWidth(addButton, 100)
+        Tools.setWidth(addButton, 60)
         addButton.snp.makeConstraints { make  in
             make.centerY.equalTo(container)
             make.right.equalTo(container).offset(-20)

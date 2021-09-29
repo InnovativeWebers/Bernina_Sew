@@ -62,10 +62,12 @@ class SelectProductViewController: UIViewController {
         }
         
         view.addSubview(nextButton)
+        let tabHeight = K.userDefaults.float(forKey: "tabHeight")
+        Tools.setHeight(nextButton, 55)
         nextButton.snp.makeConstraints {(make) -> Void in
             make.left.equalTo(view).offset(20)
             make.right.equalTo(view).offset(-20)
-            make.bottom.equalTo(view).offset(-40)
+            make.bottom.equalTo(view).offset(-20 - tabHeight)
         }
         
 

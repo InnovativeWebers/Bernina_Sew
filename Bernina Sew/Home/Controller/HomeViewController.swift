@@ -99,6 +99,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
+        let tabHeight = self.tabBarController?.tabBar.frame.size.height
+        K.userDefaults.setValue(tabHeight, forKey: "tabHeight")
+        
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barStyle = UIBarStyle.default
