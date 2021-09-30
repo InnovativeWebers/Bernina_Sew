@@ -43,7 +43,6 @@
 		D49A79912689AA96009F62BD /* ProductInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A79902689AA96009F62BD /* ProductInfoViewController.swift */; };
 		D49A79932689AE47009F62BD /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A79922689AE47009F62BD /* EventViewController.swift */; };
 		D49A79952689B024009F62BD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A79942689B024009F62BD /* Product.swift */; };
-		D49A79972689B035009F62BD /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A79962689B035009F62BD /* ProductList.swift */; };
 		D4A3FAEA26B2AF0500DC11C4 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3FAE926B2AF0500DC11C4 /* ProductTableViewCell.swift */; };
 		D4C110B327036852009C5D68 /* SelectProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110B227036852009C5D68 /* SelectProductViewController.swift */; };
 		D4C110B527040EC7009C5D68 /* DesignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110B427040EC7009C5D68 /* DesignsViewController.swift */; };
@@ -97,7 +96,6 @@
 		D49A79902689AA96009F62BD /* ProductInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoViewController.swift; sourceTree = "<group>"; };
 		D49A79922689AE47009F62BD /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		D49A79942689B024009F62BD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		D49A79962689B035009F62BD /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		D4A3FAE926B2AF0500DC11C4 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		D4C110B227036852009C5D68 /* SelectProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProductViewController.swift; sourceTree = "<group>"; };
 		D4C110B427040EC7009C5D68 /* DesignsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignsViewController.swift; sourceTree = "<group>"; };
@@ -339,7 +337,6 @@
 		D4E071B926CCBA650078C7BF /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				D49A79962689B035009F62BD /* ProductList.swift */,
 				D49A79942689B024009F62BD /* Product.swift */,
 			);
 			path = Product;
@@ -615,7 +612,6 @@
 				D4C110B927040EF5009C5D68 /* MyBookingsViewController.swift in Sources */,
 				D432E72D26EE05EA00B9A82B /* PatternsViewController.swift in Sources */,
 				D43C3BFB2635C89100E53768 /* BlogViewController.swift in Sources */,
-				D49A79972689B035009F62BD /* ProductList.swift in Sources */,
 				D49A79932689AE47009F62BD /* EventViewController.swift in Sources */,
 				D4D13BAB269D5F1300BA2181 /* Tools.swift in Sources */,
 			);

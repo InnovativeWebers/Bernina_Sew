@@ -33,17 +33,17 @@ class Pattern: NSObject, NSCoding, Codable{
     }
     
     func encode(with coder: NSCoder) {
-        coder.encode(ID, forKey: "ProductID")
-        coder.encode(Name, forKey: "ProductName")
-        coder.encode(Image, forKey: "ProductImage")
-        coder.encode(Description, forKey: "ProductDescription")
+        coder.encode(ID, forKey: "PatternID")
+        coder.encode(Name, forKey: "PatternName")
+        coder.encode(Image, forKey: "PatternImage")
+        coder.encode(Description, forKey: "PatternDescription")
     }
     
     required init?(coder: NSCoder) {
-        self.ID = (coder.decodeObject(forKey: "ProductID") as? Int)!
-        self.Name = (coder.decodeObject(forKey: "ProductName") as? String)!
-        self.Image = (coder.decodeObject(forKey: "ProductImage") as? String)!
-        self.Description = (coder.decodeObject(forKey: "ProductDescription") as? String)!
+        self.ID = (coder.decodeObject(forKey: "PatternID") as? Int)!
+        self.Name = (coder.decodeObject(forKey: "PatternName") as? String)!
+        self.Image = (coder.decodeObject(forKey: "PatternImage") as? String)!
+        self.Description = (coder.decodeObject(forKey: "PatternDescription") as? String)!
     }
     
     

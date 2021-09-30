@@ -7,11 +7,41 @@
 
 import UIKit
 
-struct Product: Decodable {
+struct ProductList: Decodable {
+    var FeaturedProducts: [Product]
+}
+
+
+class Product: NSObject, NSCoding, Decodable {
+
+    
     var ID: Int
     var Name: String
     var Image: String
     var Price: Int
     var Description: String
-
+    
+    init(ID: Int, Name: String, Image: String, Price: Int, Description: String){
+        self.ID = ID
+        self.Name = Name
+        self.Image = Image
+        self.Price = Price
+        self.Description = Description
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(ID, forKey: "ProductID")
+        coder.encode(Name, forKey: "ProductName")
+        coder.encode(Image, forKey: "ProductImage")
+        coder.encode(Price, forKey: "Price")
+        coder.encode(Description, forKey: "ProductDescription")
+    }
+    
+    required init?(coder: NSCoder) {
+        self.ID = (coder.decodeObject(forKey: "ProductID") as? Int)!
+        self.Name = (coder.decodeObject(forKey: "ProductName") as? String)!
+        self.Image = (coder.decodeObject(forKey: "ProductImage") as? String)!
+        self.Price = (coder.decodeObject(forKey: "Price") as? Int)!
+        self.Description = (coder.decodeObject(forKey: "ProductDescription") as? String)!
+    }
 }

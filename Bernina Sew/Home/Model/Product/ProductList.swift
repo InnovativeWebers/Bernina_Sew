@@ -7,6 +7,4 @@
 
 import UIKit
 
-struct ProductList: Decodable {
-    var FeaturedProducts: [Product]
-}
+
