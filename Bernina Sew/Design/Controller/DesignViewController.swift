@@ -30,9 +30,10 @@ class DesignViewController: UIViewController {
             
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationController?.navigationBar.isTranslucent = false
         self.title = "Design"
@@ -48,6 +49,8 @@ class DesignViewController: UIViewController {
         patternCollectionView.register(CollectionCell.self, forCellWithReuseIdentifier: "CollectionCell")
         patternCollectionView.delegate = self
         patternCollectionView.dataSource = self
+        self.patternCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
+
         
         view.addSubview(patternCollectionView)
         Tools.setHeight(patternCollectionView, 100)
@@ -85,12 +88,19 @@ extension DesignViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionCell
         
         cell.collectionImage.sd_setImage(with: URL(string: patternsList[indexPath.row].Image), completed: nil)
-        
+    
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.imageView.sd_setImage(with: URL(string: patternsList[indexPath.row].Image), placeholderImage: UIImage(named: "placeHolder"), options: .highPriority, completed: nil)
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.layer.borderColor = K.brandRed.cgColor
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.layer.borderColor = K.brandGrey.cgColor
     }
     
     

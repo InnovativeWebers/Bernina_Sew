@@ -28,6 +28,15 @@ class AccountViewController: UIViewController {
         }
     }
     
+    let addressButton = Tools.setUpButton("My Address", K.brandRed, 18)
+    @objc func addressPressed(sender: UIButton){
+        sender.showAnimation {
+            let vc = AddressViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +61,16 @@ class AccountViewController: UIViewController {
         
         changePhotoButton.snp.makeConstraints {(make) -> Void in
             make.top.equalTo(changeUserNameButton.snp_bottomMargin).offset(20)
+            make.left.equalTo(view).offset(16)
+            make.right.equalTo(view).offset(-16)
+        }
+        
+        
+        Tools.setHeight(addressButton, 50)
+        addressButton.addTarget(self, action: #selector(addressPressed(sender:)), for: .touchUpInside)
+        view.addSubview(addressButton)
+        addressButton.snp.makeConstraints { make  in
+            make.top.equalTo(changePhotoButton.snp_bottomMargin).offset(20)
             make.left.equalTo(view).offset(16)
             make.right.equalTo(view).offset(-16)
         }

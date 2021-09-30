@@ -12,6 +12,7 @@ class ProductInfoViewController: UIViewController {
     var productName: String?
     var productImageUrl: String?
     var productPrice: String?
+    var productPriceValue: Int?
     var productID: Int?
     var productDescription: String?
     var offset = 20
@@ -52,8 +53,24 @@ class ProductInfoViewController: UIViewController {
     let addToCartButton = Tools.setUpButton("Add to cart", K.brandRed, 25)
     
     @objc func addAction(sender: UIButton){
-        sender.showAnimation {
+        sender.showAnimation { [self] in
+
+            var productArray = [Product]()
+            if let data = UserDefaults.standard.object(forKey: "Products") as? NSData {
+                productArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [Product]
+            }
+            let product = Product(ID: productID!,Name: productName!, Image: productImageUrl!, Price: productPriceValue!, Description: productDescription!)
+            
+            productArray.append(product)
+            
+            let data = NSKeyedArchiver.archivedData(withRootObject: productArray)
+            UserDefaults.standard.setValue(data, forKey: "Products")
+            
+            
+            
             SCLAlertView().showTitle("Added", subTitle: "Check your cart", style: .success, colorStyle: 0x29BB89)
+            
+            
         }
     }
     

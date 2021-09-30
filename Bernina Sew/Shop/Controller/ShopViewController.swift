@@ -23,7 +23,9 @@ class ShopViewController: UIViewController {
     }
     
     @objc func cartAction(sender: UIBarButtonItem) {
-        // Function body goes here
+        let vc = CartViewController()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     let productTableView = Tools.setUpTableView()
@@ -110,17 +112,17 @@ extension ShopViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableViewCell
-        cell.productImageView.sd_setImage(with: URL(string: productList![indexPath.row].Image), placeholderImage: UIImage(named: "placeHolder"), options: .highPriority, completed: nil)
+        cell.productImageView.sd_setImage(with: URL(string: productList![indexPath.row].Image!), placeholderImage: UIImage(named: "placeHolder"), options: .highPriority, completed: nil)
         cell.productName.text = productList![indexPath.row].Name
         cell.selectionStyle = .none
-        cell.productPrice.text = "$ \(productList![indexPath.row].Price)"
+        cell.productPrice.text = "$ \(productList![indexPath.row].Price!)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ProductInfoViewController()
         vc.productImageUrl = productList![indexPath.row].Image
-        vc.productPrice = "$ \(productList![indexPath.row].Price)"
+        vc.productPrice = "$ \(productList![indexPath.row].Price!)"
         vc.productID = productList![indexPath.row].ID
         vc.productName = productList![indexPath.row].Name
         vc.productDescription = productList![indexPath.row].Description

@@ -84,9 +84,8 @@ class AddPostViewController: UIViewController{
                 
                 let dataToStore = NSKeyedArchiver.archivedData(withRootObject: blogs)
                 UserDefaults.standard.setValue(dataToStore, forKey: "Blogs")
-                print("saved")
-                print(titleTextfield.text)
-                print(contentTextView.text)
+                
+                self.navigationController?.popViewController(animated: true)
             }else{
                 SCLAlertView().showTitle("Missing fields", subTitle: "Please enter title and description", style: .warning, colorStyle: 0xC10000)
             }

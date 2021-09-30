@@ -39,7 +39,7 @@ class SelectProductViewController: UIViewController {
         let imageIcon = UIImage(systemName: "paintpalette.fill", withConfiguration: K.symbolConfig)?.withTintColor(K.brandRed, renderingMode: .alwaysOriginal)
         self.tabBarController?.tabBar.items![2].selectedImage = imageIcon
         
-        self.imageView.sd_setImage(with: URL(string: productLIst[0].Image), placeholderImage: UIImage(named: "placeHolder"), options: .highPriority, completed: nil)
+        self.imageView.sd_setImage(with: URL(string: productLIst[0].Image!), placeholderImage: UIImage(named: "placeHolder"), options: .highPriority, completed: nil)
         
         nextButton.addTarget(self, action: #selector(nextPressed(sender:)), for: .touchUpInside)
         
@@ -83,15 +83,21 @@ extension SelectProductViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionCell
         
-        cell.collectionImage.sd_setImage(with: URL(string: productLIst[indexPath.row].Image), completed: nil)
+        cell.collectionImage.sd_setImage(with: URL(string: productLIst[indexPath.row].Image!), completed: nil)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.imageView.sd_setImage(with: URL(string: productLIst[indexPath.row].Image), placeholderImage: UIImage(named: "placeHolder"), options: .highPriority, completed: nil)
+        self.imageView.sd_setImage(with: URL(string: productLIst[indexPath.row].Image!), placeholderImage: UIImage(named: "placeHolder"), options: .highPriority, completed: nil)
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.layer.borderColor = K.brandRed.cgColor
     }
     
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.layer.borderColor = K.brandGrey.cgColor
+    }
     
 }
 

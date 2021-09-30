@@ -15,11 +15,11 @@ struct ProductList: Decodable {
 class Product: NSObject, NSCoding, Decodable {
 
     
-    var ID: Int
-    var Name: String
-    var Image: String
-    var Price: Int
-    var Description: String
+    var ID: Int?
+    var Name: String?
+    var Image: String?
+    var Price: Int?
+    var Description: String?
     
     init(ID: Int, Name: String, Image: String, Price: Int, Description: String){
         self.ID = ID
@@ -30,18 +30,18 @@ class Product: NSObject, NSCoding, Decodable {
     }
     
     func encode(with coder: NSCoder) {
-        coder.encode(ID, forKey: "ProductID")
-        coder.encode(Name, forKey: "ProductName")
-        coder.encode(Image, forKey: "ProductImage")
+        coder.encode(ID, forKey: "ID")
+        coder.encode(Name, forKey: "Name")
+        coder.encode(Image, forKey: "Image")
         coder.encode(Price, forKey: "Price")
-        coder.encode(Description, forKey: "ProductDescription")
+        coder.encode(Description, forKey: "Description")
     }
     
     required init?(coder: NSCoder) {
-        self.ID = (coder.decodeObject(forKey: "ProductID") as? Int)!
-        self.Name = (coder.decodeObject(forKey: "ProductName") as? String)!
-        self.Image = (coder.decodeObject(forKey: "ProductImage") as? String)!
-        self.Price = (coder.decodeObject(forKey: "Price") as? Int)!
-        self.Description = (coder.decodeObject(forKey: "ProductDescription") as? String)!
+        self.ID = coder.decodeObject(forKey: "ID") as? Int
+        self.Name = coder.decodeObject(forKey: "Name") as? String
+        self.Image = coder.decodeObject(forKey: "Image") as? String
+        self.Price = coder.decodeObject(forKey: "Price") as? Int
+        self.Description = coder.decodeObject(forKey: "Description") as? String
     }
 }

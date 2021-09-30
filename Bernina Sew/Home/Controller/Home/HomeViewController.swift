@@ -345,7 +345,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionCell
         
         if collectionView == featuredCollectionView {
-            cell.collectionImage.sd_setImage(with: URL(string: productList[indexPath.row].Image), completed: nil)
+            cell.collectionImage.sd_setImage(with: URL(string: productList[indexPath.row].Image!), completed: nil)
         }else {
             cell.collectionImage.sd_setImage(with: URL(string: patternsList[indexPath.row].Image), completed: nil)
         }
@@ -356,10 +356,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         if collectionView == featuredCollectionView {
             let vc = ProductInfoViewController()
             vc.productImageUrl = productList[indexPath.row].Image
-            vc.productPrice = "$ \(productList[indexPath.row].Price)"
+            vc.productPrice = "$ \(productList[indexPath.row].Price!)"
             vc.productID = productList[indexPath.row].ID
             vc.productName = productList[indexPath.row].Name
             vc.productDescription = productList[indexPath.row].Description
+            vc.productPriceValue = productList[indexPath.row].Price
+
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
         }else {

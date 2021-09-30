@@ -14,8 +14,7 @@ class MyBookingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        self.title = "My Bookings"
-        
+
 
         if let data = UserDefaults.standard.object(forKey: "Events") as? NSData {
         eventList = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [Event]

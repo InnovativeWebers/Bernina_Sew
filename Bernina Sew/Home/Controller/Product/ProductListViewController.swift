@@ -40,17 +40,22 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableViewCell
-        cell.productImageView.sd_setImage(with: URL(string: productList![indexPath.row].Image), placeholderImage: UIImage(named: "placeHolder"), options: .highPriority, completed: nil)
+        cell.productImageView.sd_setImage(with: URL(string: productList![indexPath.row].Image!), placeholderImage: UIImage(named: "placeHolder"), options: .highPriority, completed: nil)
         cell.productName.text = productList![indexPath.row].Name
         cell.selectionStyle = .none
-        cell.productPrice.text = "$ \(productList![indexPath.row].Price)"
+        cell.productPrice.text = "$ \(productList![indexPath.row].Price!)"
+        cell.productID = productList![indexPath.row].ID
+        cell.productDescription = productList![indexPath.row].Description
+        cell.productPriceValue = productList![indexPath.row].Price
+        cell.productImageUrl = productList![indexPath.row].Image
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ProductInfoViewController()
         vc.productImageUrl = productList![indexPath.row].Image
-        vc.productPrice = "$ \(productList![indexPath.row].Price)"
+        vc.productPrice = "$ \(productList![indexPath.row].Price!)"
+        vc.productPriceValue = productList![indexPath.row].Price
         vc.productID = productList![indexPath.row].ID
         vc.productName = productList![indexPath.row].Name
         vc.productDescription = productList![indexPath.row].Description
