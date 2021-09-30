@@ -76,7 +76,20 @@ class EventViewController: UIViewController {
     
     
     @objc func bookingAction(sender: UIButton){
-        sender.showAnimation {
+        sender.showAnimation { [self] in
+            var eventArray = [Event]()
+            if let data = UserDefaults.standard.object(forKey: "Events") as? NSData {
+            eventArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [Event]
+               }
+            
+            let event = Event(Name: eventName!, Level: eventLevel!, Date: eventDate!, Description: eventDescripton!)
+            
+            eventArray.append(event)
+            
+            let data = NSKeyedArchiver.archivedData(withRootObject: eventArray)
+            UserDefaults.standard.setValue(data, forKey: "Events")
+            
+            
             SCLAlertView().showTitle("Booked", subTitle: "Check your bookings in 'Profile' tab", style: .success, colorStyle: 0x29BB89)
         }
     }
