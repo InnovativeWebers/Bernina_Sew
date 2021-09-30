@@ -47,7 +47,21 @@ class PatternsViewController: UIViewController {
     let addToFavsButton = Tools.setUpButton("Add to favorites", K.brandRed, 25)
     
     @objc func addAction(sender: UIButton){
-        sender.showAnimation {
+        sender.showAnimation { [self] in
+            var patternArray = [Pattern]()
+            if let data = UserDefaults.standard.object(forKey: "Patterns") as? NSData {
+            patternArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [Pattern]
+               }
+            
+            let pattern = Pattern(ID: patternID!, Name: patternName!, Image: patternImgUrl!, Description: patterDescription!)
+            
+            patternArray.append(pattern)
+            
+            let data = NSKeyedArchiver.archivedData(withRootObject: patternArray)
+            UserDefaults.standard.setValue(data, forKey: "Patterns")
+            
+            
+            
             SCLAlertView().showTitle("Added", subTitle: "Check your favorites", style: .success, colorStyle: 0x29BB89)
         }
     }

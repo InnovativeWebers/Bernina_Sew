@@ -3,49 +3,49 @@
         {
             "Name": "L1 Workshop",
             "Level": "Easy",
-            "Date": "22-07-2021",
+            "Date": "Jul 22, 2021",
             "Description": "This work shop is targeted at people who are new to sewing."
         },
         
         {
             "Name": "L2 Workshop",
             "Level": "Medium",
-            "Date": "29-07-2021",
+            "Date": "Jul 29, 2021",
             "Description": "This work shop is targeted at people who have some experience in sewing."
         },
         
         {
             "Name": "L3 Workshop",
             "Level": "Hard",
-            "Date": "01-08-2021",
+            "Date": "Aug, 01, 2021",
             "Description": "This work shop is targeted at people who are experienced in sewing."
         },
         
         {
             "Name": "L2 Workshop",
             "Level": "Medium",
-            "Date": "03-08-2021",
+            "Date": "Aug 03, 2021",
             "Description": "This work shop is targeted at people who have some experience in sewing."
         },
         
         {
             "Name": "L1 Workshop",
             "Level": "Easy",
-            "Date": "10-08-2021",
+            "Date": "Aug 10, 2021",
             "Description": "This work shop is targeted at people who are new to sewing."
         },
         
         {
             "Name": "L1 Workshop",
             "Level": "Easy",
-            "Date": "13-08-2021",
+            "Date": "Sep 13, 2021",
             "Description": "This work shop is targeted at people who are new to sewing."
         },
         
         {
             "Name": "L3 Workshop",
             "Level": "Hard",
-            "Date": "20-08-2021",
+            "Date": "Sep 20, 2021",
             "Description": "This work shop is targeted at people who are experienced in sewing."
         },
         
@@ -53,7 +53,7 @@
         {
             "Name": "L1 Workshop",
             "Level": "Easy",
-            "Date": "28-08-2021",
+            "Date": "Sep 28, 2021",
             "Description": "This work shop is targeted at people who are new to sewing."
         }
     

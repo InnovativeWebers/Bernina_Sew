@@ -53,6 +53,8 @@
 		D4C110C027056B45009C5D68 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110BF27056B45009C5D68 /* CartViewController.swift */; };
 		D4C110C3270580CD009C5D68 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110C2270580CD009C5D68 /* CartCell.swift */; };
 		D4C110C5270598D9009C5D68 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110C4270598D9009C5D68 /* CheckoutViewController.swift */; };
+		D4C110C72705A6AC009C5D68 /* MyFavorietesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110C62705A6AC009C5D68 /* MyFavorietesViewController.swift */; };
+		D4C110C92705A881009C5D68 /* FavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110C82705A881009C5D68 /* FavCell.swift */; };
 		D4D13BA9269D3A8B00BA2181 /* featuredProductJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D13BA8269D3A8B00BA2181 /* featuredProductJSON.json */; };
 		D4D13BAB269D5F1300BA2181 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D13BAA269D5F1300BA2181 /* Tools.swift */; };
 		D4E801BF2624876D001C3CB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E801BE2624876D001C3CB0 /* AppDelegate.swift */; };
@@ -109,6 +111,8 @@
 		D4C110BF27056B45009C5D68 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		D4C110C2270580CD009C5D68 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 		D4C110C4270598D9009C5D68 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		D4C110C62705A6AC009C5D68 /* MyFavorietesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavorietesViewController.swift; sourceTree = "<group>"; };
+		D4C110C82705A881009C5D68 /* FavCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCell.swift; sourceTree = "<group>"; };
 		D4D13BA8269D3A8B00BA2181 /* featuredProductJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = featuredProductJSON.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		D4D13BAA269D5F1300BA2181 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		D4E801BB2624876D001C3CB0 /* Bernina Sew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bernina Sew.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +183,7 @@
 		D46843B4269EE9DC0026E468 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D4C110C82705A881009C5D68 /* FavCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				D4C110B827040EF5009C5D68 /* MyBookingsViewController.swift */,
 				D4C110BA270410A2009C5D68 /* AddressViewController.swift */,
 				D4C110BC27041C43009C5D68 /* AboutViewController.swift */,
+				D4C110C62705A6AC009C5D68 /* MyFavorietesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -619,6 +625,7 @@
 				D4C110C027056B45009C5D68 /* CartViewController.swift in Sources */,
 				D432E72F26EE060900B9A82B /* PatternsListViewController.swift in Sources */,
 				D49A798F2689AA7C009F62BD /* ProductListViewController.swift in Sources */,
+				D4C110C92705A881009C5D68 /* FavCell.swift in Sources */,
 				D43C3BF52635C86B00E53768 /* ShopViewController.swift in Sources */,
 				D4C110BB270410A2009C5D68 /* AddressViewController.swift in Sources */,
 				D432E73926EE2B3200B9A82B /* BlogModel.swift.swift in Sources */,
@@ -631,6 +638,7 @@
 				D46843A2269D92BB0026E468 /* Pattern.swift in Sources */,
 				D4E801C12624876D001C3CB0 /* SceneDelegate.swift in Sources */,
 				D432E73226EE064100B9A82B /* PatternTableViewCell.swift in Sources */,
+				D4C110C72705A6AC009C5D68 /* MyFavorietesViewController.swift in Sources */,
 				D4C110B327036852009C5D68 /* SelectProductViewController.swift in Sources */,
 				D451ECFA264CDA6C00A17A67 /* ProfileViewController.swift in Sources */,
 				D46843AA269E8D210026E468 /* AccountViewController.swift in Sources */,

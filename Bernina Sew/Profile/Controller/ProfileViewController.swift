@@ -44,6 +44,11 @@ class ProfileViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func favButtonPressed(_ sender: UIButton) {
+        let vc = MyFavorietesViewController()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     @IBAction func designsButtonPressed(_ sender: Any) {
         let vc = DesignsViewController()
         vc.hidesBottomBarWhenPushed = true
@@ -122,26 +127,5 @@ class ProfileViewController: UIViewController {
     
 
     
-    func logout(alert: UIAlertAction!){
-        let firebaseAuth = Auth.auth()
-        do {
-          try firebaseAuth.signOut()
-            performSegue(withIdentifier: "profileToLogin", sender: self)
-        } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
-        }
-    }
-    @IBAction func logoutPressed(_ sender: UIButton) {
-        
-        sender.showAnimation {
-            let alert = UIAlertController.init(title: "Log out", message: "Are you sure？", preferredStyle:.alert)
-            let action1 = UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil)
-            let action2 = UIAlertAction.init(title: "Log out", style: .default, handler: self.logout)
-            
-            alert.addAction(action1)
-            alert.addAction(action2)
-            self.present(alert, animated: true, completion: nil)
-        }
-        
-    }
+
 }

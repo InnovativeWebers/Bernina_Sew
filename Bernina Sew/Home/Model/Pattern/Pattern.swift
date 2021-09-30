@@ -20,10 +20,10 @@ struct PatternList: Decodable {
 
 class Pattern: NSObject, NSCoding, Codable{
 
-    var ID: Int
-    var Name: String
-    var Image: String
-    var Description: String
+    var ID: Int?
+    var Name: String?
+    var Image: String?
+    var Description: String?
     
     init(ID: Int, Name: String, Image: String, Description: String){
         self.ID = ID
@@ -40,10 +40,10 @@ class Pattern: NSObject, NSCoding, Codable{
     }
     
     required init?(coder: NSCoder) {
-        self.ID = (coder.decodeObject(forKey: "PatternID") as? Int)!
-        self.Name = (coder.decodeObject(forKey: "PatternName") as? String)!
-        self.Image = (coder.decodeObject(forKey: "PatternImage") as? String)!
-        self.Description = (coder.decodeObject(forKey: "PatternDescription") as? String)!
+        self.ID = coder.decodeObject(forKey: "PatternID") as? Int
+        self.Name = coder.decodeObject(forKey: "PatternName") as? String
+        self.Image = coder.decodeObject(forKey: "PatternImage") as? String
+        self.Description = coder.decodeObject(forKey: "PatternDescription") as? String
     }
     
     

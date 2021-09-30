@@ -347,7 +347,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         if collectionView == featuredCollectionView {
             cell.collectionImage.sd_setImage(with: URL(string: productList[indexPath.row].Image!), completed: nil)
         }else {
-            cell.collectionImage.sd_setImage(with: URL(string: patternsList[indexPath.row].Image), completed: nil)
+            cell.collectionImage.sd_setImage(with: URL(string: patternsList[indexPath.row].Image!), completed: nil)
         }
         return cell
     }
