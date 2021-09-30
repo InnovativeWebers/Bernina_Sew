@@ -25,11 +25,13 @@ class HomeViewController: UIViewController {
         return tf
     }()
     
+    let searchButton = Tools.setUpButton("Search", K.brandRed, 12)
+    
     let featuredLabel = Tools.setUpHeadingLabel("Featured")
     let patternsLabel = Tools.setUpHeadingLabel("Patterns")
     let eventsLabel = Tools.setUpHeadingLabel("Events")
     
-    let searchButton = Tools.setUpButton("Search", K.brandRed, 12)
+
     let featureButton = Tools.setUpButton("More", K.brandRed, 12)
     let patternsButton = Tools.setUpButton("More", K.brandRed, 12)
     let eventsButton = Tools.setUpButton("More", K.brandRed, 12)

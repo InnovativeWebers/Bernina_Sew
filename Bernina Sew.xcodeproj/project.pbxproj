@@ -177,6 +177,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D4C110BE270562BD009C5D68 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D4E801C22624876D001C3CB0 /* HomeViewController.swift */,
+				D49A798A268995BE009F62BD /* TabViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		D4C92C552666931F00E3AE2D /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,11 +220,10 @@
 		D4C92C582666933300E3AE2D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D4C110BE270562BD009C5D68 /* Home */,
 				D432E72B26EE05C800B9A82B /* Patterns */,
 				D4E071BE26CCBAC40078C7BF /* Product */,
 				D4E071BD26CCBAB40078C7BF /* Event */,
-				D4E801C22624876D001C3CB0 /* HomeViewController.swift */,
-				D49A798A268995BE009F62BD /* TabViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
