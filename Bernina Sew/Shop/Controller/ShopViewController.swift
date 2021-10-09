@@ -30,6 +30,10 @@ class ShopViewController: UIViewController {
     
     let productTableView = Tools.setUpTableView()
     var productList = Tools.loadProductList(filename: "featuredProductJSON")?.FeaturedProducts
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+        
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +48,10 @@ class ShopViewController: UIViewController {
         
         searchTextField.delegate = self
         searchTextField.addTarget(self, action: #selector(searchPressed(sender:)), for: .touchUpInside)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+                tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
         
         view.addSubview(searchButton)
         view.addSubview(searchTextField)
@@ -114,6 +122,10 @@ extension ShopViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableViewCell
         cell.productImageView.sd_setImage(with: URL(string: productList![indexPath.row].Image!), placeholderImage: UIImage(named: "placeHolder"), options: .highPriority, completed: nil)
         cell.productName.text = productList![indexPath.row].Name
+        cell.productID = productList![indexPath.row].ID
+        cell.productPriceValue = productList![indexPath.row].Price
+        cell.productDescription = productList![indexPath.row].Description
+        cell.productImageUrl = productList![indexPath.row].Image
         cell.selectionStyle = .none
         cell.productPrice.text = "$ \(productList![indexPath.row].Price!)"
         return cell

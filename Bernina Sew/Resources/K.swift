@@ -21,4 +21,5 @@ struct K {
     static let screenWidth = UIScreen.main.bounds.width
     static let screenHeight = UIScreen.main.bounds.height
     static let userDefaults = UserDefaults.standard
+    static let AppVersion = "1.0.0"
 }

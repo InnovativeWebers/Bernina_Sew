@@ -19,7 +19,7 @@ class SettingsViewController: UIViewController {
         let firebaseAuth = Auth.auth()
         do {
           try firebaseAuth.signOut()
-            performSegue(withIdentifier: "profileToLogin", sender: self)
+            self.navigationController?.popViewController(animated: true)
         } catch let signOutError as NSError {
           print ("Error signing out: %@", signOutError)
         }
@@ -41,7 +41,9 @@ class SettingsViewController: UIViewController {
     
     @objc func aboutPressed(sender: UIButton){
         sender.showAnimation {
-            
+            let vc = AboutViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

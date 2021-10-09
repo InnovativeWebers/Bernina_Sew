@@ -14,5 +14,10 @@ target 'Bernina Sew' do
   pod 'SCLAlertView'
   pod 'NVActivityIndicatorView'
   pod 'SDWebImage', :modular_headers => true
+  pod 'DropDown'
+  
+  pod 'MaterialComponents/TextControls+OutlinedTextAreas'
+  pod 'MaterialComponents/TextControls+OutlinedTextFields'
+
 
 end

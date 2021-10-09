@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var AccountButton: UIButton!
     @IBOutlet weak var bookingsButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
-    @IBOutlet weak var logoutButton: UIButton!
+  
     
     @IBAction func acountButtonPressed(_ sender: UIButton) {
         let alert = Tools.setUpLoginAlert(self)
@@ -55,6 +55,13 @@ class ProfileViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @objc func loginPressed(sender: UIButton){
+        sender.showAnimation {
+            self.performSegue(withIdentifier: "profileToLogin", sender: self)
+        }
+    }
+    
+    let loginButton = Tools.setUpButton("Login", K.brandRed, 20)
 
     
     let user = Auth.auth().currentUser
@@ -101,6 +108,7 @@ class ProfileViewController: UIViewController {
         profileImage.layer.borderColor = K.brandGrey.cgColor
         profileImage.layer.cornerRadius = 12
         nameLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        loginButton.addTarget(self, action: #selector(loginPressed(sender:)), for: .touchUpInside)
         
 
 
@@ -111,11 +119,6 @@ class ProfileViewController: UIViewController {
         let imageIcon = UIImage(systemName: "face.smiling.fill", withConfiguration: K.symbolConfig)?.withTintColor(K.brandRed, renderingMode: .alwaysOriginal)
         self.tabBarController?.tabBar.items![4].selectedImage = imageIcon
         
-//        let userName = UserDefaults.standard.string(forKey: "username")
-//        if (userName != nil) {
-//            nameLabel.text = userName as? String
-//        }
-//
 
         if user?.displayName == nil {
             nameLabel.text = "Bernina-User-\(user?.uid.prefix(5) ?? "Temp")"
@@ -123,6 +126,18 @@ class ProfileViewController: UIViewController {
             nameLabel.text = user?.displayName
         }
         emailLabel.text = user?.email
+        
+        if Auth.auth().currentUser != nil {
+            loginButton.isHidden = true
+        }
+        
+        view.addSubview(loginButton)
+        Tools.setHeight(loginButton, 45)
+        loginButton.snp.makeConstraints { make  in
+            make.left.equalTo(profileImage.snp_rightMargin).offset(20)
+            make.right.equalTo(view).offset(-20)
+            make.top.equalTo(nameLabel.snp_bottomMargin).offset(16)
+        }
     }
     
 
