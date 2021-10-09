@@ -55,7 +55,7 @@ class AddAddressViewController: UIViewController {
     
     let postCodeTextField: MDCOutlinedTextField = {
         let tf = MDCOutlinedTextField()
-        tf.label.text = "zip code"
+        tf.label.text = "ZIP"
         tf.textContentType = .postalCode
         tf.sizeToFit()
         Tools.setHeight(tf, 60)
@@ -159,9 +159,16 @@ class AddAddressViewController: UIViewController {
         }
         
         view.addSubview(suburbTextField)
+        Tools.setWidth(suburbTextField, 150)
         suburbTextField.snp.makeConstraints { make  in
             make.left.equalTo(stateView.snp_rightMargin).offset(offset)
             make.top.equalTo(phoneTextField.snp_bottomMargin).offset(offset)
+        }
+        
+        view.addSubview(postCodeTextField)
+        postCodeTextField.snp.makeConstraints { make  in
+            make.top.equalTo(phoneTextField.snp_bottomMargin).offset(offset)
+            make.left.equalTo(suburbTextField.snp_rightMargin).offset(offset)
             make.right.equalTo(view).offset(-offset)
         }
         

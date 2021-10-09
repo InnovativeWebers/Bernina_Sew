@@ -56,6 +56,7 @@
 		D4C110C72705A6AC009C5D68 /* MyFavorietesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110C62705A6AC009C5D68 /* MyFavorietesViewController.swift */; };
 		D4C110C92705A881009C5D68 /* FavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C110C82705A881009C5D68 /* FavCell.swift */; };
 		D4C5353F27114731005FBA7A /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C5353E27114731005FBA7A /* AddAddressViewController.swift */; };
+		D4C535422711809A005FBA7A /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C535412711809A005FBA7A /* AddressModel.swift */; };
 		D4D13BA9269D3A8B00BA2181 /* featuredProductJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D13BA8269D3A8B00BA2181 /* featuredProductJSON.json */; };
 		D4D13BAB269D5F1300BA2181 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D13BAA269D5F1300BA2181 /* Tools.swift */; };
 		D4E801BF2624876D001C3CB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E801BE2624876D001C3CB0 /* AppDelegate.swift */; };
@@ -115,6 +116,7 @@
 		D4C110C62705A6AC009C5D68 /* MyFavorietesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavorietesViewController.swift; sourceTree = "<group>"; };
 		D4C110C82705A881009C5D68 /* FavCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCell.swift; sourceTree = "<group>"; };
 		D4C5353E27114731005FBA7A /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
+		D4C535412711809A005FBA7A /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		D4D13BA8269D3A8B00BA2181 /* featuredProductJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = featuredProductJSON.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		D4D13BAA269D5F1300BA2181 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		D4E801BB2624876D001C3CB0 /* Bernina Sew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bernina Sew.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +209,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D4C5354027117D88005FBA7A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4C535412711809A005FBA7A /* AddressModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D4C92C552666931F00E3AE2D /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +262,7 @@
 		D4C92C592666936600E3AE2D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				D4C5354027117D88005FBA7A /* Model */,
 				D46843B4269EE9DC0026E468 /* View */,
 				D4C92C5A2666937900E3AE2D /* Controller */,
 			);
@@ -627,6 +638,7 @@
 				D46843AC269EAA880026E468 /* ChangePhotoViewController.swift in Sources */,
 				D4C110C027056B45009C5D68 /* CartViewController.swift in Sources */,
 				D4C5353F27114731005FBA7A /* AddAddressViewController.swift in Sources */,
+				D4C535422711809A005FBA7A /* AddressModel.swift in Sources */,
 				D432E72F26EE060900B9A82B /* PatternsListViewController.swift in Sources */,
 				D49A798F2689AA7C009F62BD /* ProductListViewController.swift in Sources */,
 				D4C110C92705A881009C5D68 /* FavCell.swift in Sources */,
