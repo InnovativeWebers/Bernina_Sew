@@ -28,6 +28,8 @@ class AddressViewController: UIViewController {
             
         }
     }
+    
+    let addressTableView = Tools.setUpTableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()

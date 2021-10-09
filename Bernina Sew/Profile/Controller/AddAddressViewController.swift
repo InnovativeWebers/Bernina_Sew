@@ -97,10 +97,37 @@ class AddAddressViewController: UIViewController {
     @objc func addAction(sender: UIButton) {
         sender.showAnimation { [self] in
         
-            print(firstNameTextField.text)
-            print(stateView.currentTitle)
+            var address: AddressModel?
             
-            SCLAlertView().showTitle("Address added", subTitle: "The address has been added", style: .success, colorStyle: 0x29BB89)
+            var addressArray = [AddressModel]()
+            if let data = UserDefaults.standard.object(forKey: "addresses") as? NSData {
+            addressArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [AddressModel]
+               }
+            
+            let firstName = firstNameTextField.text!
+            let lastName = lastNameTextField.text!
+            let phoneNum = phoneTextField.text!
+            let state = stateView.currentTitle!
+            let suburb = suburbTextField.text!
+            let postCode = postCodeTextField.text!
+            let line1 = addressLine1TextField.text!
+            let line2 = addressLine2TextField.text!
+            
+            if( firstName == "" || lastName == "" || phoneNum == "" || state == "Select State" || suburb == "" || postCode == "" || line1 == ""){
+                SCLAlertView().showTitle("Missing fields", subTitle: "Please fill in all the required fields", style: .warning, colorStyle: 0xC10000)
+            }else{
+                
+                address = AddressModel(firstName: firstName, lastName: lastName, phoneNum: phoneNum, state: state, suburb: suburb, postCode: postCode, line1: line1, line2: line2)
+                
+                addressArray.append(address!)
+                
+                let data = NSKeyedArchiver.archivedData(withRootObject: addressArray)
+                UserDefaults.standard.setValue(data, forKey: "addresses")
+                
+                SCLAlertView().showTitle("Address added", subTitle: "The address has been added", style: .success, colorStyle: 0x29BB89)
+            }
+            
+
         }
     }
     
