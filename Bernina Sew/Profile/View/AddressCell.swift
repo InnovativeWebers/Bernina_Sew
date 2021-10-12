@@ -72,6 +72,12 @@ class AddressCell: UITableViewCell {
             make.top.equalTo(addressLine1.snp_bottomMargin).offset(8)
             make.left.equalTo(container).offset(10)
         }
+        
+        container.addSubview(suburb)
+        suburb.snp.makeConstraints { make  in
+            make.top.equalTo(addressLine2.snp_bottomMargin).offset(8)
+            make.left.equalTo(container).offset(10)
+        }
 
         
     }
