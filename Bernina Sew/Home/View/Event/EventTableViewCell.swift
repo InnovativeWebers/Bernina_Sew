@@ -20,7 +20,7 @@ class EventTableViewCell: UITableViewCell {
         
         contentView.layer.cornerRadius = 10
         contentView.layer.borderWidth = 2.0
-        contentView.layer.borderColor = K.brandGrey.cgColor
+        contentView.layer.borderColor = K.brandGray.cgColor
         
 
  

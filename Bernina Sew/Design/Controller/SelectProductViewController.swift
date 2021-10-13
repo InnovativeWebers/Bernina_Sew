@@ -96,7 +96,7 @@ extension SelectProductViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        cell?.contentView.layer.borderColor = K.brandGrey.cgColor
+        cell?.contentView.layer.borderColor = K.brandGray.cgColor
     }
     
 }

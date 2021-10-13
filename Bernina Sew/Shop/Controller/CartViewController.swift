@@ -66,7 +66,7 @@ class CartViewController: UIViewController {
         if cartList.count == 0 {
             infoLabel.isHidden = false
             checkOutButton.isEnabled = false
-            checkOutButton.backgroundColor = K.brandGrey
+            checkOutButton.backgroundColor = K.brandGray
         }else{
             infoLabel.isHidden = true
             checkOutButton.isEnabled = true

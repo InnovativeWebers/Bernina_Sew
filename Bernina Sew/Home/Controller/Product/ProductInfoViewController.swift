@@ -37,7 +37,7 @@ class ProductInfoViewController: UIViewController {
     
     let productIDLabel: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = K.brandGrey
+        lbl.textColor = K.brandGray
         return lbl
     }()
     

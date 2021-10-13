@@ -30,7 +30,7 @@ class CheckoutViewController: UIViewController {
         let v = UIView()
         v.layer.cornerRadius = 10
         v.layer.borderWidth = 3
-        v.layer.borderColor = K.brandRed.cgColor
+        v.layer.borderColor = UIColor.black.cgColor
         Tools.setHeight(v, 130)
         return v
     }()
@@ -54,6 +54,8 @@ class CheckoutViewController: UIViewController {
         return price
     }
     
+    let paymentMethodsArray = ["Credit Card", "PayPal"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -62,6 +64,10 @@ class CheckoutViewController: UIViewController {
         productCollectionView.dataSource = self
         productCollectionView.delegate = self
         productCollectionView.register(CollectionCell.self, forCellWithReuseIdentifier: "CollectionCell")
+        
+        paymentTableView.dataSource = self
+        paymentTableView.delegate = self
+        paymentTableView.register(PaymentCell.self, forCellReuseIdentifier: "PaymentCell")
         
         
         priceLabel.text = "Total price: $\(price)"
@@ -87,10 +93,12 @@ class CheckoutViewController: UIViewController {
         }
         
         paymentTableView.layer.borderWidth = 3
-        paymentTableView.layer.borderColor = K.brandRed.cgColor
+        paymentTableView.layer.borderColor = UIColor.black.cgColor
         paymentTableView.layer.cornerRadius = 10
         paymentTableView.isScrollEnabled = false
-        Tools.setHeight(paymentTableView, 150)
+    
+        paymentTableView.rowHeight = 60
+        Tools.setHeight(paymentTableView, 120)
         
         view.addSubview(paymentTableView)
         paymentTableView.snp.makeConstraints { make  in
@@ -111,6 +119,33 @@ extension CheckoutViewController: UICollectionViewDelegate, UICollectionViewData
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionCell
         cell.collectionImage.sd_setImage(with: URL(string: cartList![indexPath.row].Image!), completed: nil)
         return cell
+    }
+    
+}
+
+extension CheckoutViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return paymentMethodsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentCell", for: indexPath) as! PaymentCell
+        cell.paymentLabel.text = paymentMethodsArray[indexPath.row]
+        cell.selectionStyle = .none
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! PaymentCell
+        cell.container.layer.borderColor = K.brandRed.cgColor
+        let symbolConfig = UIImage.SymbolConfiguration(scale: .small)
+        cell.selectionImageView.image = UIImage(systemName: "circle.circle.fill", withConfiguration: symbolConfig)?.withTintColor(K.brandRed).withRenderingMode(.alwaysOriginal)
+    }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! PaymentCell
+        cell.container.layer.borderColor = K.brandGray.cgColor
+        let symbolConfig = UIImage.SymbolConfiguration(scale: .small)
+        cell.selectionImageView.image = UIImage(systemName: "circle.circle", withConfiguration: symbolConfig)?.withTintColor(K.brandGray).withRenderingMode(.alwaysOriginal)
     }
     
 }

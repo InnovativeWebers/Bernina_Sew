@@ -31,7 +31,7 @@ class PatternsViewController: UIViewController {
     
     let patternIDLabel: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = K.brandGrey
+        lbl.textColor = K.brandGray
         return lbl
     }()
     

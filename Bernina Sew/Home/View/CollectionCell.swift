@@ -26,7 +26,7 @@ class CollectionCell: UICollectionViewCell {
         
         contentView.layer.cornerRadius = 10
         contentView.layer.borderWidth = 3.0
-        contentView.layer.borderColor = K.brandGrey.cgColor
+        contentView.layer.borderColor = K.brandGray.cgColor
         
 
         collectionImage.snp.makeConstraints {(make) -> Void in

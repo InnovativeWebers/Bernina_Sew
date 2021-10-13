@@ -113,7 +113,7 @@ class ProfileViewController: UIViewController {
         }
         profileImage.contentMode = .scaleAspectFill
         profileImage.layer.borderWidth = 1.5
-        profileImage.layer.borderColor = K.brandGrey.cgColor
+        profileImage.layer.borderColor = K.brandGray.cgColor
         profileImage.layer.cornerRadius = 12
         nameLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         loginButton.addTarget(self, action: #selector(loginPressed(sender:)), for: .touchUpInside)

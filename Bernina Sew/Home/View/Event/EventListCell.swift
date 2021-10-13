@@ -53,7 +53,7 @@ class EventListCell: UITableViewCell {
         contentView.addSubview(eventLabel)
 
         
-        contentView.layer.borderColor = K.brandGrey.cgColor
+        contentView.layer.borderColor = K.brandGray.cgColor
         contentView.layer.borderWidth = 2.0
         contentView.layer.cornerRadius = 10
         

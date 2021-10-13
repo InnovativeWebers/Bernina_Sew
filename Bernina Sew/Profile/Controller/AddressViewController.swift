@@ -48,6 +48,7 @@ class AddressViewController: UIViewController {
 
         if let data = UserDefaults.standard.object(forKey: "addresses") as? NSData {
             addressArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [AddressModel]
+            self.addressTableView.reloadData()
         }
         
         
