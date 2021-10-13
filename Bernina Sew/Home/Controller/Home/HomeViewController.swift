@@ -12,9 +12,6 @@ import NVActivityIndicatorView
 
 class HomeViewController: UIViewController {
    
-    
-
-    
     let searchTextField: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
@@ -103,6 +100,15 @@ class HomeViewController: UIViewController {
         self.title = "Home"
         let tabHeight = self.tabBarController?.tabBar.frame.size.height
         K.userDefaults.setValue(tabHeight, forKey: "tabHeight")
+        
+        if #available(iOS 15, *){
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground() // isTranslucent = true
+            appearance.backgroundColor = .white
+            self.navigationController?.navigationBar.standardAppearance = appearance;
+            self.navigationController?.navigationBar.scrollEdgeAppearance = self.navigationController?.navigationBar.standardAppearance
+        }
+
         
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationController?.navigationBar.isTranslucent = false

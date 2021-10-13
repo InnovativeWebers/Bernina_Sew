@@ -13,11 +13,20 @@ class CartViewController: UIViewController {
     
     
     let checkOutButton = Tools.setUpButton("Check out", K.brandRed, 25)
+    let infoLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.text = "No items added."
+        lbl.font = .systemFont(ofSize: 20)
+        lbl.textColor = K.brandRed
+        return lbl
+    }()
     
     @objc func checkPressed(sender: UIButton){
         sender.showAnimation {
-
-            
+            let vc = CheckoutViewController()
+            vc.hidesBottomBarWhenPushed = true
+            vc.cartList = self.cartList
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 
@@ -52,6 +61,22 @@ class CartViewController: UIViewController {
             make.left.equalTo(view).offset(20)
             make.right.equalTo(view).offset(-20)
             make.bottom.equalTo(view).offset(-20)
+        }
+        
+        if cartList.count == 0 {
+            infoLabel.isHidden = false
+            checkOutButton.isEnabled = false
+            checkOutButton.backgroundColor = K.brandGrey
+        }else{
+            infoLabel.isHidden = true
+            checkOutButton.isEnabled = true
+            checkOutButton.backgroundColor = K.brandRed
+        }
+        
+        view.addSubview(infoLabel)
+        infoLabel.snp.makeConstraints { make in
+            make.centerX.equalTo(view)
+            make.centerY.equalTo(view)
         }
         
 

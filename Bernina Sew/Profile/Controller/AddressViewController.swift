@@ -51,11 +51,7 @@ class AddressViewController: UIViewController {
         }
         
         
-        view.addSubview(addButton)
-        addButton.snp.makeConstraints { make  in
-            make.bottom.equalTo(view).offset(-offset * 2)
-            make.right.equalTo(view).offset(-offset)
-        }
+
         
         view.addSubview(addressTableView)
         addressTableView.snp.makeConstraints { make  in
@@ -64,6 +60,12 @@ class AddressViewController: UIViewController {
             make.right.equalTo(view)
             make.bottom.equalTo(view)
             
+        }
+        
+        view.addSubview(addButton)
+        addButton.snp.makeConstraints { make  in
+            make.bottom.equalTo(view).offset(-offset * 2)
+            make.right.equalTo(view).offset(-offset)
         }
     }
     

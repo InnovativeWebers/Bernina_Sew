@@ -23,8 +23,21 @@ class TabViewController: UITabBarController {
         let unselectedColor = UIColor.black
         let selectedColor = K.brandRed
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: unselectedColor], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: selectedColor], for: .selected)
+        if #available(iOS 15, *) {
+                    let tabBarAppearance = UITabBarAppearance()
+                    tabBarAppearance.backgroundColor = .white
+                    tabBarAppearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: selectedColor]
+                    tabBarAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: unselectedColor]
+                    tabBar.standardAppearance = tabBarAppearance
+                    tabBar.scrollEdgeAppearance = tabBarAppearance
+                } else {
+                    
+                    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: unselectedColor], for: .normal)
+                    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: selectedColor], for: .selected)
+                    tabBar.barTintColor = .white
+        }
+        
+
         
     }
     

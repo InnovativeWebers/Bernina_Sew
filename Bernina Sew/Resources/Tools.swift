@@ -133,7 +133,7 @@ struct Tools {
 
         let layout = UICollectionViewFlowLayout()
            layout.scrollDirection = .horizontal
-        layout.itemSize = cellSize
+            layout.itemSize = cellSize
            layout.minimumLineSpacing = CGFloat(lineSpacing)
            layout.minimumInteritemSpacing = CGFloat(interItemSpacing)
            let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)

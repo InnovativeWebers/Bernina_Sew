@@ -69,6 +69,14 @@ class ProfileViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        if #available(iOS 15, *){
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground() // isTranslucent = true
+            appearance.backgroundColor = .white
+            self.navigationController?.navigationBar.standardAppearance = appearance;
+            self.navigationController?.navigationBar.scrollEdgeAppearance = self.navigationController?.navigationBar.standardAppearance
+        }
         self.navigationController?.navigationBar.tintColor = K.brandRed
         let handle = Auth.auth().addStateDidChangeListener { [self] auth, user in
             if Auth.auth().currentUser != nil {
