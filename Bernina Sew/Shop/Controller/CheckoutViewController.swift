@@ -13,6 +13,8 @@ class CheckoutViewController: UIViewController {
     var cartList: [Product]?
     let confirmButton = Tools.setUpButton("Proceed", K.brandRed, 25)
     let addAddressButton = Tools.setUpButton("Add an address", K.brandRed, 25)
+    var paymentMethodSeleted = false
+    var addressSelected = false
     
     let productCollectionView: UICollectionView = {
         let cellSize = CGSize(width: 60, height: 60)
@@ -82,8 +84,21 @@ class CheckoutViewController: UIViewController {
     var addressArray: [AddressModel]?
     
     @objc func confirmAction(sender: UIButton){
-        sender.showAnimation {
-            SCLAlertView().showTitle("Success", subTitle: "Order has been submitted!", style: .success, colorStyle: 0x29BB89)
+        sender.showAnimation { [self] in
+            
+            if !paymentMethodSeleted{
+                SCLAlertView().showTitle("Payment method not selected", subTitle: "Please select a payment method.", style: .warning, colorStyle: 0xC10000)
+            }
+            
+            if !addressSelected {
+                SCLAlertView().showTitle("Address not selected", subTitle: "Please select an address.", style: .warning, colorStyle: 0xC10000)
+            }
+            
+            if addressSelected && paymentMethodSeleted {
+                
+                
+                SCLAlertView().showTitle("Success", subTitle: "Order has been submitted!", style: .success, colorStyle: 0x29BB89)
+            }
         }
     }
     
@@ -238,6 +253,7 @@ extension CheckoutViewController: UICollectionViewDelegate, UICollectionViewData
             let cell = collectionView.cellForItem(at: indexPath) as! AddressCollectionCell
             cell.container.layer.borderWidth = 3
             cell.container.layer.borderColor = K.brandRed.cgColor
+            self.addressSelected = true
             
         }
     }
@@ -270,6 +286,7 @@ extension CheckoutViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.cellForRow(at: indexPath) as! PaymentCell
         cell.container.layer.borderColor = K.brandRed.cgColor
         let symbolConfig = UIImage.SymbolConfiguration(scale: .small)
+        self.paymentMethodSeleted = true
         cell.selectionImageView.image = UIImage(systemName: "circle.circle.fill", withConfiguration: symbolConfig)?.withTintColor(K.brandRed).withRenderingMode(.alwaysOriginal)
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
