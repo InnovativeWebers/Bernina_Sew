@@ -81,7 +81,6 @@ class ProfileViewController: UIViewController {
         let handle = Auth.auth().addStateDidChangeListener { [self] auth, user in
             if Auth.auth().currentUser != nil {
               // User is signed in.
-              print("the user is signed in")
             if user?.displayName == nil {
                 nameLabel.text = "Bernina-User-\(user?.uid.prefix(5) ?? "Temp")"
             }else{

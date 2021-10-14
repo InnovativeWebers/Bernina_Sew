@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BA07C05B510C906505885AF7 /* Pods_Bernina_Sew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19F656D6F84E3B74881F654 /* Pods_Bernina_Sew.framework */; };
+		D42278AC2716BC740077C09D /* AddressCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278AB2716BC740077C09D /* AddressCollectionCell.swift */; };
+		D42278AF27172F590077C09D /* OrderModel.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278AE27172F590077C09D /* OrderModel.swift.swift */; };
 		D432E72D26EE05EA00B9A82B /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E72C26EE05EA00B9A82B /* PatternsViewController.swift */; };
 		D432E72F26EE060900B9A82B /* PatternsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E72E26EE060900B9A82B /* PatternsListViewController.swift */; };
 		D432E73226EE064100B9A82B /* PatternTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E73126EE064100B9A82B /* PatternTableViewCell.swift */; };
@@ -69,6 +71,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D42278AB2716BC740077C09D /* AddressCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCollectionCell.swift; sourceTree = "<group>"; };
+		D42278AE27172F590077C09D /* OrderModel.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift.swift; sourceTree = "<group>"; };
 		D432E72C26EE05EA00B9A82B /* PatternsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsViewController.swift; sourceTree = "<group>"; };
 		D432E72E26EE060900B9A82B /* PatternsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsListViewController.swift; sourceTree = "<group>"; };
 		D432E73126EE064100B9A82B /* PatternTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternTableViewCell.swift; sourceTree = "<group>"; };
@@ -155,6 +159,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D42278AD271729C20077C09D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D42278AE27172F590077C09D /* OrderModel.swift.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D432E72B26EE05C800B9A82B /* Patterns */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +223,7 @@
 			children = (
 				D4C110C2270580CD009C5D68 /* CartCell.swift */,
 				D4DCBDA827156BC6004CFA57 /* PaymentCell.swift */,
+				D42278AB2716BC740077C09D /* AddressCollectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -316,6 +329,7 @@
 		D4C92C612666946700E3AE2D /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				D42278AD271729C20077C09D /* Model */,
 				D4C110C1270580AC009C5D68 /* View */,
 				D4C92C622666947100E3AE2D /* Controller */,
 			);
@@ -366,7 +380,7 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		D4D13BA7269D376C00BA2181 /* Resources */ = {
+		D4D13BA7269D376C00BA2181 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 				D49A798C268995FF009F62BD /* K.swift */,
@@ -374,7 +388,7 @@
 				D46843A7269E83CE0026E468 /* ImagePicker.swift */,
 				D46843AF269EC5800026E468 /* CBToast.swift */,
 			);
-			path = Resources;
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		D4E071B826CCBA4E0078C7BF /* Event */ = {
@@ -481,7 +495,7 @@
 				D46843B926A02F270026E468 /* Assets.xcassets */,
 				D46843B1269ED1410026E468 /* GoogleService-Info.plist */,
 				D4E071BF26CCBAF80078C7BF /* InputFiles */,
-				D4D13BA7269D376C00BA2181 /* Resources */,
+				D4D13BA7269D376C00BA2181 /* Tools */,
 				D4E071C026CCBB840078C7BF /* Storyboard */,
 				D4C92C69266694B800E3AE2D /* Login */,
 				D4C92C652666948C00E3AE2D /* Design */,
@@ -637,6 +651,7 @@
 				D4DCBDA927156BC6004CFA57 /* PaymentCell.swift in Sources */,
 				D49A798B268995BE009F62BD /* TabViewController.swift in Sources */,
 				D46843B0269EC5800026E468 /* CBToast.swift in Sources */,
+				D42278AF27172F590077C09D /* OrderModel.swift.swift in Sources */,
 				D49A79912689AA96009F62BD /* ProductInfoViewController.swift in Sources */,
 				D46843B826A0162D0026E468 /* CollectionCell.swift in Sources */,
 				D46843A8269E83CE0026E468 /* ImagePicker.swift in Sources */,
@@ -659,6 +674,7 @@
 				D4C110B727040EDD009C5D68 /* SettingsViewController.swift in Sources */,
 				D49A79952689B024009F62BD /* Product.swift in Sources */,
 				D46843A2269D92BB0026E468 /* Pattern.swift in Sources */,
+				D42278AC2716BC740077C09D /* AddressCollectionCell.swift in Sources */,
 				D4E801C12624876D001C3CB0 /* SceneDelegate.swift in Sources */,
 				D432E73226EE064100B9A82B /* PatternTableViewCell.swift in Sources */,
 				D4C53544271193AF005FBA7A /* AddressCell.swift in Sources */,
