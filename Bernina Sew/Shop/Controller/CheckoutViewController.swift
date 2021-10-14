@@ -15,6 +15,7 @@ class CheckoutViewController: UIViewController {
     let addAddressButton = Tools.setUpButton("Add an address", K.brandRed, 25)
     var paymentMethodSeleted = false
     var addressSelected = false
+    var orderValue: Int?
     
     let productCollectionView: UICollectionView = {
         let cellSize = CGSize(width: 60, height: 60)
@@ -82,21 +83,32 @@ class CheckoutViewController: UIViewController {
     
     
     var addressArray: [AddressModel]?
+    var orderArray = [OrderModel]()
     
     @objc func confirmAction(sender: UIButton){
         sender.showAnimation { [self] in
             
+            if let data = UserDefaults.standard.object(forKey: "Orders") as? NSData {
+            orderArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [OrderModel]
+             }
+            
+            let date = Date().localizedDescription()
+            
+            let order = OrderModel(orderId: 0, orderTime: date, orderValue: orderValue!)
+            
+            orderArray.append(order)
+            
             if !paymentMethodSeleted{
                 SCLAlertView().showTitle("Payment method not selected", subTitle: "Please select a payment method.", style: .warning, colorStyle: 0xC10000)
             }
-            
-            if !addressSelected {
+            else if !addressSelected{
                 SCLAlertView().showTitle("Address not selected", subTitle: "Please select an address.", style: .warning, colorStyle: 0xC10000)
             }
             
             if addressSelected && paymentMethodSeleted {
                 
-                
+                let data = NSKeyedArchiver.archivedData(withRootObject: orderArray)
+                UserDefaults.standard.setValue(data, forKey: "Orders")
                 SCLAlertView().showTitle("Success", subTitle: "Order has been submitted!", style: .success, colorStyle: 0x29BB89)
             }
         }
@@ -116,6 +128,7 @@ class CheckoutViewController: UIViewController {
         view.backgroundColor = .white
         self.title = "Check out"
         let price = GetTotalPrice(cartList!)
+        orderValue = price
         productCollectionView.dataSource = self
         productCollectionView.delegate = self
         productCollectionView.register(CollectionCell.self, forCellWithReuseIdentifier: "CollectionCell")

@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		BA07C05B510C906505885AF7 /* Pods_Bernina_Sew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19F656D6F84E3B74881F654 /* Pods_Bernina_Sew.framework */; };
 		D42278AC2716BC740077C09D /* AddressCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278AB2716BC740077C09D /* AddressCollectionCell.swift */; };
-		D42278AF27172F590077C09D /* OrderModel.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278AE27172F590077C09D /* OrderModel.swift.swift */; };
+		D42278AF27172F590077C09D /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278AE27172F590077C09D /* OrderModel.swift */; };
+		D42278B12717F4320077C09D /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278B02717F4320077C09D /* OrdersViewController.swift */; };
 		D432E72D26EE05EA00B9A82B /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E72C26EE05EA00B9A82B /* PatternsViewController.swift */; };
 		D432E72F26EE060900B9A82B /* PatternsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E72E26EE060900B9A82B /* PatternsListViewController.swift */; };
 		D432E73226EE064100B9A82B /* PatternTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E73126EE064100B9A82B /* PatternTableViewCell.swift */; };
@@ -72,7 +73,8 @@
 
 /* Begin PBXFileReference section */
 		D42278AB2716BC740077C09D /* AddressCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCollectionCell.swift; sourceTree = "<group>"; };
-		D42278AE27172F590077C09D /* OrderModel.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift.swift; sourceTree = "<group>"; };
+		D42278AE27172F590077C09D /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		D42278B02717F4320077C09D /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		D432E72C26EE05EA00B9A82B /* PatternsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsViewController.swift; sourceTree = "<group>"; };
 		D432E72E26EE060900B9A82B /* PatternsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsListViewController.swift; sourceTree = "<group>"; };
 		D432E73126EE064100B9A82B /* PatternTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternTableViewCell.swift; sourceTree = "<group>"; };
@@ -162,7 +164,7 @@
 		D42278AD271729C20077C09D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D42278AE27172F590077C09D /* OrderModel.swift.swift */,
+				D42278AE27172F590077C09D /* OrderModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +304,7 @@
 				D4C110BC27041C43009C5D68 /* AboutViewController.swift */,
 				D4C110C62705A6AC009C5D68 /* MyFavorietesViewController.swift */,
 				D4C5353E27114731005FBA7A /* AddAddressViewController.swift */,
+				D42278B02717F4320077C09D /* OrdersViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -651,7 +654,7 @@
 				D4DCBDA927156BC6004CFA57 /* PaymentCell.swift in Sources */,
 				D49A798B268995BE009F62BD /* TabViewController.swift in Sources */,
 				D46843B0269EC5800026E468 /* CBToast.swift in Sources */,
-				D42278AF27172F590077C09D /* OrderModel.swift.swift in Sources */,
+				D42278AF27172F590077C09D /* OrderModel.swift in Sources */,
 				D49A79912689AA96009F62BD /* ProductInfoViewController.swift in Sources */,
 				D46843B826A0162D0026E468 /* CollectionCell.swift in Sources */,
 				D46843A8269E83CE0026E468 /* ImagePicker.swift in Sources */,
@@ -675,6 +678,7 @@
 				D49A79952689B024009F62BD /* Product.swift in Sources */,
 				D46843A2269D92BB0026E468 /* Pattern.swift in Sources */,
 				D42278AC2716BC740077C09D /* AddressCollectionCell.swift in Sources */,
+				D42278B12717F4320077C09D /* OrdersViewController.swift in Sources */,
 				D4E801C12624876D001C3CB0 /* SceneDelegate.swift in Sources */,
 				D432E73226EE064100B9A82B /* PatternTableViewCell.swift in Sources */,
 				D4C53544271193AF005FBA7A /* AddressCell.swift in Sources */,
