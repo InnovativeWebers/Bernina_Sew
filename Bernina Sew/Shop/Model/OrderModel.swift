@@ -28,7 +28,7 @@ class OrderModel: NSObject, NSCoding {
     required init?(coder: NSCoder) {
         self.orderId = coder.decodeObject(forKey: "OrderID") as? Int
         self.orderTime = coder.decodeObject(forKey: "OrderTime") as? String
-        self.orderValue = coder.decodeInteger(forKey: "OrderValue")
+        self.orderValue = coder.decodeObject(forKey: "OrderValue") as? Int
     }
     
     

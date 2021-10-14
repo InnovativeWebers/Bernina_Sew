@@ -178,6 +178,9 @@
                                         <state key="normal" title="Orders">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="ordersButtonPressed:" destination="IBx-df-4oQ" eventType="touchUpInside" id="GiB-F7-BEK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4c9-Od-m3w">
                                         <rect key="frame" x="0.0" y="86" width="350" height="36"/>

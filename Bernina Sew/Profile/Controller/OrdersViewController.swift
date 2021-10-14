@@ -6,13 +6,56 @@
 //
 
 import UIKit
+import SnapKit
 
 class OrdersViewController: UIViewController {
 
+    var orderArray = [OrderModel]()
+    let orderTableView = Tools.setUpTableView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Orders"
+        view.backgroundColor = .white
+        
 
-        // Do any additional setup after loading the view.
+        if let data = UserDefaults.standard.object(forKey: "Orders") as? NSData {
+            orderArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [OrderModel]
+        }
+        
+        orderTableView.delegate = self
+        orderTableView.dataSource = self
+        orderTableView.register(OrderCell.self, forCellReuseIdentifier: "OrderCell")
+        orderTableView.rowHeight = 90
+
+        view.addSubview(orderTableView)
+        orderTableView.snp.makeConstraints { make in
+            make.top.equalTo(view).offset(20)
+            make.left.equalTo(view).offset(20)
+            make.right.equalTo(view).offset(-20)
+            make.bottom.equalTo(view).offset(-20)
+        }
+        
+        
+    
     }
 
+}
+
+
+extension OrdersViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return orderArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell", for: indexPath) as! OrderCell
+        cell.orderNumLabel.text = "Order #\(indexPath.row)"
+        cell.selectionStyle = .none
+        cell.orderDateLabel.text = orderArray[indexPath.row].orderTime!
+        cell.orderValueLabel.text = "$\(orderArray[indexPath.row].orderValue!)"
+        
+        return cell
+    }
+    
+    
 }

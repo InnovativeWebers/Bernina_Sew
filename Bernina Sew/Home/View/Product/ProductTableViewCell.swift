@@ -23,6 +23,7 @@ class ProductTableViewCell: UITableViewCell {
     
     @objc func addPressed(sender: UIButton){
         sender.showAnimation { [self] in
+            
             var productArray = [Product]()
             if let data = UserDefaults.standard.object(forKey: "Products") as? NSData {
             productArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [Product]

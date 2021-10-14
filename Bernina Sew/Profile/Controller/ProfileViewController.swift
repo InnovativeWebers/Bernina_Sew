@@ -17,8 +17,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var AccountButton: UIButton!
     @IBOutlet weak var bookingsButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
-  
-    
     @IBAction func acountButtonPressed(_ sender: UIButton) {
         let alert = Tools.setUpLoginAlert(self)
         if Auth.auth().currentUser == nil {
@@ -33,27 +31,70 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func bookingsButtonPressed(_ sender: Any) {
-        let vc = MyBookingsViewController()
-        vc.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+        let alert = Tools.setUpLoginAlert(self)
+        if Auth.auth().currentUser == nil {
+            self.present(alert, animated: true, completion: nil)
+            
+        }else {
+            let vc = MyBookingsViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func settingsButtonPressed(_ sender: UIButton) {
-        let vc = SettingsViewController()
-        vc.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
+        let alert = Tools.setUpLoginAlert(self)
+        if Auth.auth().currentUser == nil {
+            self.present(alert, animated: true, completion: nil)
+            
+        }else {
+            let vc = SettingsViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+
     }
     
     @IBAction func favButtonPressed(_ sender: UIButton) {
-        let vc = MyFavorietesViewController()
-        vc.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
+        let alert = Tools.setUpLoginAlert(self)
+        if Auth.auth().currentUser == nil {
+            self.present(alert, animated: true, completion: nil)
+            
+        }else {
+            let vc = MyFavorietesViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+
     }
+    
     @IBAction func designsButtonPressed(_ sender: Any) {
-        let vc = DesignsViewController()
-        vc.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
+        let alert = Tools.setUpLoginAlert(self)
+        if Auth.auth().currentUser == nil {
+            self.present(alert, animated: true, completion: nil)
+            
+        }else {
+            let vc = DesignsViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
+    
+    @IBAction func ordersButtonPressed(_ sender: Any) {
+        let alert = Tools.setUpLoginAlert(self)
+        if Auth.auth().currentUser == nil {
+            self.present(alert, animated: true, completion: nil)
+            
+        }else {
+            let vc = OrdersViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     
     @objc func loginPressed(sender: UIButton){
         sender.showAnimation {

@@ -98,6 +98,12 @@ class CheckoutViewController: UIViewController {
             
             orderArray.append(order)
             
+            let productArray:[Product] = []
+            let data = NSKeyedArchiver.archivedData(withRootObject: productArray)
+            UserDefaults.standard.setValue(data, forKey: "Products")
+            
+            
+            
             if !paymentMethodSeleted{
                 SCLAlertView().showTitle("Payment method not selected", subTitle: "Please select a payment method.", style: .warning, colorStyle: 0xC10000)
             }

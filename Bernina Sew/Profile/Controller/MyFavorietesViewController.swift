@@ -17,8 +17,10 @@ class MyFavorietesViewController: UIViewController {
         view.backgroundColor = .white
         
         if let data = UserDefaults.standard.object(forKey: "Patterns") as? NSData {
-        patternList = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [Pattern]
-           }
+            patternList = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [Pattern]
+        }
+        
+        
         
         
         patternTableView.delegate = self
@@ -40,7 +42,12 @@ class MyFavorietesViewController: UIViewController {
 
 extension MyFavorietesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return patternList!.count
+        if(patternList == nil){
+            return 0
+        }else{
+            return patternList!.count
+        }
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -11,6 +11,7 @@
 		D42278AC2716BC740077C09D /* AddressCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278AB2716BC740077C09D /* AddressCollectionCell.swift */; };
 		D42278AF27172F590077C09D /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278AE27172F590077C09D /* OrderModel.swift */; };
 		D42278B12717F4320077C09D /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278B02717F4320077C09D /* OrdersViewController.swift */; };
+		D42278B3271800610077C09D /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278B2271800610077C09D /* OrderCell.swift */; };
 		D432E72D26EE05EA00B9A82B /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E72C26EE05EA00B9A82B /* PatternsViewController.swift */; };
 		D432E72F26EE060900B9A82B /* PatternsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E72E26EE060900B9A82B /* PatternsListViewController.swift */; };
 		D432E73226EE064100B9A82B /* PatternTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E73126EE064100B9A82B /* PatternTableViewCell.swift */; };
@@ -75,6 +76,7 @@
 		D42278AB2716BC740077C09D /* AddressCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCollectionCell.swift; sourceTree = "<group>"; };
 		D42278AE27172F590077C09D /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		D42278B02717F4320077C09D /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		D42278B2271800610077C09D /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		D432E72C26EE05EA00B9A82B /* PatternsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsViewController.swift; sourceTree = "<group>"; };
 		D432E72E26EE060900B9A82B /* PatternsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsListViewController.swift; sourceTree = "<group>"; };
 		D432E73126EE064100B9A82B /* PatternTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternTableViewCell.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				D4C110C82705A881009C5D68 /* FavCell.swift */,
 				D4C53543271193AF005FBA7A /* AddressCell.swift */,
+				D42278B2271800610077C09D /* OrderCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				D42278B12717F4320077C09D /* OrdersViewController.swift in Sources */,
 				D4E801C12624876D001C3CB0 /* SceneDelegate.swift in Sources */,
 				D432E73226EE064100B9A82B /* PatternTableViewCell.swift in Sources */,
+				D42278B3271800610077C09D /* OrderCell.swift in Sources */,
 				D4C53544271193AF005FBA7A /* AddressCell.swift in Sources */,
 				D4C110C72705A6AC009C5D68 /* MyFavorietesViewController.swift in Sources */,
 				D4C110B327036852009C5D68 /* SelectProductViewController.swift in Sources */,

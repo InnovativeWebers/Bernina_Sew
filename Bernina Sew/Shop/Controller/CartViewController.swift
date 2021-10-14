@@ -30,14 +30,14 @@ class CartViewController: UIViewController {
         }
     }
 
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         self.title = "My Cart"
         view.backgroundColor = .white
         
         if let data = UserDefaults.standard.object(forKey: "Products") as? NSData {
-        cartList = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [Product]
+            cartList = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [Product]
+            self.cartTableView.reloadData()
            }
         
         checkOutButton.addTarget(self, action: #selector(checkPressed(sender:)), for: .touchUpInside)
