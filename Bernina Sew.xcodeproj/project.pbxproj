@@ -12,6 +12,8 @@
 		D42278AF27172F590077C09D /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278AE27172F590077C09D /* OrderModel.swift */; };
 		D42278B12717F4320077C09D /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278B02717F4320077C09D /* OrdersViewController.swift */; };
 		D42278B3271800610077C09D /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278B2271800610077C09D /* OrderCell.swift */; };
+		D42278B527181B430077C09D /* DesignCell.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278B427181B430077C09D /* DesignCell.swift.swift */; };
+		D42278B8271960200077C09D /* DesignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42278B7271960200077C09D /* DesignModel.swift */; };
 		D432E72D26EE05EA00B9A82B /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E72C26EE05EA00B9A82B /* PatternsViewController.swift */; };
 		D432E72F26EE060900B9A82B /* PatternsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E72E26EE060900B9A82B /* PatternsListViewController.swift */; };
 		D432E73226EE064100B9A82B /* PatternTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432E73126EE064100B9A82B /* PatternTableViewCell.swift */; };
@@ -77,6 +79,8 @@
 		D42278AE27172F590077C09D /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		D42278B02717F4320077C09D /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		D42278B2271800610077C09D /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		D42278B427181B430077C09D /* DesignCell.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCell.swift.swift; sourceTree = "<group>"; };
+		D42278B7271960200077C09D /* DesignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignModel.swift; sourceTree = "<group>"; };
 		D432E72C26EE05EA00B9A82B /* PatternsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsViewController.swift; sourceTree = "<group>"; };
 		D432E72E26EE060900B9A82B /* PatternsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsListViewController.swift; sourceTree = "<group>"; };
 		D432E73126EE064100B9A82B /* PatternTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternTableViewCell.swift; sourceTree = "<group>"; };
@@ -171,6 +175,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D42278B6271960110077C09D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D432E72B26EE05C800B9A82B /* Patterns */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +221,7 @@
 				D4C110C82705A881009C5D68 /* FavCell.swift */,
 				D4C53543271193AF005FBA7A /* AddressCell.swift */,
 				D42278B2271800610077C09D /* OrderCell.swift */,
+				D42278B427181B430077C09D /* DesignCell.swift.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,6 +367,7 @@
 		D4C92C652666948C00E3AE2D /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				D42278B6271960110077C09D /* Model */,
 				D4C92C662666949300E3AE2D /* Controller */,
 			);
 			path = Design;
@@ -365,6 +378,7 @@
 			children = (
 				D43C3BFD2635C89C00E53768 /* DesignViewController.swift */,
 				D4C110B227036852009C5D68 /* SelectProductViewController.swift */,
+				D42278B7271960200077C09D /* DesignModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -661,6 +675,7 @@
 				D49A79912689AA96009F62BD /* ProductInfoViewController.swift in Sources */,
 				D46843B826A0162D0026E468 /* CollectionCell.swift in Sources */,
 				D46843A8269E83CE0026E468 /* ImagePicker.swift in Sources */,
+				D42278B527181B430077C09D /* DesignCell.swift.swift in Sources */,
 				D451ED12264F8C3A00A17A67 /* Event.swift in Sources */,
 				D4C110C5270598D9009C5D68 /* CheckoutViewController.swift in Sources */,
 				D46843AC269EAA880026E468 /* ChangePhotoViewController.swift in Sources */,
@@ -698,6 +713,7 @@
 				D43C3BFB2635C89100E53768 /* BlogViewController.swift in Sources */,
 				D49A79932689AE47009F62BD /* EventViewController.swift in Sources */,
 				D4D13BAB269D5F1300BA2181 /* Tools.swift in Sources */,
+				D42278B8271960200077C09D /* DesignModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
