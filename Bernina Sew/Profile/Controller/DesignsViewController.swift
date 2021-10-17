@@ -6,26 +6,50 @@
 //
 
 import UIKit
-
+import SnapKit
 class DesignsViewController: UIViewController {
-
+    var designArray = [DesignModel]()
+    let designTableView = Tools.setUpTableView()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         self.title = "My Designs"
-
-        // Do any additional setup after loading the view.
+        designTableView.delegate = self
+        designTableView.dataSource = self
+        designTableView.register(DesignCell.self, forCellReuseIdentifier: "DesignCell")
+        
+        if let data = UserDefaults.standard.object(forKey: "Designs") as? NSData {
+            designArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [DesignModel]
+        }
+        
+        designTableView.rowHeight = 120
+        
+        view.addSubview(designTableView)
+        designTableView.snp.makeConstraints { make in
+            make.left.equalTo(view).offset(20)
+            make.top.equalTo(view).offset(20)
+            make.right.equalTo(view).offset(-20)
+            make.bottom.equalTo(view).offset(-20)
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+extension DesignsViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return designArray.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DesignCell", for: indexPath) as! DesignCell
+        
+        cell.patternImageView.sd_setImage(with: URL(string: designArray[indexPath.row].PatternImageURL!), completed: nil)
+        cell.productImageView.sd_setImage(with: URL(string: designArray[indexPath.row].ProductImageURL!), completed: nil)
+        cell.selectionStyle = .none
+        return cell
+    }
+    
+    
 }

@@ -178,6 +178,7 @@
 		D42278B6271960110077C09D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D42278B7271960200077C09D /* DesignModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,7 +379,6 @@
 			children = (
 				D43C3BFD2635C89C00E53768 /* DesignViewController.swift */,
 				D4C110B227036852009C5D68 /* SelectProductViewController.swift */,
-				D42278B7271960200077C09D /* DesignModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

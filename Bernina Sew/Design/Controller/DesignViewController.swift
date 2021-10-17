@@ -20,11 +20,15 @@ class DesignViewController: UIViewController {
         return iv
     }()
     
+    var seletedIndex = 0
+    
     let nextButton = Tools.setUpButton("Next➡", K.brandRed, 25)
     
     @objc func nextPressed(sender: UIButton){
         sender.showAnimation {
+            
             let vc = SelectProductViewController()
+            vc.patternIndex = self.seletedIndex
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
             
@@ -103,6 +107,7 @@ extension DesignViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.imageView.sd_setImage(with: URL(string: patternsList[indexPath.row].Image!), placeholderImage: UIImage(named: "placeHolder"), options: .highPriority, completed: nil)
         let cell = collectionView.cellForItem(at: indexPath)
+        seletedIndex = indexPath.row
         cell?.contentView.layer.borderColor = K.brandRed.cgColor
     }
     

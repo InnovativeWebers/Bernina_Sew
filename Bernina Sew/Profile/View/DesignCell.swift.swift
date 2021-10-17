@@ -48,8 +48,9 @@ class DesignCell: UITableViewCell {
             make.centerY.equalTo(container)
         }
         
+        container.addSubview(patternImageView)
         patternImageView.snp.makeConstraints { make in
-            make.left.equalTo(productImageView.snp_rightMargin).offset(10)
+            make.left.equalTo(productImageView.snp_rightMargin).offset(20)
             make.centerY.equalTo(container)
         }
         

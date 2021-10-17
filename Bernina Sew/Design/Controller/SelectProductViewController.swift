@@ -12,6 +12,7 @@ import SCLAlertView
 class SelectProductViewController: UIViewController {
 
     let productLIst = Tools.loadProductList(filename: "featuredProductJSON")!.FeaturedProducts
+    let patternList = Tools.loadPatternList(filename: "patternJSON")!.Patterns
     let productCollectionView = Tools.setUpCollectionView(10, 10, 100, 100)
     let imageView: UIImageView = {
         let iv = UIImageView()
@@ -23,11 +24,36 @@ class SelectProductViewController: UIViewController {
     
     let nextButton = Tools.setUpButton("Done", K.brandRed, 25)
     
+    var patternURLString: String?
+    var productURLString: String?
+    var productSelected: Bool?
+    var designArray: [DesignModel] = []
+    var selectedIndex = 0
+    var patternIndex: Int?
+    
     @objc func nextPressed(sender: UIButton){
-        sender.showAnimation {
+        sender.showAnimation { [self] in
+
+
+            productURLString = productLIst[selectedIndex].Image
+            patternURLString = patternList[patternIndex!].Image
+            
+            if let data = UserDefaults.standard.object(forKey: "Designs") as? NSData {
+                designArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [DesignModel]
+            }
+
+            let design = DesignModel(pattern: patternURLString!, product: productURLString!)
+
+            designArray.append(design)
+            let data = NSKeyedArchiver.archivedData(withRootObject: designArray)
+            UserDefaults.standard.setValue(data, forKey: "Designs")
+
+            
             SCLAlertView().showTitle("Design created", subTitle: "Design has been added", style: .success, colorStyle: 0x29BB89)
         }
     }
+        
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,6 +117,8 @@ extension SelectProductViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.imageView.sd_setImage(with: URL(string: productLIst[indexPath.row].Image!), placeholderImage: UIImage(named: "placeHolder"), options: .highPriority, completed: nil)
         let cell = collectionView.cellForItem(at: indexPath)
+        self.productSelected = true
+        selectedIndex = indexPath.row
         cell?.contentView.layer.borderColor = K.brandRed.cgColor
     }
     
