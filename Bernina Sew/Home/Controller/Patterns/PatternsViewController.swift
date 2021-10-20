@@ -53,6 +53,14 @@ class PatternsViewController: UIViewController {
             patternArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [Pattern]
                }
             
+            for pattern in patternArray {
+                if pattern.ID == patternID! {
+                    SCLAlertView().showTitle("Already added!", subTitle: "You have already added this pattern to favorites before.", style: .warning, colorStyle: 0xC10000)
+                    
+                    return
+                }
+            }
+            
             let pattern = Pattern(ID: patternID!, Name: patternName!, Image: patternImgUrl!, Description: patterDescription!)
             
             patternArray.append(pattern)
@@ -62,7 +70,7 @@ class PatternsViewController: UIViewController {
             
             
             
-            SCLAlertView().showTitle("Added", subTitle: "Check your favorites", style: .success, colorStyle: 0x29BB89)
+            SCLAlertView().showTitle("Added", subTitle: "Check your favorites in 'profile' tab", style: .success, colorStyle: 0x29BB89)
         }
     }
 

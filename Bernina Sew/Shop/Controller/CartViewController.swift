@@ -96,7 +96,21 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         cell.productPrice.text = "$ \(cartList[indexPath.row].Price!)"
         return cell
     }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+            cartList.remove(at: indexPath.row)
+            
+            let data = NSKeyedArchiver.archivedData(withRootObject: cartList)
+            UserDefaults.standard.setValue(data, forKey: "Products")
+            tableView.endUpdates()
+        }
+    }
     
 }
 

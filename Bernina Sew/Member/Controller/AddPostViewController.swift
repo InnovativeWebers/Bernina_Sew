@@ -76,7 +76,7 @@ class AddPostViewController: UIViewController{
                 let minutes = calendar.component(.minute, from: date)
                 let seconds = calendar.component(.second, from: date)
                 
-                let dateString = "\(year)-\(month)-\(day) \(hour)-\(minutes)-\(seconds)"
+                let dateString = "\(year)-\(month)-\(day) \(hour):\(minutes):\(seconds)"
                 
                 let blog = BlogModel(BlogTitle: titleTextfield.text!, BlogContent: contentTextView.text!, Time: dateString)
                 blogs.append(blog)

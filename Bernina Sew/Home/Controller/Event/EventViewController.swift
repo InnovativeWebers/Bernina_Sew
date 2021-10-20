@@ -82,6 +82,15 @@ class EventViewController: UIViewController {
             eventArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [Event]
                }
             
+            for event in eventArray {
+                if event.Name == eventName! && event.Date == eventDate! {
+                    SCLAlertView().showTitle("Already booked!", subTitle: "You have already booked this event before.", style: .warning, colorStyle: 0xC10000)
+                    
+                    return
+                    
+                }
+            }
+            
             let event = Event(Name: eventName!, Level: eventLevel!, Date: eventDate!, Description: eventDescripton!)
             
             eventArray.append(event)

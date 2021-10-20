@@ -64,4 +64,19 @@ extension MyBookingsViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+            eventList.remove(at: indexPath.row)
+            let data = NSKeyedArchiver.archivedData(withRootObject: eventList)
+            UserDefaults.standard.setValue(data, forKey: "Events")
+            tableView.endUpdates()
+        }
+    }
 }
