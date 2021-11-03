@@ -128,7 +128,7 @@ class ProfileViewController: UIViewController {
                 self.nameLabel.text = user?.displayName
             }
             emailLabel.text = user?.email
-            
+            loginButton.isHidden = true
             if user?.photoURL != nil {
                 let storageRef = storage.reference()
                 let imageRef = storageRef.child("profileImages/profile.jpg")
@@ -147,6 +147,8 @@ class ProfileViewController: UIViewController {
             
             } else {
               // No user is signed in.
+                loginButton.isHidden = false
+                profileImage.image = UIImage(named: "bernina-red")
                 print("the user is not signed in")
               // ...
             }
@@ -175,9 +177,6 @@ class ProfileViewController: UIViewController {
         }
         emailLabel.text = user?.email
         
-        if Auth.auth().currentUser != nil {
-            loginButton.isHidden = true
-        }
         
         view.addSubview(loginButton)
         Tools.setHeight(loginButton, 45)

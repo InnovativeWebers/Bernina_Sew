@@ -19,7 +19,7 @@ class SettingsViewController: UIViewController {
         let firebaseAuth = Auth.auth()
         do {
           try firebaseAuth.signOut()
-            self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
         } catch let signOutError as NSError {
           print ("Error signing out: %@", signOutError)
         }
@@ -57,7 +57,6 @@ class SettingsViewController: UIViewController {
 
         logoutButton.addTarget(self, action: #selector(logoutPressed(_:)), for: .touchUpInside)
         aboutButton.addTarget(self, action: #selector(aboutPressed(sender:)), for: .touchUpInside)
-        
         
 
         

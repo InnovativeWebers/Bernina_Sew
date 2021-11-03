@@ -82,16 +82,12 @@ class CheckoutViewController: UIViewController {
     let paymentMethodsArray = ["Credit Card", "PayPal"]
     
     
-    var addressArray: [AddressModel]?
+    var addressArray: [AddressModel] = []
     var orderArray = [OrderModel]()
     
     @objc func confirmAction(sender: UIButton){
         sender.showAnimation { [self] in
-            
-            if let data = UserDefaults.standard.object(forKey: "Orders") as? NSData {
-            orderArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [OrderModel]
-             }
-            
+
             let date = Date().localizedDescription()
             
             let order = OrderModel(orderId: 0, orderTime: date, orderValue: orderValue!)
@@ -128,12 +124,18 @@ class CheckoutViewController: UIViewController {
         }
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         view.backgroundColor = .white
         self.title = "Check out"
         let price = GetTotalPrice(cartList!)
+        
+        if let data = UserDefaults.standard.object(forKey: "addresses") as? NSData {
+            addressArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [AddressModel]
+        }
+        
+        
         orderValue = price
         productCollectionView.dataSource = self
         productCollectionView.delegate = self
@@ -150,9 +152,7 @@ class CheckoutViewController: UIViewController {
         confirmButton.addTarget(self, action: #selector(confirmAction(sender:)), for: .touchUpInside)
         addAddressButton.addTarget(self, action: #selector(addAddress(sender:)), for: .touchUpInside)
         
-        if let data = UserDefaults.standard.object(forKey: "addresses") as? NSData {
-            addressArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [AddressModel]
-        }
+
         
         
         priceLabel.text = "Total price: $\(price)"
@@ -200,7 +200,7 @@ class CheckoutViewController: UIViewController {
         }
         
         
-        if addressArray?.count == 0 {
+        if addressArray.count == 0 {
             addressCollectionView.isHidden = true
             addAddressButton.isHidden = false
         }else{
@@ -235,7 +235,7 @@ extension CheckoutViewController: UICollectionViewDelegate, UICollectionViewData
         if collectionView == productCollectionView {
             return cartList!.count
         }else{
-            return addressArray!.count
+            return addressArray.count
         }
 
     }
@@ -247,14 +247,14 @@ extension CheckoutViewController: UICollectionViewDelegate, UICollectionViewData
             return cell
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddressCollectionCell", for: indexPath) as! AddressCollectionCell
-            let firstName = addressArray![indexPath.row].firstName
-            let lastName = addressArray![indexPath.row].lastName
-            let phoneNum = addressArray![indexPath.row].phoneNum
-            let suburb = addressArray![indexPath.row].suburb
-            let state = addressArray![indexPath.row].state
-            let postCode = addressArray![indexPath.row].postCode
-            let addressLine1 = addressArray![indexPath.row].line1
-            let addressLine2 = addressArray![indexPath.row].line2
+            let firstName = addressArray[indexPath.row].firstName
+            let lastName = addressArray[indexPath.row].lastName
+            let phoneNum = addressArray[indexPath.row].phoneNum
+            let suburb = addressArray[indexPath.row].suburb
+            let state = addressArray[indexPath.row].state
+            let postCode = addressArray[indexPath.row].postCode
+            let addressLine1 = addressArray[indexPath.row].line1
+            let addressLine2 = addressArray[indexPath.row].line2
             
             cell.nameLabel.text = "\(firstName!) \(lastName!)"
             cell.phoneNum.text = "\(phoneNum!)"

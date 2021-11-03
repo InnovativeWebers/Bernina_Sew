@@ -41,7 +41,7 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        self.title = "Account"
    
         Tools.setHeight(changeUserNameButton, 50)
         Tools.setHeight(changePhotoButton, 50)
